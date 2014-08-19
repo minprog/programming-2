@@ -1,0 +1,4 @@
+name: pset8
+required:
+    - questions.txt
+    - recover.c

@@ -1,0 +1,5 @@
+name: pset10
+required:
+    - dictionary.c
+    - dictionary.h
+    - Makefile
