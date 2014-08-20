@@ -9,6 +9,7 @@ the longest (this is known as ‘first-in-first-out’, or FIFO). You can read u
 learn more.
 
 Create a new file called queue.py to make your Queue class. In your Queue class, you will need three methods:
+
 * \_\_init\_\_ : to initialize your Queue (think: how will you store the queue’s elements? You’ll need to initialize
 an appropriate object attribute in this method)
 * insert: inserts one element in your Queue

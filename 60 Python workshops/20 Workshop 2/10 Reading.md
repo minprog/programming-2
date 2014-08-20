@@ -18,6 +18,7 @@ to re-read them during your practice session!
 ## Readings
 
 From Think Python, read chapters:
+
 * 3 [Functions](http://www.greenteapress.com/thinkpython/html/thinkpython004.html)
 * 6.1 -- 6.5 [Fruitful functions](http://www.greenteapress.com/thinkpython/html/thinkpython007.html)
 * 5.8 -- 5.12 [Recursion](http://www.greenteapress.com/thinkpython/html/thinkpython006.html#toc59)
