@@ -7,22 +7,26 @@ If you are working on your own machine, you will probably need to install
 Python. You should download and install
 version 2.7.x, NOT 3.x (this will give you plenty of trouble).
 
-### Windows
-#### Python x,y (recommended)
+## Windows
+### Python x,y (recommended)
+
 A complete package containing modules for among others plotting graphs. Go to the [website](https://code.google.com/p/pythonxy/wiki/Downloads?tm=2), download and install the current release.
 
-#### Standard Python
+### Standard Python
+
 Go to the [website](http://python.org/download/releases) and download the Windows MSI installer for either x86 or
 x86-64, depending on which version of Windows you are running.
 
-### Mac OS X
-#### Python + matplotlib, numpy, scipy
+## Mac OS X
+### Python + matplotlib, numpy, scipy
+
 Follow the instructions at: [link](http://penandpants.com/2012/02/24/install-python/)
 
-#### Standard Python
+### Standard Python
+
 Download and install the Mac Installer disk image from the Python [website](http://python.org/download/releases).
 
-### Other Linux
+## Linux
 
 Check which version of Python you have by running
 
