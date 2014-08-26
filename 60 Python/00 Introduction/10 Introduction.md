@@ -1,6 +1,6 @@
 Welcome to the Python workshops!
 
-The structure of a workshop differs somewhat from the C problem sets. First and foremost, there are no lectures, there is however a substantial amount of reading to be done. You will find the first two workshops cover concepts most of which you already know from C. Therefore we suggest you skim through the readings and tackle the exercises and questions. If you experience difficulties completing the exercises and questions simply take another look at the readings. Be warned though, the third workshop covers a new subject: object oriented programming (OOP in short) and as such you will most likely spend more time reading. 
+The structure of a workshop differs somewhat from the C problem sets. First and foremost, there are no lectures. There is however a substantial amount of reading to be done. You will find the first two workshops cover concepts most of which you already know from C. Therefore we suggest you skim through the readings and tackle the exercises and questions. If you experience difficulties completing the exercises and questions simply take another look at the readings. Be warned though, the third workshop covers a new subject: object oriented programming (OOP in short) and as such you will most likely spend more time reading. 
 
 Each Python workshops consists of three parts which you must submit in order to complete the workshop:
 
