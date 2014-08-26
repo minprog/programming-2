@@ -1,8 +1,12 @@
-# Problem set 8 (Recover)
+# Recover
 
 ## Getting started
 
-* Watch these video's: [file I/O](http://cs50.tv/2012/fall/shorts/file_i_o/file_i_o-720p.mp4), [structs](http://cs50.tv/2012/fall/shorts/structs/structs-720p.mp4), [Valgrind](http://cs50.tv/2012/fall/shorts/valgrind/valgrind-720p.mp4).
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/file_i_o/file_i_o-720p.mp4)
+
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/structs/structs-720p.mp4)
+
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/valgrind/valgrind-720p.mp4)
 
 * Execute
 
@@ -226,7 +230,7 @@
 
   Because `whodunit` can be implemented in several ways, you won't be able to check your implementation's correctness with `check50`. And, lest it spoil your fun, the staff's solution to `whodunit` is not available.
   
-  [Need help?](http://www.youtube.com/watch?v=AkEpi5tQ9Qc)
+<iframe width="711" height="400" src="http://www.youtube.com/embed/AkEpi5tQ9Qc" frameborder="0" allowfullscreen></iframe>
   
 * In `~/Desktop/pset8/questions.txt`, answer the question below. (And yet we used Photoshop.)
 
@@ -282,7 +286,7 @@
 
   Lest it spoil your (forensic) fun, the staff's solution to `recover` is not available.
   
-  [Click here for a walkthrough.](http://www.youtube.com/watch?v=Y4vV61lbL3g)
+<iframe width="711" height="400" src="http://www.youtube.com/embed/Y4vV61lbL3g" frameborder="0" allowfullscreen></iframe>
 
 ## Final steps
 

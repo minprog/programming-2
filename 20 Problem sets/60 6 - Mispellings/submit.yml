@@ -1,4 +1,4 @@
-name: pset9
+name: dictionary1
 required:
     - dictionary.c
     - dictionary.h

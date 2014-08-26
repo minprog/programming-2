@@ -1,9 +1,3 @@
-# Problem set 10 (Mispellings, cont'd)
+# Mispellings
 
-todo
-
-## Final steps
-
-* When you are done with `mispellings.c`, submit it by going over to the **Submit** tab. Be sure to compile and test one last time before you submit.
-
-* All done!
+This page allows you to upload your finalized versions of `dictionary.c`, `dictionary.h`, and `Makefile`. For the complete specification, see the previous problem set. To submit your finalized work, go to the **submit** tab of this problem set.

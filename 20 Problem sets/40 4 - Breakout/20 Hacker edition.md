@@ -1,10 +1,14 @@
 **Please consult your teaching fellow before attempting any hacker edition!**
 
-# Problem set 7 (Breakout)
+# Breakout
 
 ## Getting started
 
-* Watch these videos: [pointers](http://cs50.tv/2012/fall/shorts/pointers/pointers-720p.mp4), [strings](http://cs50.tv/2012/fall/shorts/strings/strings-720p.mp4), [CS50 Library](http://cs50.tv/2012/fall/shorts/cs50_library/cs50_library-720p.mp4).
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/pointers/pointers-720p.mp4)
+
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/strings/strings-720p.mp4)
+
+![videoplayer](http://cdn.cs50.net/2012/fall/shorts/cs50_library/cs50_library-720p.mp4)
 
 * Your challenge for this problem set is to implement the Breakout.
 
@@ -56,10 +60,7 @@
 
   So that's how we knew!
 
-* Take a look at a few other files:
-  * `cursor.c`: [Video.](http://www.youtube.com/watch?v=xsB0v8GtVMw)
-  * `bounce.c`: [Video.](http://www.youtube.com/watch?v=8RMHJe1ZpKM)
-  * `button.c`, `checkbox.c`, `label.c`, `slider.c`, and `text.c`. No video's for these!
+* Take a look at a few other files, namely `cursor.c`, `bounce.c`, `button.c`, `checkbox.c`, `label.c`, `slider.c`, and `text.c`. The following two videos discuss the first two of these; no videos for the others!
 
 # Breaking out
 
