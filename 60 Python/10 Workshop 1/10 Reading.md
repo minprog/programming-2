@@ -14,4 +14,5 @@ From Think Python, read chapters:
 * 1 [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html)
 * 2 [Variables, expressions and statements](http://www.greenteapress.com/thinkpython/html/thinkpython003.html)
 * 5.1 -- 5.7 [Conditionals](http://www.greenteapress.com/thinkpython/html/thinkpython006.html)
-* 7.1 -- 7.4 [Iteration](http://www.greenteapress.com/thinkpython/html/thinkpython008.html)
+* 7.1 -- 7.4 [Iteration (while loop)](http://www.greenteapress.com/thinkpython/html/thinkpython008.html)
+* 8.1 -- 8.4 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)

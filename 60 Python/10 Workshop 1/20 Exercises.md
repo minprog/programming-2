@@ -10,7 +10,7 @@ section. Be sure to install Python version 2.7.x! Ask an assistant for help if
 you run into any trouble. Before continuing, play around with the Python shell
 a bit and explore how you can use it as a calculator.
 
-[Reference]: /reference/installing
+[Reference]: /python/installing
 
 ## Exercise 1.1 – Hello, world!
 
