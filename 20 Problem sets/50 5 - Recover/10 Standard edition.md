@@ -1,5 +1,7 @@
 # Recover
 
+* Let's ensure that the Appliance is up to date by running `update50` from a Terminal before starting.
+
 ## Getting started
 
 ![videoplayer](http://cdn.cs50.net/2012/fall/shorts/file_i_o/file_i_o-720p.mp4)
@@ -10,7 +12,7 @@
 
 * Execute
 
-		cd ~/Desktop
+		cd ~/Dropbox
 		wget http://cdn.cs50.net/2013/fall/psets/5/pset5/pset5.zip
 		unzip pset5.zip
 		mv pset5 pset8
@@ -20,7 +22,7 @@
 
 ## About BMP images
 
-* If you ever saw Windows XP's default wallpaper (think rolling hills and blue skies), then you've seen a BMP. If you've ever looked at a webpage, you've probably seen a GIF. If you've ever looked at a digital photo, you've probably seen a JPEG. If you've ever taken a screenshot on a Mac, you've probably seen a PNG. Read up a bit on the BMP, GIF, JPEG, and PNG file formats. Then, open up questions.txt in ~/Desktop/pset8, as with gedit, and tell us the below.
+* If you ever saw Windows XP's default wallpaper (think rolling hills and blue skies), then you've seen a BMP. If you've ever looked at a webpage, you've probably seen a GIF. If you've ever looked at a digital photo, you've probably seen a JPEG. If you've ever taken a screenshot on a Mac, you've probably seen a PNG. Read up a bit on the BMP, GIF, JPEG, and PNG file formats. Then, open up questions.txt in ~/Dropbox/pset8, as with gedit, and tell us the below.
 
   1. How many different colors does each format support?
 
@@ -79,11 +81,11 @@
 
   Okay, stop! Don't proceed further until you're sure you understand why `0000ff` represents a red pixel in a 24-bit BMP file.
   
-* Okay, let's transition from theory to practice. Double-click Home on John Harvard's desktop and you should find yourself in John Harvard's home directory. Double-click pset8, double-click bmp, and then double-click smiley.bmp therein. You should see a tiny smiley face that's only 8 pixels by 8 pixels. Select View > Zoom > Zoom Fit, and you should see a larger, albeit blurrier, version. (So much for "enhance," huh?) Actually, this particular image shouldn't really be blurry, even when enlarged. The program that launched when you double-clicked smiley.bmp (called Ristretto Image Viewer) is simply trying to be helpful (CSI-style) by "dithering" the image (i.e., by smoothing out its edges). Below's what the smiley looks like if you zoom in without dithering. At this zoom level, you can really see the image's pixels (as big squares).
+* Okay, let's transition from theory to practice. Double-click Home on John Harvard's Dropbox and you should find yourself in John Harvard's home directory. Double-click pset8, double-click bmp, and then double-click smiley.bmp therein. You should see a tiny smiley face that's only 8 pixels by 8 pixels. Select View > Zoom > Zoom Fit, and you should see a larger, albeit blurrier, version. (So much for "enhance," huh?) Actually, this particular image shouldn't really be blurry, even when enlarged. The program that launched when you double-clicked smiley.bmp (called Ristretto Image Viewer) is simply trying to be helpful (CSI-style) by "dithering" the image (i.e., by smoothing out its edges). Below's what the smiley looks like if you zoom in without dithering. At this zoom level, you can really see the image's pixels (as big squares).
 
   ![Picture!](52.png)
 
-  Okay, go ahead and return your attention to a terminal window, and navigate your way to ~/Desktop/pset8/bmp. Let's look at the underlying bytes that compose smiley.bmp using `xxd`, a command-line "hex editor." Execute:
+  Okay, go ahead and return your attention to a terminal window, and navigate your way to ~/Dropbox/pset8/bmp. Let's look at the underlying bytes that compose smiley.bmp using `xxd`, a command-line "hex editor." Execute:
 
 		xxd -c 24 -g 3 -s 54 smiley.bmp
 
@@ -182,7 +184,7 @@
 			biCompression = 0, biSizeImage = 192, biXPelsPerMeter = 2834,
 			biYPelsPerMeter = 2834, biClrUsed = 0, biClrImportant = 0}
 
-  In `~/Desktop/pset8/questions.txt`, answer each of the following questions in a sentence or more.
+  In `~/Dropbox/pset8/questions.txt`, answer each of the following questions in a sentence or more.
   
   7. What's `stdint.h`?
 
@@ -232,7 +234,7 @@
   
 <iframe width="711" height="400" src="http://www.youtube.com/embed/AkEpi5tQ9Qc" frameborder="0" allowfullscreen></iframe>
   
-* In `~/Desktop/pset8/questions.txt`, answer the question below. (And yet we used Photoshop.)
+* In `~/Dropbox/pset8/questions.txt`, answer the question below. (And yet we used Photoshop.)
 
   19. Whodunit?
 
@@ -244,7 +246,7 @@
 
   In anticipation of this problem set, I spent the past several days snapping photos of people I know, all of which were saved by my digital camera as JPEGs on a 1GB CompactFlash (CF) card. (It's possible I actually spent the past several days on Facebook instead.) Unfortunately, I'm not very good with computers, and I somehow deleted them all! Thankfully, in the computer world, "deleted" tends not to mean "deleted" so much as "forgotten." My computer insists that the CF card is now blank, but I'm pretty sure it's lying to me.
 
-  Write in `~/Desktop/pset8/jpg/recover.c` a program that recovers these photos.
+  Write in `~/Dropbox/pset8/jpg/recover.c` a program that recovers these photos.
 
   Ummm.
 
@@ -268,7 +270,7 @@
   
 		FILE* file = fopen("card.raw", "r");
 
-  Notice, incidentally, that `~/Desktop/pset8/jpg` contains only `recover.c`, but it's devoid of any code. (We leave it to you to decide how to implement and compile `recover`!) For simplicity, you should hard-code `card.raw` in your program; your program need not accept any command-line arguments. When executed, though, your program should recover every one of the JPEGs from `card.raw`, storing each as a separate file in your current working directory. Your program should number the files it outputs by naming each `###.jpg`, where `###` is three-digit decimal number from `000` on up. (Befriend `sprintf`.) You need not try to recover the JPEGs' original names. To check whether the JPEGs your program spit out are correct, simply double-click and take a look! If each photo appears intact, your operation was likely a success!
+  Notice, incidentally, that `~/Dropbox/pset8/jpg` contains only `recover.c`, but it's devoid of any code. (We leave it to you to decide how to implement and compile `recover`!) For simplicity, you should hard-code `card.raw` in your program; your program need not accept any command-line arguments. When executed, though, your program should recover every one of the JPEGs from `card.raw`, storing each as a separate file in your current working directory. Your program should number the files it outputs by naming each `###.jpg`, where `###` is three-digit decimal number from `000` on up. (Befriend `sprintf`.) You need not try to recover the JPEGs' original names. To check whether the JPEGs your program spit out are correct, simply double-click and take a look! If each photo appears intact, your operation was likely a success!
 
   Odds are, though, the JPEGs that the first draft of your code spits out won't be correct. (If you open them up and don't see anything, they're probably not correct!) Execute the command below to delete all JPEGs in your current working directory.
   

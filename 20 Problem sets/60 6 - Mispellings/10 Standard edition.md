@@ -2,7 +2,9 @@
 
 * 20-hour students are allowed two weeks to finish this problem set, but you must show the progress you've made during the first week by uploading your work-in-progress to our servers no later than 15:00 on Friday.
 
-* 40-hour students are allowed one week to finish this problem set, but you must show the progress you've made during the first half of the week by uploading your work-in-progress to our servers no later than 15:00 on Tuesday.
+* 40-hour students are allowed one week to finish this problem set. You need to upload the entirety of the assignment no later than 15:00 on Friday. (You do not need to upload a work-in-progress on Wednesday.)
+
+* Let's ensure that the Appliance is up to date by running `update50` from a Terminal before starting.
 
 ## Getting started
 
@@ -10,9 +12,9 @@
 
 * This problem set comes with some distribution code that you'll need to download before getting started. Go ahead and execute
 
-		cd ~/Desktop
+		cd ~/Dropbox
 
-  in order to navigate to your `~/Desktop` directory. Then execute
+  in order to navigate to your `~/Dropbox` directory. Then execute
 
 		wget http://cdn.cs50.net/2013/fall/psets/6/pset6/pset6.zip
 		unzip pset6.zip

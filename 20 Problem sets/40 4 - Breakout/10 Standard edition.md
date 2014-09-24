@@ -1,5 +1,7 @@
 # Breakout
 
+* Let's ensure that the Appliance is up to date by running `update50` from a Terminal before starting.
+
 ## Getting started
 
 ![videoplayer](http://cdn.cs50.net/2012/fall/shorts/pointers/pointers-720p.mp4)
@@ -16,7 +18,7 @@
 
 * Execute
 
-		cd ~/Desktop
+		cd ~/Dropbox
   
   and then
 
@@ -68,7 +70,7 @@
 
 # Breaking out
 
-* Now that we're accustomed to some of the features of SPL, let's get started on the problem set for this week. Perform the following command to grab the distribution code of this week. Ensure you're in `~/Desktop`.
+* Now that we're accustomed to some of the features of SPL, let's get started on the problem set for this week. Perform the following command to grab the distribution code of this week. Ensure you're in `~/Dropbox`.
 
 		wget http://cdn.cs50.net/2013/fall/psets/4/pset4/pset4.zip
 
@@ -135,7 +137,7 @@
 
 * Alright, if you're like me, odds are you'll find it easiest to implement Breakout via some baby steps, each of which will get you closer and closer to a great outcome. Rather than try to implement the whole game at once, allow me to suggest that you proceed as follows:
 
-* Try out the staff's solution again (via `~cs50/pset4/breakout` from within your own ~/Desktop/pset4 directory) to remind yourself how our implementation behaves. Yours doesn't need to be identical. In fact, all the better if you personalize yours. But playing with our implementation should help guide you toward yours.
+* Try out the staff's solution again (via `~cs50/pset4/breakout` from within your own ~/Dropbox/pset4 directory) to remind yourself how our implementation behaves. Yours doesn't need to be identical. In fact, all the better if you personalize yours. But playing with our implementation should help guide you toward yours.
 
 * Implement `initPaddle`. Per the function's return value, your paddle should be implemented as a `GRect`. Odds are you'll first want to decide on a width and height for your paddle, perhaps declaring them both atop `breakout.c` with constants. Then calculate coordinates (`x` and `y`) for your paddle, keeping in mind that it should be initially aligned in the bottom-middle of your game's window. We leave it to you to decide exactly where. Odds are some arithmetic involving the window's width and height and the paddle's width and height will help you center it. Keep in mind that `x` and `y` refer to a `GRect`'s top-left corner, not its own middle. Your paddle's size and location doesn't need to match the staff's precisely, but it should be perfectly centered, near the window's bottom. You're welcome to choose a color for it too, for which `setColor` and `setFilled` might be of interest. Finally, instantiate your paddle with `newGRect`. (Take note of that function's prototype, which you can find [http://cdn.cs50.net/2013/fall/psets/4/pset4/pset4/spl/doc/gobjects.html](here).) Then return the `GRect` returned by `newGRect` (rather than `NULL`, which the distribution code returns only so that the program will compile without `initPaddle` fully implemented).
 
