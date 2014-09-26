@@ -1,4 +1,4 @@
-name: w1
+name: py1
 form: true
 required:
     - homework1.py

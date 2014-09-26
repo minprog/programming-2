@@ -1,4 +1,4 @@
-name: w3
+name: py3
 required:
     - queue.py
     - stack.py

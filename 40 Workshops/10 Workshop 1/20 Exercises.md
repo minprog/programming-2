@@ -10,7 +10,57 @@ section. Be sure to install Python version 2.7.x! Ask an assistant for help if
 you run into any trouble. Before continuing, play around with the Python shell
 a bit and explore how you can use it as a calculator.
 
-[Reference]: /python/installing
+## Interactive Python shell
+
+When you start up IDLE, a window with an interactive Python shell will pop up:
+
+![IDLE Shell](st-shell.png)
+
+You can type Python code directly into this shell, at the `>>>` prompt. Whenever
+you enter a complete code fragment, it will be executed. For instance, typing:
+
+	>>> print "hello world"
+
+and pressing ENTER, will cause the following to be displayed:
+
+	hello world
+
+Try typing an underscore (`_`). Can you see it? On some operating systems, the
+bottoms of hanging letters such as 'g' or 'y', as well as underscorces, cannot
+be seen in IDLE. If this is the case for you, go to **Options -> Configure
+IDLE**, and change the size of the default font to 9 or 11. This will fix the
+problem! IDLE can also be used as a calculator:
+
+	>>> 4+4
+	8
+	>>> 8**3
+	512
+
+Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), modulo
+(`%`) and power (`**`) operators are built into the Python language. This means
+you can use them right away. If you want to use a square root in your
+calculation, you can either raise something to the power of 0.5 or you can
+import the `math` module. Do not worry about what it means right now, we will
+cover this later during the course. Below are two examples of square root
+calculation:
+
+	>>> 16**0.5
+	4.0
+	>>> import math
+	>>> math.sqrt(16)
+	4.0
+
+The math module allows you to do a number of useful operations:
+
+	>>> math.log(16, 2)
+	4.0
+	>>> math.cos( 0 )
+	1.0
+
+Note that you only need to execute the import command once after you start IDLE;
+however you will need to execute it agin if you restart the shell, as restarting
+resets everything back to how it was when you opened IDLE. Don't worry too much
+about this right now; we'll cover it more in depth soon!
 
 ## Exercise 1.1 – Hello, world!
 

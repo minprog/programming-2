@@ -5,12 +5,15 @@ The structure of a workshop differs somewhat from the C problem sets. First and 
 Each Python workshops consists of three parts which you must submit in order to complete the workshop:
 
 ## Exercises
+
 Exercises mainly consist of practice problems introducing you to Python and preparing you for the programs section. You are required to submit each exercise in the specified file. The exercises will be checked, but not graded.
 
 ## Questions
+
 The questions are there to test your knowledge of the readings you have done. We require that you answer these questions on the website, and we will check your answers, but similarly to exercises your answers will not be graded.
 
 ## Programs
+
 Programs are the real deal. This where you put your newly gained Python knowledge to the test. Programs are generally a bit bigger than exercises and questions, and in contrary to exercises and questions, programs will be graded. So make sure you spend some time on improving your style and design!
 
 Now off you go into the [wondrous world of Python](http://xkcd.com/353/).
