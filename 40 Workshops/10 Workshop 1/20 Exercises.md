@@ -5,14 +5,18 @@ out the code in your Python interpreter as often as possible.
 
 ## Exercise 1.0 – Installing Python
 
-Follow the instructions on installing Python and IDLE in the [Reference]
-section. Be sure to install Python version 2.7.x! Ask an assistant for help if
-you run into any trouble. Before continuing, play around with the Python shell
-a bit and explore how you can use it as a calculator.
+To install Python in the appliance simply execute the following two commands in the terminal:
+
+	sudo yum install python
+	sudo yum install python-matplotlib
+	
+The first command installs Python 2.7. The second command installs several modules necessary for the
+plotting of data. Ask an assistant for help if you run into any trouble!
 
 ## Interactive Python shell
 
-When you start up IDLE, a window with an interactive Python shell will pop up:
+Open IDLE (Integrated DeveLopment Environment) by typing idle in the terminal. By doing so 
+a window with an interactive Python shell will pop up:
 
 ![IDLE Shell](st-shell.png)
 
@@ -58,7 +62,7 @@ The math module allows you to do a number of useful operations:
 	1.0
 
 Note that you only need to execute the import command once after you start IDLE;
-however you will need to execute it agin if you restart the shell, as restarting
+however you will need to execute it again if you restart the shell, as restarting
 resets everything back to how it was when you opened IDLE. Don't worry too much
 about this right now; we'll cover it more in depth soon!
 
