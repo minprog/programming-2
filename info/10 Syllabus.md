@@ -49,9 +49,9 @@ Your grade will be determined using the following guidelines:
 | Problem Sets  | 50% |
 | Workshops     | 50% |
 
-Although you must submit all problem sets, your lowest score among those
-problem sets on which you received perfect scores for the axis of scope will be
-dropped when final grades are determined.
+Although you must submit all problem sets and workshops, your lowest score
+among those problem sets on which you received perfect scores for the axis of
+scope will be dropped when final grades are determined.
 
 Know that this course draws quite the spectrum of students, including "those
 less comfortable", "those more comfortable", and those somewhere in between.
