@@ -1,58 +1,62 @@
-*Edition: September 2014* (not ready yet!)
+![CS50 @ Minor Programmeren](cs50.png)
+
+*Edition: September 2014 (5.0)*
 
 Introduction to the intellectual enterprises of computer science and the art of
 programming. This course teaches students how to think algorithmically and
 solve problems efficiently. Topics include abstraction, algorithms, data
 structures, encapsulation, resource management, security, software engineering,
-and web development. Languages include C, PHP, and JavaScript plus SQL, CSS,
-and HTML. Problem sets inspired by real-world domains of biology, cryptography,
-finance, forensics, and gaming. Designed for concentrators and
-non-concentrators alike, with or without prior programming experience.
+and web development. Languages include C and Python. Problem sets inspired by
+real-world domains of biology, cryptography, finance, forensics, and gaming.
+Designed for students with or without prior programming experience.
 
 ## Staff
 
-The course's staff consists of your instructor and several student assistants.
-Due to the size of the course, we can't usually respond to email inquiries
-about your problem sets or organizational matters. You are encouraged to speak
-to a student assistant or the instructor at the lab.
+The course's staff consists of your instructor and many student assistants. Due
+to the size of the course, we can't usually respond to email inquiries about
+your problem sets. You are encouraged to speak to an assistant or the
+instructor at the lab.
 
-### Instructor
+Martijn Stegeman  
+*instructor*  
+<help@mprog.nl>
 
-Martijn Stegeman (<m.stegeman@uva.nl>)
+Ben Witzen  
+*head teaching assistant*  
+
+Jelle van Assema  
+*head teaching assistant*  
 
 ## Prerequisites
 
-This course is aimed at students with little or no prior programming experience
-but a desire to understand computational approaches to problem solving. So, by
-definition, none of you are under-qualified for this course.
+This course is the second part of a two-course series aimed at students with
+little or no prior programming experience but a desire to understand
+computational approaches to problem solving. So, by definition, none of you are
+under-qualified.
 
 ## Expectations
 
-You are expected to watch all lectures and sections, submit nine problem sets,
-take two quizzes, and submit a final project. You are also expected to attend a
+You are expected to watch all lectures and sections, submit four problem sets, three workshop reports, and take a quiz. You are also expected to attend a
 minimum amount of lab sessions in order to get you moving quickly through the
 course.
 
 ## Grades
 
-You will receive a number grade for the course if:
+You will receive a number grade for the course if you've attended lab sessions as agreed upon; you've submitted every problem set working and on time; you've submitted all understanding assignments complete and on time; and you've passed the quiz.
 
-* you've attended lab sessions as agreed upon;
-* you've submitted every problem set working and on time;
-* you've passed the quizzes.
+Your grade will be determined using the following guidelines:
 
-We are most certain that every student is able to pass the course!
+| Problem Sets  | 50% |
+| Workshops     | 50% |
 
-The grade of **Programming 2** will be determined using the following weights:
-
-* Problem sets 7 through 10 form 100% of the final grade
-* The exam needs to be passed.
+Although you must submit all problem sets, your lowest score among those
+problem sets on which you received perfect scores for the axis of scope will be
+dropped when final grades are determined.
 
 Know that this course draws quite the spectrum of students, including "those
 less comfortable", "those more comfortable", and those somewhere in between.
-However, what ultimately matters in this course is not so much where you end
-up relative to your classmates but where you end up relative to yourself
-in Week 0.
+However, what ultimately matters in this course is not so much where you end up
+relative to your classmates but where you end up relative to yourself in Week 0.
 
 The course is not graded on a curve. The course does not have pre-determined
 cutoffs for final grades. Those less comfortable and somewhere in between are
@@ -68,33 +72,33 @@ these and read them as a preparation for or review of one of the lectures.
 
 If one seeks additional reference, here are some good suggestions:
 
-> **For Those Less Comfortable**
+> *For Those Less Comfortable*
 > 
-> Absolute Beginner’s Guide to C, Second Edition  
-> Greg Perry  
-> Sams Publishing, 1994  
-> ISBN 0-672-30510-0
+> C Programming Absolute Beginner’s Guide, Third Edition  
+> Greg Perry, Dean Miller  
+> Pearson Education, 2014  
+> ISBN 0-789-75198-4
 > 
-> **For Those More Comfortable**
+> *For Those More Comfortable*
 > 
-> Programming in C, Third Edition  
-> Stephen Kochan  
-> Sams Publishing, 2004  
-> ISBN 0-672-32666-3
+> Programming in C, Fourth Edition  
+> Stephen G. Kochan  
+> Pearson Education, 2015  
+> ISBN 0-321-77641-0
 
 The book below is recommended for those interested in understanding how their
 own computers work for personal edification.
 
 > How Computers Work, Ninth Edition  
 > Ron White  
-> Que Publishing, 2007  
+> Que Publishing, 2008  
 > ISBN 0-7897-3613-6
 
 This last book below is recommended for aspiring hackers, those interested in
 programming tricks and low-level optimization of code for applications beyond
 the scope of this course.
 
-> Hacker's Delight  
+> Hacker’s Delight, Second Edition  
 > Henry S. Warren Jr.  
-> Addison-Wesley, 2003  
-> ISBN 0-201-91465-4
+> Pearson Education, 2013  
+> ISBN 0-321-84268-5
