@@ -26,7 +26,7 @@
 
 		wget http://cdn.cs50.net/2013/fall/lectures/5/m/src5m.zip
 		unzip src5m.zip
-		rm src5m
+		rm src5m.zip
 		cd src5m
 
   to download, unzip, and navigate to some example programs.
