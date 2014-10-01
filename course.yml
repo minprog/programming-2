@@ -11,9 +11,9 @@ license: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0
 psets:
     - breakout
     - recover
-    - mispell1
-    - mispell2
+    - mispell
     - py1
     - py2
     - py3
     - quiz
+    - prog2
