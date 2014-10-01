@@ -1,4 +1,4 @@
-name: mispell1
+name: mispell
 required:
     - dictionary.c
     - dictionary.h

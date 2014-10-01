@@ -1,1 +1,0 @@
-No hacker edition this week!
