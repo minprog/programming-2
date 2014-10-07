@@ -268,7 +268,7 @@
 
 		diff -y student.txt ~cs50/pset6/keys/austinpowers.txt
   
-  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a > or | where they differ.
+  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a `>` or `|` where they differ.
 
   To test your code less manually (though still not exhaustively), you may also execute the below:
 
