@@ -8,8 +8,6 @@
 
 ## Getting started
 
-![videoplayer](http://cdn.cs50.net/2012/fall/shorts/hash_tables/hash_tables-720p.mp4)
-
 * This problem set comes with some distribution code that you'll need to download before getting started. Go ahead and execute
 
 		cd ~/Dropbox
