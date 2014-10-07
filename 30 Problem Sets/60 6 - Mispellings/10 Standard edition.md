@@ -305,4 +305,6 @@
 
 ## Final steps
 
-* You are required to upload your current progress on `dictionary.c`, `dictionary.h`, and `Makefile`, along with `progress.txt` describing what you've already completed and what still remains to be done. Make sure your current working version of the spellchecker compiles.
+* When you're done with `dictionary.c`, `dictionary.h`, and `Makefile`, you can upload them at the **Submit** tab. Ensure that everything compiles!
+
+* All done!
