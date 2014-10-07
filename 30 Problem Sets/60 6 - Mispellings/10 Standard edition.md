@@ -268,18 +268,7 @@
 
 		diff -y student.txt ~cs50/pset6/keys/austinpowers.txt
   
-  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a > or | where they differ. For instance, if you see
-
-		MISSPELLED WORDS                                                MISSPELLED WORDS
-		
-		FOTTAGE                                                         FOTTAGE
-		INT                                                             INT
-		                                                              > EVIL'S
-		s                                                               s
-		                                                              > EVIL'S
-		Farbissina                                                      Farbissina
-
-  that means your program (whose output is on the left) does not think that EVIL's is misspelled, even though the staff's output (on the right) does, as is implied by the absence of EVIL's in the lefthand column and the presence of EVIL's in the righthand column.
+  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a > or | where they differ.
 
   To test your code less manually (though still not exhaustively), you may also execute the below:
 
