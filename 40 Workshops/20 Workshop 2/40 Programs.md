@@ -21,14 +21,14 @@ it's quite small.
 Next, open your Python Shell and try to read it into Python:
 
 	>>> import csv
-	>>> file = csv.reader(open("n:\population.csv"))
+	>>> file = csv.reader(open("home/jharvard/Dropbox/YOUR\_FOLDER/population.csv"))
 	>>> file.next()
 	>>> ['country', 'country isocode', 'year', 'POP']
 
 Cool! Apparently Python can read your file. This first line isn't so
 interesting to our program. But it does tell us what data can be found where.
 
-Did you notice that the line is output by Python as an **list**? That is very
+Did you notice that the line is output by Python as a **list**? That is very
 convenient. It appears that `csv.reader` will read a line and convert it into
 an array containing the data fields.
 
