@@ -4,12 +4,6 @@ Ooooh this is nice! Easy graphical output with Python. This exercise will learn
 you how to integrate other people's functions into your own program. Pyplot is
 a library of functions that make it easy to plot data.
 
-In order to use Pyplot you need to download the matplotlib module which contains
-the Pyplot module. To check if you already have this module available, which should be the case
-if you for instance installed Python x,y type import matplotlib in the IDLE shell, if this produces
-no errors you're in the clear. Otherwise download and install the module from [link](http://matplotlib.org/downloads.html). Be sure to download the correct version 
-for your platform and Python version. 
-
 Work through the [Pyplot tutorial] and create a file called `pyplot.py` to save
 your tutorial tests. Put each example in a separate function!
 
@@ -19,7 +13,7 @@ your tutorial tests. Put each example in a separate function!
 
 First, download [population.csv](population.csv) (**download, not open in
 Excel!**), containing a list of the population counts in the Netherlands over
-the last 60 years. Put it in your N:-drive.
+the last 60 years.
 
 You will need to read this file and plot its data. Have a look at it first,
 it's quite small.

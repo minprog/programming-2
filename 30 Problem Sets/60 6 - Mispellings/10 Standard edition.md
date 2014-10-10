@@ -8,8 +8,6 @@
 
 ## Getting started
 
-![videoplayer](http://cdn.cs50.net/2012/fall/shorts/hash_tables/hash_tables-720p.mp4)
-
 * This problem set comes with some distribution code that you'll need to download before getting started. Go ahead and execute
 
 		cd ~/Dropbox
@@ -270,18 +268,7 @@
 
 		diff -y student.txt ~cs50/pset6/keys/austinpowers.txt
   
-  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a > or | where they differ. For instance, if you see
-
-		MISSPELLED WORDS                                                MISSPELLED WORDS
-		
-		FOTTAGE                                                         FOTTAGE
-		INT                                                             INT
-		                                                              > EVIL'S
-		s                                                               s
-		                                                              > EVIL'S
-		Farbissina                                                      Farbissina
-
-  that means your program (whose output is on the left) does not think that EVIL's is misspelled, even though the staff's output (on the right) does, as is implied by the absence of EVIL's in the lefthand column and the presence of EVIL's in the righthand column.
+  If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a `>` or `|` where they differ.
 
   To test your code less manually (though still not exhaustively), you may also execute the below:
 
@@ -305,4 +292,6 @@
 
 ## Final steps
 
-* You are required to upload your current progress on `dictionary.c`, `dictionary.h`, and `Makefile`, along with `progress.txt` describing what you've already completed and what still remains to be done. Make sure your current working version of the spellchecker compiles.
+* When you're done with `dictionary.c`, `dictionary.h`, and `Makefile`, you can upload them at the **Submit** tab. Ensure that everything compiles!
+
+* All done!

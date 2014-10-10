@@ -1,8 +1,11 @@
 ## Intro to Object Oriented Programming
 1. What is the difference between a local variable and an object’s attribute?
+	<textarea name="a[3-0-1]"></textarea>
 2. What method is called when the object is created?
+	<textarea name="a[3-0-2]"></textarea>
 3. If you have an object instance, obj, and you want to call its do something() method (assuming it has one),
 how would you do this? (write the line of code you would use)
+	<textarea name="a[3-0-3]"></textarea>
 
 ## Understanding Objects
 1. Write a class called Address that has two attributes: number and street name. Make sure you have an

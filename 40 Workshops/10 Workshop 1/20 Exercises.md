@@ -7,7 +7,7 @@ out the code in your Python interpreter as often as possible.
 
 To install Python in the appliance simply execute the following two commands in the terminal:
 
-	sudo yum install python
+	sudo yum install python-tools
 	sudo yum install python-matplotlib
 	
 The first command installs Python 2.7. The second command installs several modules necessary for the
