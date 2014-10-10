@@ -21,7 +21,7 @@ it's quite small.
 Next, open your Python Shell and try to read it into Python:
 
 	>>> import csv
-	>>> file = csv.reader(open("/home/jharvard/Dropbox/YOUR\_FOLDER/population.csv"))
+	>>> file = csv.reader(open("/home/jharvard/Dropbox/YOUR_FOLDER/population.csv"))
 	>>> file.next()
 	>>> ['country', 'country isocode', 'year', 'POP']
 
