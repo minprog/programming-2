@@ -21,7 +21,7 @@ it's quite small.
 Next, open your Python Shell and try to read it into Python:
 
 	>>> import csv
-	>>> file = csv.reader(open("/home/jharvard/Dropbox/YOUR_FOLDER/population.csv"))
+	>>> file = csv.reader(open('/home/jharvard/Dropbox/YOUR_FOLDER/population.csv'))
 	>>> file.next()
 	>>> ['country', 'country isocode', 'year', 'POP']
 
@@ -57,7 +57,12 @@ there's a decimal point in the population count!
 ## Printing the population list nicely
 
 Your first assignment with this file is to print the data to the screen.
-Create a file called `population.py` and define a function like this:
+Create a file called `population.py` and store it in the same folder as `population.csv`.
+By doing so you can open `population.csv` from `population.py` by simply calling:
+
+	file = csv.reader(open('population.csv'))
+
+Within `population.py` define a function like this:
 
 	def print_population_list(filename):
 		'''
@@ -79,7 +84,7 @@ It is called `print_...` so it may print something! It should have this
 
 Put your test call right below the function definition:
 
-	print_population_list('N:\population.csv')
+	print_population_list('population.csv')
 
 ## Reading the list into a dictionary
 
@@ -104,7 +109,7 @@ calculations with, so we would like to have that as an integer.
 
 Test the function with this call below your code:
 
-	print population_dict('N:\population.csv')
+	print population_dict('population.csv')
 
 ## Plotting the population
 
