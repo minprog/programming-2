@@ -15,9 +15,7 @@ how you can simplify things.
 
 ### Getting Started
 
-The zip file can be downloaded [here].
-
-[here]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/unit-2/lecture-12-introduction-to-simulation-and-random-walks/ps5.zip
+The zip file can be downloaded [here](ps5.zip).
 
 * ps5.py, a skeleton of a solution
 * ps5_test.py, a test suite that will help you check your answers.
