@@ -4,7 +4,7 @@
 
 * You are expected to have uploaded a fully functional dictionary no later than 15:00 on the **first** Friday (November 14th). This dictionary must pass all of check50's checks, and must not leak any memory (Valgrind). This functional dictionary must be implemented using a **hash table** only.
 
-* The second week, you are expected to optimize your dictionary to decrease the time speller takes to spellcheck documents. You may implement any code you wish. (You may look for other solutions than a hash table, and may even implement "ugly" code for the sake of speed.) You can add your score to our scoreboard to see how you compare against others! The deadline for this part is November 21th. Your solution will be graded based on its correctness and its speed. Good luck!
+* The second week, you are expected to optimize your dictionary to decrease the time speller takes to spellcheck documents. You may implement any code you wish. (You may look for other solutions than a hash table, and may even implement "ugly" code for the sake of speed.) You can <a href="http://www.ragey.net/board">add your score to our scoreboard</a> to see how you compare against others! The deadline for this part is November 21th. Your solution will be graded based on its correctness and its speed. Good luck!
 
 * Let's ensure that the Appliance is up to date by running `update50` from a Terminal before starting.
 
