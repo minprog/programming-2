@@ -1,12 +1,6 @@
-name: py2
-form: true
+name: py3
 required:
-    - lastweek.py
-    - homework2.py
-    - nims.py
-    - gpa.py
-    - pyplot.py
-    - population.py
-optional:
-    - zellers.py
-    - comprehensions.py
+    - queue.py
+    - stack.py
+    - ps5.py
+form: true

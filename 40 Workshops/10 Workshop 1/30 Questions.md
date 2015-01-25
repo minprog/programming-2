@@ -43,86 +43,6 @@ To verify your answers, you can use the interactive Python shell, but first try 
 	<type 'int'>
 	>>>
 
-## Exercise 1.11 – Natural Language Processing
-
-Consider the following sentence:
-
-> **Alice saw the boy on the hill with the telescope.**
-
-1. Draw a sketch of what's described in this sentence.
-
-2. Draw a different sketch that could also be described by this sentence.
-
-3. Write the sentence in two different ways, that clarifies the meaning of each of your sketches (hint: rewrite the sentence using extra words, commas, etc).
-
-<textarea name="a[1-11-3]"></textarea>
-
-The ambiguity illustrated by this sentence is known as "prepositional phrase attachment." Think about this as you continue to learn how to program, and consider how programming languages are designed to avoid the ambiguity illustrated by this example!
-
-## Exercise 1.12 – Boolean operators
-
-Boolean operators can seem tricky at first, and it takes practice to evaluate them correctly. Write the value (`True` or `False`) produced by each expession below, using the assigned values of the variables `a`, `b`, and `c`. Try to do this without using your interpreter, but you should check yourself when you think you've got it. Hint: Work from the inside out, starting with the inner-most expressions, like in arithmetic.
-
-|expression              |value                             |
-|------------------------|----------------------------------|
-|`a`                     |False                             |
-|`b`                     |True                              |
-|`c`                     |False                             |
-|`b and c`               |<input name="a[12-1]" type="text">|
-|`b or c`                |<input name="a[12-2]" type="text">|
-|`not a and b`           |<input name="a[12-3]" type="text">|
-|`(a and b) or not c`    |<input name="a[12-4]" type="text">|
-|`not b and not (a or c)`|<input name="a[12-5]" type="text">|
-
-## Exercise 1.13 – Conditionals
-
-The purpose of this exercise is to understand conditionals. Tiberius is looking for his dream job, but has some restrictions. He loves California and would take a job there if it paid over 40,000 a year. He hates Massachusetts and demands at least 100,000 to work there. Any other place he's content to work for 60,000 a year, unless he can work in space in which case he would work for free. The following code shows his basic strategy for evaluating a job offer.
-
-{: .language-python}
-	pay = _____
-	location = _____
-
-	if location == "U.S.S. Enterprise":
-		print "So long, suckers! I'll take it!"
-	elif location == "Massachusetts":
-		if pay < 100000:
-			print "No way"
-		else:
-			print "I'll take it!"
-	elif location == "California" and pay > 40000:
-		print "I'll take it!"
-	elif pay > 60000:
-		print "I'll take it!"
-	else:
-		print "No thanks, I can find something better."
-
-For each of the following job offers, write down the output that would be generated. Do this without running the code. It is an important skill to be able to understand what a piece of code does without running it.
-
-1.	`location = "Massachusetts"`  
-	`pay = 50000`
-
-	<textarea name="a[1-13-1]"></textarea>
-
-2.	`location = "Iowa"`  
-	`pay = 50000`
-
-	<textarea name="a[1-13-2]"></textarea>
-
-3.	`location = "California"`  
-	`pay = 50000`
-
-	<textarea name="a[1-13-3]"></textarea>
-
-4.	`location = "U.S.S. Enterprise"`  
-	`pay = 1`
-
-	<textarea name="a[1-13-4]"></textarea>
-
-5.	`location = "California"`  
-	`pay = 25000`
-
-	<textarea name="a[1-13-5]"></textarea>
-
 ## Exercise 1.14 – Understanding loops
 
 For each of the following fragments of code, write what the output would be. Again, do this without running the code (although feel free to check yourself when you're done).
@@ -160,33 +80,117 @@ For each of the following fragments of code, write what the output would be. Aga
 
 > <textarea name="a[1-14-4]"></textarea>
 
-## Exercise 1.15 – Buggy loop (aka Find The Bug!)
+# List and string operations
 
-Consider the following program that Ben Bitdiddle handed in to the course staff (again, try to do this exercise without running the code in IDLE!):
+String operators might be a little less intuitive than those on numbers. This
+exercise will give you a chance to practice those. Given the following 
+variables:
 
-{: .language-python}
-	n = 10
-	i = 10
-	
-	while i > 0:
-		print i
-		if i % 2 == 0:
-			i = i / 2
-		else:
-			i = i + 1
+	look = 'Look at me!'
+	now = ' NOW'
 
-What do you think this code is doing? Without comments it is hard to guess what Ben's intention was (*cough* -- this is why the staff loves to look at commented code!!), so read through it and make a sensible guess as to what it is doing. There's a lot of mistakes in the code so your guess is as good as ours!
+What are the values of the following expressions? Try to guess on your own
+before using your interpreter (but feel free to use your interpreter once you 
+get stuck).
 
-1.	Make a table that shows the value of the variables `n` and `i` during the
-	execution of the program. Your table should contain two columns (one for
-	each variable) and one row for each iteration. For each row in the table,
-	write down the values of the variables as they would be at the line
-	containing the print statement.
+|expression                           |value                               |
+|-------------------------------------|------------------------------------|
+|`look[:4]`                           |<input name="a[2-1-1]" type="text">|
+|`look[-1]`                           |<input name="a[2-1-2]" type="text">|
+|`look*2`                             |<input name="a[2-1-3]" type="text">|
+|`look[:-1] + now + look[-1]`         |<input name="a[2-1-4]" type="text">|
+|`now[1]`                             |<input name="a[2-1-5]" type="text">|
+|`now[4]`                             |<input name="a[2-1-6]" type="text">|
+|`look*2 + look[:-1] + now + look[-1]`|<input name="a[2-1-7]" type="text">|
 
-	<textarea name="a[1-15-1]"></textarea>
+For more on strings, see [the Python docs](http://docs.python.org/release/2.7.5/library/stdtypes.html#string-methods).
 
-2.	Ben made a lot of mistakes. State what you think Ben was trying to do and
-	suggest one or more ways he could fix his code (there's a few good answers
-	for this depending on what you think the code should be doing).
+# List operations
 
-	<textarea name="a[1-15-2]"></textarea>
+Say we have this list:
+
+	a_list = [3, 5, 6, 12]
+
+For the following, write the line(s) of code that will emit the given output.
+For each problem there may be more than one correct answer; just give one. 
+
+More on lists: [the Python docs](http://docs.python.org/release/2.7.5/tutorial/datastructures.html).
+
+1.	Output: `3`
+
+	<textarea name="a[2-2-1]"></textarea>
+
+2.	Output: `12`
+
+	<textarea name="a[2-2-2]"></textarea>
+
+3.	Output: `[5, 6, 12]`
+
+	<textarea name="a[2-2-3]"></textarea>
+
+4.	Output:
+
+		3
+		5
+		6
+		12
+
+	<textarea name="a[2-2-4]"></textarea>
+
+5.	Output: `[12, 6, 5, 3]`
+
+	<textarea name="a[2-2-5]"></textarea>
+
+6.	Output: `[9, 15, 18, 36]`
+
+	<textarea name="a[2-2-6]"></textarea>
+
+7.	Output: `[False, False, True, True]`
+
+	<textarea name="a[2-2-7]"></textarea>
+
+## Mutability
+
+We've learned about many Python data structures (strings, lists, tuples,
+dictionaries). For both "mutable" and "immutable", please give a short (5
+words or fewer) definition, and then list what data structure(s) have that
+characteristic.
+
+Mutable:
+
+<textarea name="a[2-3-1]"></textarea>
+
+Immutable:
+
+<textarea name="a[2-3-2]"></textarea>
+
+## Finding Bugs
+
+The following set of instructions were given to Ben Bitdiddle, and he produced
+the code below. Find at least three bugs he made, and say how to fix them.
+
+Instructions: Write a negate function that takes a number and returns the
+negation of that number. Also write a large num function that takes a number,
+and returns True if that number is bigger than 10000, and False otherwise.
+Additionally, write some code to test your functions.
+
+	def negate(num):
+		return -num
+
+	def large_num(num):
+		res = (num > 10000)
+
+	negate(b)
+	neg_b = num
+	print 'b:', b, 'neg_b:', neg_b
+
+	big = large_num(b)
+	print 'b is big:', big
+
+Bugs:
+
+1. <textarea name="a[2-4-1]"></textarea>
+
+2. <textarea name="a[2-4-2]"></textarea>
+
+3. <textarea name="a[2-4-3]"></textarea>

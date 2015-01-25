@@ -563,77 +563,12 @@ what is this condition?) by simply returning an empty list...
 
 For every problem, check the following:
 
-* Have you put the problem in a function?
+* Have you put the problem in a function? (if required)
 * Have you added the problem to the right Python file?
 * Have you put your name on top of that file?
 * Have you made sure the program is NOT interactive (e.g. we don't have to type
-  anything) except 2.1?
+  anything) except were explicitly asked?
 * Have you written at least three tests to show the program is correct, or even
   more tests if the problem prescribes this?
 * Do the tests give the expected output?
-
-
-# Hacker: Zeller's Algorithm, revisited
-
-This is similar to the *Program* from Week 1, but in this version we will be
-writing a function that takes parameters, and using dictionaries to facilitate
-"pretty printing" (where the answer is given to the user in a nice looking
-fashion). For the rules of the algorithm, please take a look at the description
-written in the Week 1 section. Put this problem in `zellers.py`.
-
-Calling `zellers("March", 10, 1940)` should give the output: `Sunday`.
-
-Hints:
-
-1. Use a dictionary to map between the month and its numerical value.
-
-2. You can use either a list or dictionary to convert the final output of the
-   algorithm to the day of the week.
-
-3. Make sure you handle the following three points correctly.
-
-   * Note: If the month is January or February, then the preceding year is
-     used for computation. This is because there was a period in history when
-     March 1st, not January 1st, was the beginning of the year.
-
-   * If the computed value of R is a negative number, add 7 to get a
-     nonnegative number between 0 and 6.
-
-   * You might need to use one of the following (but, maybe not): To convert
-     the string '90' to the number 90, use `int('90')`; to convert the int 90 to
-     the string '90', use `str(90)`.
-
-# Hacker: Palindromes!
-
-Write a function is palindrome which takes a string as parameter, and returns
-True if the string is a palindrome (meaning it is the same forwards as
-backwards), and False otherwise. This problem is kind of tricky so feel free to
-ask for help; turn in any progress you make on it as well as comments
-explaining what does and doesn't work. For an additional challenge, try writing
-this as a recursive function.
-
-Some useful things to remember:
-
-* Use the function `len` to find the length of a string.
-
-* To get just a piece of a string, use the slice operator. For example:
-
-		astring = 'hello'
-		substr  = astring[1:-1]  # sets substr to 'ell'
-
-* You can decide for yourself whether you want your function to correctly
-  identify palindromes that have spaces (such as 'able was i ere i saw elba').
-  Look up `string.join` for a useful function to use.
-
-* `string.lower` may also be a useful function.
-
-* BE SURE TO TEST WELL! Include multiple test cases, including one where the
-  word isn't a palindrome, but the first and last letters are equal (such as
-  "yummy").
-
-* It is easiest to do this with a while loop, although there are a few
-  different ways of structuring such a loop. Think about what conditions need
-  to be met for a palindrome to be true, and when you can stop testing for one
-  (hint: the words 'ana' and 'anna' are both palindromes; when do we know to
-  stop checking?)
-
+* Is your output understandable without looking at the code?

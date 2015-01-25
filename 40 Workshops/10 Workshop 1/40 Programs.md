@@ -1,6 +1,3 @@
-Here are two programs that you will write from scratch, in order to practice
-for weeks 4 and on, where you'll be writing larger programs all the time.
-
 # Zeller's Algorithm
 
 Zeller's algorithm computes the day of the week on which a given date will fall
@@ -10,10 +7,10 @@ on a specific date. You will need to create a new file for this program,
 day of the week on which the user's birthday fell in the year you were born and
 print the result to the screen.
 
-Start with the program in Exercise 1.5, but ask for the month as a number
-between 1-12 where March is 1 and February is 12. If born in Jan or Feb, enter
-previous year (see the notes below). In the end, print out the name of the user
-and on what they of the week they were born.
+Write a function (zellers) that takes parameters (month, day, year), and uses dictionaries to facilitate "pretty printing" (where the answer is given to the user in a nice looking
+fashion).
+
+Calling `zellers("March", 10, 1940)` should give the output: `Sunday`.
 
 Zeller's algorithm is defined as follows:
 
@@ -41,99 +38,52 @@ following order using integer arithmetic:
 	
 The value of R is the day of the week, where 0 represents Sunday, 1 is Monday,
 ..., 6 is Saturday. If the computed value of R is a negative number, add 7 to
-get a non negative number between 0 and 6 (you don't need to do this in the
-code). Print out R. You can check to be sure your code is working by looking at
-[timeanddate.com](http://www.timeanddate.com/calendar/).
+get a non negative number between 0 and 6. You can check to be sure your code is working by looking at [timeanddate.com](http://www.timeanddate.com/calendar/).
 
-Run some test cases: try today's date, your birth date, and whatever else
-interests you!
+Provide atleast three test cases at the bottom of the file: try today's date, your birth date, and whatever else interests you!
 
-# Hacker edition: Secret messages
+Hints:
 
-This exercise is tricky! Be sure to ask the assistants for help whenever you
-need it!
+1. Use a dictionary to map between the month and its numerical value.
 
-The goal of this exercise is to write a cyclic cipher to encrypt messages. This
-type of cipher was used by Julius Caesar to communicate with his generals. It is
-very simple to generate but it can actually be easily broken and does not
-provide the security one would hope for.
+2. You can use either a list or dictionary to convert the final output of the
+   algorithm to the day of the week.
 
-The key idea behind the Caesar cipher is to replace each letter by a letter some
-fixed number of positions down the alphabet. For example, if we want to create a
-cipher shifting by 3, you will get the following mapping:
+3. Make sure you handle the following three points correctly.
 
-Plain:   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
-Cipher:  DEFGHIJKLMNOPQRSTUVWXYZABC
+   * Note: If the month is January or February, then the preceding year is
+     used for computation. This is because there was a period in history when
+     March 1st, not January 1st, was the beginning of the year.
 
-To be able to generate the cipher above, we need to understand a little bit
-about how text is represented inside the computer. Each character has a
-numerical value and one of the standard encodings is ASCII (American Standard
-Code for Information Interchange). It is a mapping between the numerical value
-and the character graphic. For example, the ASCII value of 'A' is 65 and the
-ASCII value of 'a' is 97. To convert between the ASCII code and the character
-value in Python, you can use the following code:
+   * If the computed value of R is a negative number, add 7 to get a
+     nonnegative number between 0 and 6.
 
-{: .language-python}
-	letter = 'a'
+   * You might need to use one of the following (but, maybe not): To convert
+     the string '90' to the number 90, use `int('90')`; to convert the int 90 to
+     the string '90', use `str(90)`.
 
-	# converts a letter to ascii code
-	ascii_code = ord(letter)
+# Hacker addition: List comprehensions
 
-	# converts ascii code to a letter
-	letter_res = chr(ascii_code)
-	
-	print ascii_code, letter_res
+List comprehensions follow naturally from set builder notation and lambda calculus. They are very cool and make your life a lot easier. Don't worry if you don't get them yet.
 
-Start small. Do not try to implement the entire program at once. Break the
-program into parts as follows:
+Read about list comprehensions on pages 34-35 of the 6.01 [course notes]; the Wikipedia article on them are good, and [this site] is concise and good.
 
-1.	Create a file called `cipher.py`. Start your program by asking the user
-	for a phrase to encode and the shift value. Then begin the structure of
-	your program by entering in this loop (we'll build on it more in a bit):
+Put this program in `comprehensions.py`.
 
-	{: .language-python}
-		encoded_phrase = ''
-		for c in phrase:
-			encoded_phrase = encoded_phrase + c
+1. Write a list comprehension that prints a list of the cubes of the numbers 1 through 10.
 
-	What does this loop do? Make sure you understand what the code does before
-	moving on!
+2. Write a list comprehension that prints out the possible results of two coin flips (one result would be 'ht'). (Hint - how many results should there be?)
 
-2.	Now modify the program above to replace all the alphabetic characters with
-	'x'. For example:
+3. Write a function that takes in a string and uses a list comprehension to return all the vowels in the string.
 
-		Enter sentence to encrypt: Mayday! Mayday!
-		Enter shift value: 4
-		The encoded phrase is:  Xxxxxx! Xxxxxx!
+4. Write a function that takes in a list of elements of different types and uses a list comprehension to return all the elements of the list of type int. Note: The function isinstance will be of help here. Google "Python isinstance" and see if you can figure out what it does, or type help(isinstance) at the Python shell.
 
-	We are going to apply the cipher only to the alphabetic characters and we
-	will ignore the others.
+5. Run this list comprehension in your prompt:
 
-3.	Now modify your code, so that it produces the encoded string using the
-	cyclic cipher with the shift value entered by the user. Let's see how one
-	might do a cyclic shift. Let's say we have the sequence:
+		[x+y for x in [10,20,30] for y in [1,2,3]]
 
-		012345
+   Figure out what is going on here, and write a nested for loop that gives you the same result. Make sure what is going on makes sense to you!
 
-	If we use a shift value of 4 and just shift all the numbers, the result
-	will be:
+[course notes]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/unit-1-software-engineering/object-oriented-programming/MIT6_01SCS11_chap02.pdf
 
-		456789
-
-	We want the values of the numbers to remain between `0` and `5`. To do
-	this we will use the modulus operator. The expression `x % y` will return
-	a number in the range `0` to `y - 1` inclusive, e.g. `4 % 6 = 4`,
-	`6 % 6 = 0`, `7 % 6 = 1`. Thus the result of the operation will be:
-
-		450123
-		
-	**Hint**: Note that the ASCII value of `A` is `65` and `a` is `97`, not
-	`0`. So you will have to think how to use the modulus operator to achieve
-	the desired result. Apply the cipher separately to the upper and lower
-	case letters.
-	
-Here is what you program should output:
-
-	Enter sentence to encrypt: Mayday! Mayday!
-	Enter shift value: 4
-	The encoded phrase is:  Qechec! Qechec!
+[this site]: http://www.secnetix.de/olli/Python/list_comprehensions.hawk
