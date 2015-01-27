@@ -82,7 +82,7 @@ your very first 'Hello, world!' program. How to create a program file:
 
 	![File -> New](file-new.png)
 
-2. Save the file as `hello_world.py`. Do NOT skip the `.py` portion of the file
+2. Save the file as `python_exercises1_1.py`. Do NOT skip the `.py` portion of the file
 name --- otherwise, you will lose out on syntax highlighting!
 
 	![Filename](filename.png)
@@ -156,7 +156,7 @@ as `'Hi' + 5` or `'5 + 7` will not work.
 	decimal numbers (Don't know what these are? Ask!), as computers cannot 
 	store infinite numbers!
 
-**Part II**: In `homework1.py`, transcribe the following equations into Python
+**Part II**: In `python_exercises1_1.py`, transcribe the following equations into Python
   (without simplifying!), preserving order of operation with parenthesis as
   needed. Save each as the value of a variable, and then print the variable.
 
@@ -173,18 +173,13 @@ as `'Hi' + 5` or `'5 + 7` will not work.
 	the remainder when $$x$$ is divided by $$y$$. Try a couple of modular
 	expressions until you get the hang of it.
 
-**Part III**: In `homework1.py`, use order of operation mathematics to create
-  two equations that look the same (i.e., have the same numbers) but evaluate to
-  different values (due to parenthesization). Save each as the value of a
-  variable, then print the variables.
-
 ## Reading 3 - Strings
 Read 8.1 - 8.2
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
 ## Exercise 1.5 – User input
 
-Do this exercise in `homework1.py`. In this exercise, we will ask the user for
+Do this exercise in `python_exercises1_1.py.py`. In this exercise, we will ask the user for
 his/her first and last name, and date of birth, and print them out
 formatted. Recall that you can get input from the user using the command
 `raw_input("text")`, as shown in lecture.
@@ -318,7 +313,7 @@ Read 8.3
 
 ## Exercise 1.8 – For & While Loops
 
-Create a new file called `loops.py` and use it for all parts of this
+Continue in `python_exercises1_1.py` and use it for all parts of this
 exercise. Remember the difference between input and raw input? If not, look at
 Exercise 1.5 again.
 
@@ -358,7 +353,7 @@ Extra: Read 5.8 - 5.12
 ## 2.1 Print vs Return
 
 **Important**: most of the other exercises should be put in a file called
-`homework2.py`. You should make sure this file runs without any user input
+`python_exercises1_2.py`. You should make sure this file runs without any user input
 (unless it's a game) and gives correct output for every exercise. The same goes
 for most files you submit from now on.
 
@@ -421,7 +416,7 @@ are separated by commas. Try this:
 
 In this problem you'll be asked to write two simple methods (*method* is an
 interchangeable term for *function*). Be sure to test your functions well,
-including at least 3 test cases for each method.
+including at least 3 test cases for each method. Write these methods in `python_exercises1_2.py`.
 
 1. Write a method `is_divisible` that takes two integers, `m` and `n`. The
    method returns `True` if `m` is divisible by `n`, and returns `False`
@@ -451,6 +446,8 @@ First, have a short look at the example program below.
 	print random.randint(0, 5)
 	print random.random() * 100
 	print random.choice(3, "Hello", 432, "Bye")
+
+Write this exercise in `python_exercises1_2.py`.
 
 1. Now, write a method `rand_divisible_3` that takes no parameters, generates and prints a random number, and finally returns `True` if the randomly generated number is divisible by 3, and `False` otherwise. For this method we'll use a new module, the `random` module. At the top of your code, add the line `import random`. We'll use this module to generate a random integer using the function `randint`, which works as follows:
 
@@ -497,7 +494,7 @@ be. Here's two tests:
 	print "sum_all of [4, 3, 6] is:", sum_all([4, 3, 6])
 	print "sum_all of [1, 2, 3, 4] is:", sum_all([1, 2, 3, 4])
 
-Now make a new function `cumulative_sum` that returns a new list where the 
+Now make a new function `cumulative_sum` in `python_exercises1_2.py` that returns a new list where the 
 $$i$$-th element is the sum of the first $$i+1$$ elements from the original list.
 For example, the cumulative sum of `[4, 3, 6]` is `[4, 7, 13]`.
 
@@ -505,7 +502,7 @@ Such a useful function!
 
 ## 2.8 Pig Latin
 
-Write a function `pig_latin` that takes in a single word, then converts the
+Write a function `pig_latin` in `python_exercises1_2.py` that takes in a single word, then converts the
 word to Pig Latin. To review, Pig Latin takes the first letter of a word, 
 puts it at the end, and appends "ay". The only exception is if the first 
 letter is a vowel, in which case we keep it as it is and append "hay" to
@@ -529,7 +526,7 @@ the answer!
 
 ## 2.11 More About Dictionaries
 
-This exercise should be going into a file called `homework2.py`.
+This exercise should be going into a file called `python_exercises1_2.py`.
 
 Put these lists in your code:
 
