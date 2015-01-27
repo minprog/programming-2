@@ -394,6 +394,23 @@ and plot it. However, you don’t want the visualization getting in the way. If 
 visualization exercise, before you get started on problems 4 and 6 and before you turn your
 problem set in, make sure to comment the visualization code out of *runSimulation()*.
 
+#### Problem #5
+
+iRobot is testing out a new robot design. The proposed new robots differ in that they change
+direction randomly **after every time step**, rather than just when they run into walls. You have
+been asked to design a simulation to determine what effect, if any, this change has on room
+cleaning times.
+
+Write a new class RandomWalkRobot that inherits from Robot (like StandardRobot) but
+implements the new movement strategy. RandomWalkRobot should have the same interface
+as StandardRobot.
+
+**Test out your new class**. Perform a single trial with the new RandomWalkRobot implementation
+and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
+can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
+
+# Hacker Addition
+
 #### Problem #4
 
 Now, use your simulation to answer some questions about the robots’ performance.
@@ -421,21 +438,6 @@ Here is an example of a good plot:
 
 As you can see, when keeping the number of robots fixed, the time it takes to clean a square
 room is basically proportional to the area of that room.
-
-#### Problem #5
-
-iRobot is testing out a new robot design. The proposed new robots differ in that they change
-direction randomly **after every time step**, rather than just when they run into walls. You have
-been asked to design a simulation to determine what effect, if any, this change has on room
-cleaning times.
-
-Write a new class RandomWalkRobot that inherits from Robot (like StandardRobot) but
-implements the new movement strategy. RandomWalkRobot should have the same interface
-as StandardRobot.
-
-**Test out your new class**. Perform a single trial with the new RandomWalkRobot implementation
-and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
-can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
 
 #### Problem #6
 

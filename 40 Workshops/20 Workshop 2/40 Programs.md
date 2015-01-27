@@ -110,6 +110,9 @@ You’ll also want to write a constructor for NewsStory that takes (guid, title,
 summary, link) as arguments and stores them appropriately. The solution to this problem
 should be relatively short and very straightforward.
 
+Once you’ve implemented *NewsStory*, the *NewsStory* unit tests in our test suite
+should pass.
+
 ### Parsing the Feed
 
 Parsing is the process of turning a data stream into a structured format that is more convenient to
@@ -129,9 +132,11 @@ trigger could be set up to fire only when a news story contained both the words 
 
 In order to simplify our code, we will use object polymorphism. We will define a trigger
 interface and then implement a number of different classes that implement that trigger interface
-in different ways.
+in different ways. 
 
 ### Trigger interface
+
+There is a fair chance that you have not encountered the word interface before in this context. An interface in object oriented programming (OOP) is a class that contains no data or code, but rather defines method signatures. Sounds vague? An interface is essentialy a contract, if you (some Class) agree (implement) to the contract (interface), you have to implement all that is specified in the contract. If you have a set of classes that have all signed this contract, you can be assured they all have the methods specified in the contract. 
 
 Each trigger class you define should implement the following interface, either directly or
 transitively. It must implement the *evaluate* method that takes a news item (NewsStory object)
@@ -140,7 +145,7 @@ implementation of the Trigger class (which is why it throws an exception should 
 to use it), but rather the function definition that specifies that an evaluate(self, story) function
 should exist.
 
-The class below implements the Trigger interface __(you will not modify this)__. Any subclass that
+The class below implements the Trigger interface __(you will not modify Trigger)__. Any subclass that
 inherits from it will have an evaluate method. By default, they will use the evaluate method in
 Trigger, the superclass, unless they define their own evaluate function, which would then be used
 instead. If some subclass neglects to define its own evaluate() method, calls to it will go to
@@ -169,7 +174,9 @@ for every news item whose title contained the word “Microsoft”. In the follo
 ask you to create a word trigger abstract class and implement three classes that implement
 triggers of this sort.
 
-The trigger should fire when the whole word is present. For example, a trigger for “soft” should
+An abstract class is a class which is never instantiated directly. Abstract classes provide no or limited implemented. For instance, you could have an abstract class Shape, and classes which inherit from Shape: Rectangle, Triangle and Circle. You would never instantiate a Shape directly, but you can instantiate its subclasses Rectangle, Triangle and Square. Shape can provide all methods which shapes share, whereas the actual shapes (Rectangle, Triangle and Square) provide their specific implementation.
+
+The trigger should fire (is_word_in() should return True) when the whole word is present. For example, a trigger for “soft” should
 fire on:
 
 * Koala bears are soft and cuddly.
@@ -211,7 +218,7 @@ like the Trigger interface, except now actual code from the class is used.
 
 #### Problem 3.
 
-Implement a word trigger class, *TitleTrigger* that fires when a news item’s **title** contains a
+Implement a word trigger class, *TitleTrigger* that fires (evaluate method returns True) when a news item’s **title** contains a
 given word. The word should be an argument to the class’s constructor. This trigger should not
 be case-sensitive (it should treat “Intel” and “intel” as being equal).
 
@@ -342,7 +349,7 @@ problem set, and the names of whomever you collaborated with. For example:
         #
         .... your code goes here ...
 
-# Hacker edition
+# Hacker addition
 
 ## Part IV: User-Specified Triggers
 
