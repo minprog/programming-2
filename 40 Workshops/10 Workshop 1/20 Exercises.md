@@ -113,7 +113,7 @@ runs your code underneath that line. See?
 ## Reading 2 - Variables, expressions and statements
 [Variables, expressions and statements](http://www.greenteapress.com/thinkpython/html/thinkpython003.html)
 
-## Exercise 1.4 – Operators/Order of Operation
+## Exercise 1.2 – Operators/Order of Operation
 
 Python has the ability to be used as a cheap, 5-dollar calculator. In
 particular, it supports basic mathematical operators `+`, `-`, `*`, `/` as well
@@ -177,9 +177,9 @@ as `'Hi' + 5` or `'5 + 7` will not work.
 Read 8.1 - 8.2
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
-## Exercise 1.5 – User input
+## Exercise 1.3 – User input
 
-Do this exercise in `python_exercises1_1.py.py`. In this exercise, we will ask the user for
+Do this exercise in `python_exercises1_1.py`. In this exercise, we will ask the user for
 his/her first and last name, and date of birth, and print them out
 formatted. Recall that you can get input from the user using the command
 `raw_input("text")`, as shown in lecture.
@@ -191,7 +191,7 @@ formatted. Recall that you can get input from the user using the command
   you still want to use raw input if you want a string back, or otherwise the
   user will have to put quotes around their answer. Use raw input here: it's
   good for string processing, like this problem. `input` will come in handy when
-  using user input to compute math, like in Exercise 1.8.
+  using user input to compute math, like in Exercise 1.5.
 
 Here is an example of what this program should do:
 
@@ -253,7 +253,7 @@ and return here to code some more.
 Read 5.1 - 5.7
 [Conditionals](http://www.greenteapress.com/thinkpython/html/thinkpython006.html)
 
-## Exercise 1.6 – New Operators
+## Exercise 1.4 – New Operators
 
 Open up IDLE and play around with the operators from the book (look them up in
 the index). Make sure that you understand how to use them and what they are
@@ -311,11 +311,11 @@ Read 7.1 - 7.4
 Read 8.3
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
-## Exercise 1.8 – For & While Loops
+## Exercise 1.5 – For & While Loops
 
 Continue in `python_exercises1_1.py` and use it for all parts of this
 exercise. Remember the difference between input and raw input? If not, look at
-Exercise 1.5 again.
+Exercise 1.3 again.
 
 Be sure to test your code for each part before moving on to the next part.
 
@@ -412,7 +412,7 @@ are separated by commas. Try this:
 	>>> print 'x:', x, 'x squared:', x*x, 'sqrt(x):', x**0.5
 	x: 100 x squared: 10000 sqrt(x): 10.0
 
-## 2.4 Writing simple methods
+## 2.2 Writing simple methods
 
 In this problem you'll be asked to write two simple methods (*method* is an
 interchangeable term for *function*). Be sure to test your functions well,
@@ -438,7 +438,7 @@ including at least 3 test cases for each method. Write these methods in `python_
    function! Test if your code works by thinking of examples and making sure
    the output is the same for your new method as `!=` gives you.
 
-## 2.5 The `random` module
+## 2.3 The `random` module
 
 First, have a short look at the example program below.
 
@@ -475,7 +475,7 @@ Write this exercise in `python_exercises1_2.py`.
 
 [Tuples](http://www.greenteapress.com/thinkpython/html/thinkpython013.html)
 
-## 2.6 Working with lists
+## 2.4 Working with lists
 
 Check out this function that sums all numbers in a list:
 
@@ -500,7 +500,7 @@ For example, the cumulative sum of `[4, 3, 6]` is `[4, 7, 13]`.
 
 Such a useful function!
 
-## 2.8 Pig Latin
+## 2.5 Pig Latin
 
 Write a function `pig_latin` in `python_exercises1_2.py` that takes in a single word, then converts the
 word to Pig Latin. To review, Pig Latin takes the first letter of a word, 
@@ -524,7 +524,7 @@ the answer!
 ## Reading 8 - Dictionairies
 [Dictionaries](http://www.greenteapress.com/thinkpython/html/thinkpython012.html)
 
-## 2.11 More About Dictionaries
+## 2.6 More About Dictionaries
 
 This exercise should be going into a file called `python_exercises1_2.py`.
 

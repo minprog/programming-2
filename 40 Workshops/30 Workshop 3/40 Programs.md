@@ -10,9 +10,7 @@ read and understand, but most of the problems do not involve writing much code.
 
 ### Getting Started
 
-Download the zip file [here].
-
-[here]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/unit-2/lecture-14-sampling-and-monte-carlo-simulation/ps6.zip
+Download the zip file [here](workshop3.zip).
 
 ### Graphs & Math
 
@@ -40,7 +38,7 @@ An introduction with some [sample code] and the [numpy documentation].
 #### Check the packages are installed
 
 All you have to do is verify that these packages are available in your IDLE version (there are multiple versions
-on the UvA machines). You can test this by running *ps6_pkgtest.py* or by simply typing
+on the UvA machines). You can test this by running *workshop3_pkgtest.py* or by simply typing
 
     import matplotlib, numpy
 
@@ -147,7 +145,7 @@ behave, and document that decision in your code.
 You will need to design two classes to keep track of which parts of the room have been cleaned
 as well as the position and direction of each robot.
 
-In ps6.py, we’ve provided skeletons for the following two classes, which you will fill in in
+In workshop3.py, we’ve provided skeletons for the following two classes, which you will fill in in
 Problem #1:
 
 * **RectangularRoom** Represents the space to be cleaned and keeps track of which tiles have been cleaned.
@@ -157,7 +155,7 @@ We’ve also provided a complete implementation of the following class:
 
 * **Position** Stores the x- and y-coordinates of a robot in a room.
 
-**Read ps6.py carefully before starting, so that you understand the provided code and its capabilities.**
+**Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.**
 
 #### Problem #1
 
@@ -184,14 +182,14 @@ to be performed:
 * Setting the robot’s direction
 
 Complete the RectangularRoom and Robot classes by implementing their methods
-in ps6.py.
+in workshop3.py.
 
 (Although this problem has many parts, it should not take long once you have chosen how you
 wish to represent your data. For reasonable representations, *a majority of the methods will
 require only one line of code.*)
 
 For your reference, here are **abbreviated** specifications for the methods of RectangularRoom
-and Robot. See ps6.py for complete details.
+and Robot. See workshop3.py for complete details.
 
     class RectangularRoom(object):
         """
@@ -351,17 +349,10 @@ We’ve provided some code to generate animations of your robots as they go abou
 room. These animations can also help you debug your simulation by helping you to visually
 determine when things are going wrong.
 
-Download [ps6_visualize.py] and save it in the same directory as your ps6.py. Add the following
-line to the top of your ps6.py:
-
-[ps6_visualize.py]: http://web.mit.edu/6.s189/www/handouts/proj2/ps6_visualize.py
-
-    import ps6_visualize
-
 Here’s how to run the visualization:
 
 1. In your simulation, at the beginning of a trial, do the following to start an animation:  
-*anim = ps6_visualize.RobotVisualization(num_robots, width, height)*  
+*anim = workshop3_visualize.RobotVisualization(num_robots, width, height)*  
 (Pass in parameters appropriate to the trial, of course.) This will open a new window to
 display the animation and draw a picture of the room.
 2. Then, on each time-step, do the following to draw a new frame of the animation:  
@@ -383,7 +374,7 @@ the full simulation).
 For purposes of debugging your simulation, you can slow down the animation even further. You
 can do this by changing the call to RobotVisualization, as follows:
 
-*anim = ps6_visualize.RobotVisualization(num_robots, width, height, delay)*
+*anim = workshop3_visualize.RobotVisualization(num_robots, width, height, delay)*
 
 The parameter delay specifies how many seconds the program should pause between frames.
 The default is 0.2 (that is, 5 frames per second). You can raise this value to make the animation
@@ -394,7 +385,7 @@ and plot it. However, you don’t want the visualization getting in the way. If 
 visualization exercise, before you get started on problems 4 and 6 and before you turn your
 problem set in, make sure to comment the visualization code out of *runSimulation()*.
 
-#### Problem #5
+#### Problem #4
 
 iRobot is testing out a new robot design. The proposed new robots differ in that they change
 direction randomly **after every time step**, rather than just when they run into walls. You have
@@ -409,9 +400,26 @@ as StandardRobot.
 and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
 can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
 
+## Hand-In Procedure
+
+1. Save your code in a single file, named workshop3.py.
+2. Run your file to make sure it has no syntax errors. Test your runSimulation to make sure that it still works with both
+the StandardRobot and RandomWalkRobot classes. (It’s common to accidentally break code
+while refactoring, which is one reason that testing is really important!)
+3. At the start of your file, in a comment, write down the number of hours (roughly) you spent on
+the problems, and the names of the people you collaborated with. For example:
+
+        # Problem Set 6
+        # Name: Jane Lee
+        # Collaborators: John Doe
+        # Time: 3:30
+        ... your code goes here ...
+
 # Hacker Addition
 
-#### Problem #4
+This Hacker Addition will introduce you to plotting in Python. To help you get started, you can follow [this tutorial](http://matplotlib.org/users/pyplot_tutorial.html).
+
+#### Problem #5
 
 Now, use your simulation to answer some questions about the robots’ performance.
 
@@ -419,7 +427,7 @@ Note: The instructions in the code for Problems 4-6 are slightly different than 
 that follow here. Follow the instructions in this write up!
 
 For both of the questions below, **write code which will generate a plot using matplotlib**. Put your
-code inside the corresponding skeleton functions in ps6.py (showPlot1 and showPlot2).
+code inside the corresponding skeleton functions in workshop3.py (showPlot1 and showPlot2).
 
 Each plot should have a title and descriptive labels on both axes.
 
@@ -446,20 +454,4 @@ two types of robots. Add your code to *showPlot3()*. As always, your plot should
 appropriate title, axis labels, and (if applicable) legend.
 
 Within comments in *showPlot3*, comment briefly on how the two types of robots compare.
-
-## Hand-In Procedure
-
-1. Save your code in a single file, named ps6.py.
-2. Run your file to make sure it has no syntax errors. Run your plotting functions to make sure they
-produce plots when run. Test your runSimulation to make sure that it still works with both
-the StandardRobot and RandomWalkRobot classes. (It’s common to accidentally break code
-while refactoring, which is one reason that testing is really important!)
-3. At the start of your file, in a comment, write down the number of hours (roughly) you spent on
-the problems, and the names of the people you collaborated with. For example:
-
-        # Problem Set 6
-        # Name: Jane Lee
-        # Collaborators: John Doe
-        # Time: 3:30
-        ... your code goes here ...
 

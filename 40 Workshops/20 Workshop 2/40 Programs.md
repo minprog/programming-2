@@ -15,10 +15,10 @@ how you can simplify things.
 
 ### Getting Started
 
-The zip file can be downloaded [here](ps5.zip).
+The zip file can be downloaded [here](workshop2.zip).
 
-* ps5.py, a skeleton of a solution
-* ps5_test.py, a test suite that will help you check your answers.
+* workshop2.py, a skeleton of a solution
+* workshop2_test.py, a test suite that will help you check your answers.
 * triggers.txt, a sample trigger configuration file. You may modify this file to
 try other trigger configurations.
 * feedparser.py, a module that will retrieve and parse feeds for you.
@@ -319,10 +319,10 @@ When this is done, the *PhraseTrigger* unit tests should pass.
 
 ## Part III: Filtering
 
-At this point, you can run *ps5.py*, and it will fetch and display Google and Yahoo news items
+At this point, you can run *workshop2.py*, and it will fetch and display Google and Yahoo news items
 for you in little pop-up windows. How many news items? **All of them.**
 
-Right now, the code we’ve given you in *ps5.py* gets all of the feeds every minute, and displays
+Right now, the code we’ve given you in *workshop2.py* gets all of the feeds every minute, and displays
 the result. This is nice, but, remember, the goal here was to filter out only the the stories we
 wanted.
 
@@ -331,13 +331,13 @@ wanted.
 Write a function, *filter_stories(stories, triggerlist)* that takes in a list of news stories
 and a list of triggers, and returns only the stories which a trigger fires for.
 
-After completing Problem 10, you can try running *ps5.py*, and various RSS news items should
+After completing Problem 10, you can try running *workshop2.py*, and various RSS news items should
 pop up, filtered by some hard-coded triggers defined for you in some code near the bottom. The
 code runs an infinite loop, checking the RSS feed for new stories every 60 seconds.
 
 ## Handin Procedure
 
-1. All your code should be in a single file called ps5.py.
+1. All your code should be in a single file called workshop2.py.
 2. At the start of the file, in a comment, write down the number of hours (roughly) you spent on this
 problem set, and the names of whomever you collaborated with. For example:
 
@@ -432,7 +432,7 @@ specified in your configuration file, instead of the one we hard-coded for you:
     # After implementing readTriggerConfig, uncomment this line:
     # triggerlist = readTriggerConfig("triggers.txt")
 
-After completing Problem 11, you can try running ps5.py, and depending on your triggers.txt
+After completing Problem 11, you can try running workshop2.py, and depending on your triggers.txt
 file, various RSS news items should pop up for easy reading. The code runs an infinite loop,
 checking the RSS feed for new stories every 60 seconds.
 
