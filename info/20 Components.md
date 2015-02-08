@@ -41,7 +41,7 @@ Editions.
 
 To be clear, we encourage most students (including aspiring computer scientists) to tackle the standard editions. However, you may choose, week to week, which edition to submit. You may not submit both or some amalgam of the two.
 
-Problem sets and the final project will be evaluated along the following axes:
+Problem sets will be evaluated along the following axes:
 
 * Correctness --- have you tried doing everything?
 
