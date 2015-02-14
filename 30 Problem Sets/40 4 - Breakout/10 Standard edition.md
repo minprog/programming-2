@@ -54,7 +54,7 @@
 
   Open up `windows.c` with `gedit`. 
 
-<iframe width="711" height="400" src="http://www.youtube.com/embed/gjirq3MzqBY" frameborder="0" allowfullscreen></iframe>
+<iframe width="711" height="400" src="https://www.youtube.com/watch?v=IMOujDlGebQ" frameborder="0" allowfullscreen></iframe>
 
   How did we know how to call `newGWindow` like that? Well, there aren't man pages for SPL, but you can look at the relevant header file (`gwindow.h`). In fact, notice that inside of `src5m` is a subdirectory called `spl`. Inside of that is another subdirectory called `include`. If you take a look there, you'll find `gwindow.h`. Open it up with `gedit` and look around. Hm, a bit overwhelming. You might find it easier to look [here](http://cdn.cs50.net/2013/fall/lectures/5/m/src5m/spl/doc/gwindow.html), which contains the same information organised in a somewhat more friendly way. Click `newGWindow` under Functions, and you'll see its prototype:
 
