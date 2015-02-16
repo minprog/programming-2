@@ -1,9 +1,8 @@
 name: py1
 form: true
 required:
-    - homework1.py
-    - rps.py
-    - loops.py
+    - python_exercises1_1.py
+    - python_exercises1_2.py
     - zellers.py
 optional:
-    - cipher.py
+    - comprehensions.py

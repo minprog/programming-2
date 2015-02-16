@@ -1,12 +1,6 @@
 name: py2
-form: true
 required:
-    - lastweek.py
-    - homework2.py
-    - nims.py
-    - gpa.py
-    - pyplot.py
-    - population.py
-optional:
-    - zellers.py
-    - comprehensions.py
+    - queue.py
+    - stack.py
+    - workshop2.py
+form: true
