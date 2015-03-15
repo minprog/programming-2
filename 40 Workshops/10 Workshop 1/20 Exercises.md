@@ -136,7 +136,7 @@ Note that we can use variables in the definition of other variables!
 Mathematical operators only work on numbers: `int`s or `float`s. Statements such
 as `'Hi' + 5` or `'5 + 7` will not work.
 
-**Part I**: Input the following sets of equations, and note the difference
+Part I: Input the following sets of equations, and note the difference
   between `int` arithmetic and `float` arithmetic. You can do this just in your
   interpreter (you don't need to turn anything in for this part), but pay
   attention to the output!
@@ -156,7 +156,7 @@ as `'Hi' + 5` or `'5 + 7` will not work.
 	decimal numbers (Don't know what these are? Ask!), as computers cannot 
 	store infinite numbers!
 
-**Part II**: In `python_exercises1_1.py`, transcribe the following equations into Python
+Part II: In `python_exercises1_1.py`, transcribe the following equations into Python
   (without simplifying!), preserving order of operation with parenthesis as
   needed. Save each as the value of a variable, and then print the variable.
 
@@ -184,7 +184,7 @@ his/her first and last name, and date of birth, and print them out
 formatted. Recall that you can get input from the user using the command
 `raw_input("text")`, as shown in lecture.
 
-**Note**: There are two functions to get user input. The first, `raw_input`,
+Note: There are two functions to get user input. The first, `raw_input`,
   turns whatever the user inputs into a `string` automatically. The second,
   `input`, preserves type. So, if the user inputs an `int`, or a `float`, you
   will get an `int` or a `float` (rather than a `string`). Be careful though:
@@ -220,7 +220,7 @@ will have the output
 
 ### Pretty printing
 
-**Optional**: Now, for something completely different... a discussion on how to
+Optional: Now, for something completely different... a discussion on how to
   print strings, most prettily...
 
 Note that none of the commas are in this output! To do that you want something
@@ -352,7 +352,7 @@ Extra: Read 5.8 - 5.12
 
 ## 2.1 Print vs Return
 
-**Important**: most of the other exercises should be put in a file called
+Important: most of the other exercises should be put in a file called
 `python_exercises1_2.py`. You should make sure this file runs without any user input
 (unless it's a game) and gives correct output for every exercise. The same goes
 for most files you submit from now on.
@@ -487,7 +487,7 @@ Check out this function that sums all numbers in a list:
 
 	    return total
 
-Note how we specify, with a comment, what the type of the **parameter** must
+Note how we specify, with a comment, what the type of the parameter must
 be. Here's two tests:
 
 	# tests for sum_all
