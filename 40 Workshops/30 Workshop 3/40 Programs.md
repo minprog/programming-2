@@ -155,7 +155,7 @@ We’ve also provided a complete implementation of the following class:
 
 * *Position*: Stores the x- and y-coordinates of a robot in a room.
 
-**Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.**
+Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.
 
 ## Problem #1
 
