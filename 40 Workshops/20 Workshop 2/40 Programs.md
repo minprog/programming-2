@@ -1,6 +1,6 @@
 # RSS Feed Filter
 
-### Introduction
+## Introduction
 
 In this programs section, you will build a program to monitor news feeds over the Internet. Your
 program will filter the news, alerting the user when it notices a news story that matches that
@@ -13,7 +13,7 @@ about 20 lines of code (the solutions for some problems will be much shorter tha
 find yourself writing way more code than that, you should come visit us at office hours to see
 how you can simplify things.
 
-### Getting Started
+## Getting Started
 
 The zip file can be downloaded [here](workshop2.zip).
 
@@ -32,7 +32,7 @@ through them if you’d like to understand what’s going on.
 
 Contact the staff if you have trouble manipulating zip files.
 
-### RSS Overview
+## RSS Overview
 
 Many websites have content that is updated on an unpredictable schedule. News sites, such as
 , are a good example of this. One tedious way to keep track of this changing
@@ -53,9 +53,9 @@ We will use a special Python module to deal with these low-level details. The hi
 details, in the notes below, describing the structure of the Google News RSS feed, should be
 enough for our purposes.
 
-## Part I: Data structure design
+# Part I: Data structure design
 
-### RSS Feed Structure: Google News
+## RSS Feed Structure: Google News
 
 First, let’s talk about one specific RSS feed: Google News. The URL for the Google News feed
 is: http://news.google.com/?output=rss
@@ -72,7 +72,7 @@ represents a single news item. In a Google News feed, every entry has the follow
 * *summary*: A paragraph or so summarizing the news story.
 * *link*: A link to a web-site with the entire story.
 
-### Generalizing the Problem
+## Generalizing the Problem
 
 This is, unfortunately, a little trickier than we’d like it to be, because each of these RSS feeds is
 structured a little bit differently than the others. So, our goal in Part I is to come up with a
@@ -83,7 +83,7 @@ RSS feeds from various sources, and can act on all of them in the exact same way
 able to read the New York Times’s RSS feed, Google News’s RSS feed, The Tech’s RSS feed,
 and the RSS feeds from blogs such as CuteOverload.com, all in one place.
 
-### Problem 1.
+## Problem 1.
 
 Parsing all of this information from the feeds that Google/Yahoo/the New York Times/etc. gives
 us is no small feat. So, let’s tackle an easy part of the problem first: Pretend that someone has
@@ -113,13 +113,13 @@ should be relatively short and very straightforward.
 Once you’ve implemented *NewsStory*, the *NewsStory* unit tests in our test suite
 should pass.
 
-### Parsing the Feed
+## Parsing the Feed
 
 Parsing is the process of turning a data stream into a structured format that is more convenient to
 work with. We have provided you with code that will retrieve and parse the Google and Yahoo
 news feeds.
 
-## Part II: Triggers
+# Part II: Triggers
 
 Given a set of news stories, your program will generate alerts for a subset of those stories.
 Stories with alerts will be displayed to the user, and the other stories will be silently discarded.
@@ -134,7 +134,7 @@ In order to simplify our code, we will use object polymorphism. We will define a
 interface and then implement a number of different classes that implement that trigger interface
 in different ways. 
 
-### Trigger interface
+## Trigger interface
 
 There is a fair chance that you have not encountered the word interface before in this context. An interface in object oriented programming (OOP) is a class that contains no data or code, but rather defines method signatures. Sounds vague? An interface is essentialy a contract, if you (some Class) agree (implement) to the contract (interface), you have to implement all that is specified in the contract. If you have a set of classes that have all signed this contract, you can be assured they all have the methods specified in the contract. 
 
@@ -166,7 +166,7 @@ inherit from WordTrigger.
 
 ![Trigger Class Inheritance](trigger.png)
 
-### Whole Word Triggers
+## Whole Word Triggers
 
 Having a trigger that always fires isn’t interesting. Let’s write some that are. A user may want to
 be alerted about news items that contain specific words. For instance, a simple trigger could fire
@@ -201,7 +201,7 @@ strings will almost certainly be helpful as you tackle this part.
 
 You may also find the string methods lower and/or upper useful for this problem.
 
-### Problem 2.
+## Problem 2.
 
 Implement a word trigger abstract class, *WordTrigger*. It should take in a string word as an
 argument to the class’s constructor.
@@ -216,7 +216,7 @@ WordTrigger should inherit its evaluate method from Trigger. We do this because 
 can create subclasses of WordTrigger that use its is_word_in function. In this way, it is much
 like the Trigger interface, except now actual code from the class is used.
 
-### Problem 3.
+## Problem 3.
 
 Implement a word trigger class, *TitleTrigger* that fires (evaluate method returns True) when a news item’s *title* contains a
 given word. The word should be an argument to the class’s constructor. This trigger should not
@@ -232,7 +232,7 @@ what methods should be inherited from the superclass.
 Once you’ve implemented *TitleTrigger*, the *TitleTrigger* unit tests in our test suite should
 pass.
 
-### Problem 4.
+## Problem 4.
 
 Implement a word trigger class, *SubjectTrigger*, that fires when a news item’s *subject*
 contains a given word. The word should be an argument to the class’s constructor. This trigger
@@ -241,7 +241,7 @@ should not be case-sensitive.
 Once you’ve implemented *SubjectTrigger*, the *SubjectTrigger* unit tests in our test suite
 should pass.
 
-### Problem 5.
+## Problem 5.
 
 Implement a word trigger class, *SummaryTrigger*, that fires when a news item’s *summary*
 contains a given word. The word should be an argument to the class’s constructor. This trigger
@@ -250,7 +250,7 @@ should not be case-sensitive.
 Once you’ve implemented *SummaryTrigger*, the *SummaryTrigger* unit tests in our test suite
 should pass.
 
-### Composite Triggers
+## Composite Triggers
 
 So the triggers above are mildly interesting, but we want to do better: we want to ‘compose’ the
 earlier triggers, to set up more powerful alert rules. For instance, we may want to raise an alert
@@ -259,7 +259,7 @@ right now).
 
 Note that these triggers are not word triggers and should not be subclasses of *WordTrigger*.
 
-### Problem 6.
+## Problem 6.
 
 Implement a NOT trigger (*NotTrigger*).
 
@@ -270,7 +270,7 @@ can’t change evaluate... that’d break our polymorphism). So, given a trigger
 
 When this is done, the *NotTrigger* unit tests should pass.
 
-### Problem 7.
+## Problem 7.
 
 Implement an AND trigger (*AndTrigger*).
 
@@ -279,7 +279,7 @@ story only if both of the inputted triggers would fire on that item.
 
 When this is done, the *AndTrigger* unit tests should pass.
 
-### Problem 8.
+## Problem 8.
 
 Implement an OR trigger (*OrTrigger*).
 
@@ -288,7 +288,7 @@ This trigger should take two triggers as arguments to its constructor, and shoul
 
 When this is done, the *OrTrigger* unit tests should pass.
 
-### Phrase Triggers
+## Phrase Triggers
 
 At this point, you have no way of writing a trigger that matches on “New York City” — the only
 triggers you know how to write would be a trigger that would fire on “New” AND “York” AND
@@ -304,7 +304,7 @@ but will not match:
 
 * I love new york city
 
-### Problem 9.
+## Problem 9.
 
 Implement a phrase trigger (*PhraseTrigger*) that fires when a given phrase is in any of the
 subject, title, or summary. The phrase should be an argument to the class’s constructor. You may
@@ -317,7 +317,7 @@ find the Python operator in helpful, as in:
 
 When this is done, the *PhraseTrigger* unit tests should pass.
 
-## Part III: Filtering
+# Part III: Filtering
 
 At this point, you can run *workshop2.py*, and it will fetch and display Google and Yahoo news items
 for you in little pop-up windows. How many news items? All of them.
@@ -326,7 +326,7 @@ Right now, the code we’ve given you in *workshop2.py* gets all of the feeds ev
 the result. This is nice, but, remember, the goal here was to filter out only the the stories we
 wanted.
 
-### Problem 10.
+## Problem 10.
 
 Write a function, *filter_stories(stories, triggerlist)* that takes in a list of news stories
 and a list of triggers, and returns only the stories which a trigger fires for.
@@ -335,23 +335,23 @@ After completing Problem 10, you can try running *workshop2.py*, and various RSS
 pop up, filtered by some hard-coded triggers defined for you in some code near the bottom. The
 code runs an infinite loop, checking the RSS feed for new stories every 60 seconds.
 
-## Handin Procedure
+# Handin Procedure
 
 1. All your code should be in a single file called workshop2.py.
 2. At the start of the file, in a comment, write down the number of hours (roughly) you spent on this
 problem set, and the names of whomever you collaborated with. For example:
 
-        **# Problem Set 5
+        # Problem Set 5
         # Name: Jane Lee
         # Collaborators (Discussion): John Doe
         # Collaborators (Identical Solution): Jane Smith
         # Time: 1:30
         #
-        .... your code goes here ...**
+        .... your code goes here ...
 
 # Hacker addition
 
-## Part IV: User-Specified Triggers
+# Part IV: User-Specified Triggers
 
 Right now, your triggers are specified in your Python code, and to change them, you have to edit
 your program. This is very user-unfriendly. (Imagine if you had to edit the source code of your
@@ -418,7 +418,7 @@ will specify which triggers should be in the trigger set. An addition line begin
 keyword. Following ADD are the names of one or more previously defined triggers. These triggers
 will be added to the the trigger set.
 
-### Problem 11.
+## Problem 11.
 
 Finish implementing *readTriggerConfig(filename)*. We’ve written code to open the file and
 throw away all the lines that don’t begin with instructions (e.g. comments, blank spaces). Your
