@@ -1,6 +1,6 @@
 # Simulating Robots
 
-### Introduction
+## Introduction
 
 In this problem set you will practice designing a simulation and implementing a program that
 uses classes.
@@ -8,16 +8,16 @@ uses classes.
 Please don’t be discouraged by the apparent length of this problem set. There is quite a bit to
 read and understand, but most of the problems do not involve writing much code.
 
-### Getting Started
+## Getting Started
 
 Download the zip file [here](workshop3.zip).
 
-### Graphs & Math
+## Graphs & Math
 
 To create plots for Problems #4 and #6 of this problem set, you will need these Python library
 packages: 
 
-#### Matplotlib
+### Matplotlib
 
 This is a package for plotting graphs, barcharts and other visual representations of numerical data.
 
@@ -26,7 +26,7 @@ Some [sample images], you can click on the images for the code and the [matplotl
 [sample images]: http://matplotlib.org/gallery.html
 [matplotlib documentation]: http://matplotlib.org/contents.html
 
-#### Numpy
+### Numpy
 
 This is a package for scientific computing, implemented mostly with more efficient/advanced math operations.
 
@@ -35,7 +35,7 @@ An introduction with some [sample code] and the [numpy documentation].
 [sample code]: http://scipy.org/Getting_Started
 [numpy documentation]: http://docs.scipy.org/doc/
 
-#### Check the packages are installed
+### Check the packages are installed
 
 All you have to do is verify that these packages are available in your IDLE version (there are multiple versions
 on the UvA machines). You can test this by running *workshop3_pkgtest.py* or by simply typing
@@ -52,7 +52,7 @@ If you are working on your own machine, you will have to install the packages. Y
 [matplotlib]: http://matplotlib.org/downloads.html
 [numpy]: http://sourceforge.net/projects/numpy/files/NumPy/
 
-### Simulation Overview
+## Simulation Overview
 
 iRobot is a company (started by MIT alumni and faculty) that sells the [Roomba vacuuming robot]
 (watch one of the product videos to see these robots in action). Roomba robots move about a
@@ -106,17 +106,17 @@ t = 4: The robot moves along
 its new heading to the position
 (0.3, 0.7), cleaning another tile.
 
-#### Simulation Details
+### Simulation Details
 
 Here are additional details about the simulation model. Read these carefully.
 
-* **Multiple robots** In general, there are N > 0 robots in the room, where N is given. For
+* *Multiple robots*: In general, there are N > 0 robots in the room, where N is given. For
 simplicity, assume that robots are points and can pass through each other or occupy the
 same point without interfering.
-* **The room** The room is rectangular with some integer width w and height h, which are
+* *The room*: The room is rectangular with some integer width w and height h, which are
 given. Initially the entire floor is dirty. A robot cannot pass through the walls of the room.
 A robot may not move to a point outside the room.
-* **Robot motion rules**
+* *Robot motion rules*:
   * Each robot has a position inside the room. We’ll represent the position using
   coordinates (x, y) which are floats satisfying 0 ≤ x < w and 0 ≤ y < h. In our
   program we’ll use instances of the Position class to store these coordinates.
@@ -128,19 +128,19 @@ A robot may not move to a point outside the room.
   * If a robot would’ve ended up hitting the wall within the time-step, it instead picks
   a new direction at random. The robot continues in that direction until it reaches
   another wall.
-* **Tiles** You will need to keep track of which parts of the floor have been cleaned by the
+* *Tiles*: You will need to keep track of which parts of the floor have been cleaned by the
 robot(s). We will divide the area of the room into 1×1 tiles (there will be w * hsuch tiles).
 When a robot’s location is anywhere in a tile, we will consider the entire tile to be
 cleaned (as in the pictures above). By convention, we will refer to the tiles using ordered
 pairs of integers: (0, 0), (0, 1), ..., (0, h-1), (1, 0), (1, 1), ..., (w-1, h-1).
-* **Termination** The simulation ends when a specified fraction of the tiles in the room have
+* *Termination*: The simulation ends when a specified fraction of the tiles in the room have
 been cleaned.
 
 If you find any places above where the specification of the simulation dynamics seems
 ambiguous, it is up to you to make a reasonable decision about how your program/model will
 behave, and document that decision in your code.
 
-## Part I: The Rectangular Room and Robot classes
+# Part I: The Rectangular Room and Robot classes
 
 You will need to design two classes to keep track of which parts of the room have been cleaned
 as well as the position and direction of each robot.
@@ -148,16 +148,16 @@ as well as the position and direction of each robot.
 In workshop3.py, we’ve provided skeletons for the following two classes, which you will fill in in
 Problem #1:
 
-* **RectangularRoom** Represents the space to be cleaned and keeps track of which tiles have been cleaned.
-* **Robot** Stores the position and heading of a robot.
+* *RectangularRoom*: Represents the space to be cleaned and keeps track of which tiles have been cleaned.
+* *Robot*: Stores the position and heading of a robot.
 
 We’ve also provided a complete implementation of the following class:
 
-* **Position** Stores the x- and y-coordinates of a robot in a room.
+* *Position*: Stores the x- and y-coordinates of a robot in a room.
 
-**Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.**
+Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.
 
-#### Problem #1
+## Problem #1
 
 In this problem you will implement two classes.
 
@@ -188,7 +188,7 @@ in workshop3.py.
 wish to represent your data. For reasonable representations, *a majority of the methods will
 require only one line of code.*)
 
-For your reference, here are **abbreviated** specifications for the methods of RectangularRoom
+For your reference, here are abbreviated specifications for the methods of RectangularRoom
 and Robot. See workshop3.py for complete details.
 
     class RectangularRoom(object):
@@ -253,9 +253,9 @@ and Robot. See workshop3.py for complete details.
             def updatePositionAndClean(self):
                 """Simulate the passage of a single time-step."""
 
-## Part II: Creating and using the simulator
+# Part II: Creating and using the simulator
 
-#### Problem #2
+## Problem #2
 
 Each robot must also have some code that tells it how to move about a room, which will go in a
 method called *updatePositionAndClean*.
@@ -271,7 +271,7 @@ completed above (which contains general robot code), and a StandardRobot class i
 it (which contains its own movement strategy).
 
 Complete the *updatePositionAndClean* method of StandardRobot to simulate the motion
-of the robot after **a single time-step** (as described above in the simulation dynamics).
+of the robot after a single time-step (as described above in the simulation dynamics).
 
     class StandardRobot(Robot):
         """
@@ -288,7 +288,7 @@ of the robot after **a single time-step** (as described above in the simulation 
             been cleaned.
             """
 
-#### Problem #3
+## Problem #3
 
 In this problem you will write code that runs a complete robot simulation.
 Recall that in each trial, the objective is to determine how many time-steps are on average
@@ -307,7 +307,7 @@ function:
 The first six parameters should be self-explanatory. For the time being, you should pass
 in StandardRobot for the robot_type parameter, like so:
 
-*avg = runSimulation(10, 1.0, 15, 20, 0.8, 30, __StandardRobot__)*
+*avg = runSimulation(10, 1.0, 15, 20, 0.8, 30, StandardRobot)*
 
 Then, in runSimulation you should use *robot_type(...)* instead of *StandardRobot(...)*
 whenever you wish to instantiate a robot. (This will allow us to easily adapt the simulation to run
@@ -385,10 +385,10 @@ and plot it. However, you don’t want the visualization getting in the way. If 
 visualization exercise, before you get started on problems 4 and 6 and before you turn your
 problem set in, make sure to comment the visualization code out of *runSimulation()*.
 
-#### Problem #4
+## Problem #4
 
 iRobot is testing out a new robot design. The proposed new robots differ in that they change
-direction randomly **after every time step**, rather than just when they run into walls. You have
+direction randomly after every time step, rather than just when they run into walls. You have
 been asked to design a simulation to determine what effect, if any, this change has on room
 cleaning times.
 
@@ -396,11 +396,11 @@ Write a new class RandomWalkRobot that inherits from Robot (like StandardRobot) 
 implements the new movement strategy. RandomWalkRobot should have the same interface
 as StandardRobot.
 
-**Test out your new class**. Perform a single trial with the new RandomWalkRobot implementation
+Test out your new class. Perform a single trial with the new RandomWalkRobot implementation
 and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
 can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
 
-## Hand-In Procedure
+# Hand-In Procedure
 
 1. Save your code in a single file, named workshop3.py.
 2. Run your file to make sure it has no syntax errors. Test your runSimulation to make sure that it still works with both
@@ -419,14 +419,14 @@ the problems, and the names of the people you collaborated with. For example:
 
 This Hacker Addition will introduce you to plotting in Python. To help you get started, you can follow [this tutorial](http://matplotlib.org/users/pyplot_tutorial.html).
 
-#### Problem #5
+## Problem #5
 
 Now, use your simulation to answer some questions about the robots’ performance.
 
 Note: The instructions in the code for Problems 4-6 are slightly different than the instructions
 that follow here. Follow the instructions in this write up!
 
-For both of the questions below, **write code which will generate a plot using matplotlib**. Put your
+For both of the questions below, write code which will generate a plot using matplotlib. Put your
 code inside the corresponding skeleton functions in workshop3.py (showPlot1 and showPlot2).
 
 Each plot should have a title and descriptive labels on both axes.
@@ -447,9 +447,9 @@ Here is an example of a good plot:
 As you can see, when keeping the number of robots fixed, the time it takes to clean a square
 room is basically proportional to the area of that room.
 
-#### Problem #6
+## Problem #6
 
-**Generate an appropriate plot (of your own design)** that compares the performance of the
+Generate an appropriate plot (of your own design) that compares the performance of the
 two types of robots. Add your code to *showPlot3()*. As always, your plot should have an
 appropriate title, axis labels, and (if applicable) legend.
 
