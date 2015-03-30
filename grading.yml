@@ -1,0 +1,30 @@
+calculation:
+    resit:
+        resit: 0
+        psets: 100
+    normal:
+        quiz: 0
+        psets: 100
+
+psets:
+    type: integer
+    drop: correctness
+    grades:
+        breakout: 1
+        recover: 1
+        mispell: 1
+        py1: 1
+        py2: 1
+        py3: 1
+
+quiz:
+    type: pass
+    required: true
+    grades:
+        quiz: 1
+
+resit:
+    type: pass
+    required: true
+    grades:
+        resit: 1
