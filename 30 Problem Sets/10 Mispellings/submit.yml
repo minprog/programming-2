@@ -1,5 +1,3 @@
 name: mispell
 required:
-    - dictionary.c
-    - dictionary.h
-    - Makefile
+    - pset5.zip
