@@ -1,71 +1,40 @@
 # Course components
 
-You're on your own through this course most of the time, though we will be,
-quite literally, on your side when you're in the labs. Make good use of the
-various materials that are in the course. Here's a guided tour through the
-important parts.
+You're on your own through this course most of the time, though we will be, quite literally, on your side when you're in the labs. Make good use of the various materials that are in the course. Here's a guided tour through the important parts.
 
 ## Lectures
 
-Harvard's video lectures discuss all theory that is needed to pass the quizzes.
-Students are encouraged to watch the lectures at home or on the way to the lab,
-in order to be able to spend lab time programming and asking questions.
-
-## Sections
-
-Lectures are supplemented by videos of sections led by the Havard teaching
-fellows. Different sections are offered for those less comfortable, those more comfortable, and those somewhere in between.
+These discuss all theory that is needed to pass the quizzes. Watch the lectures before or on your way to the lab sessions, in order to be able to spend your lab time programming and asking questions.
 
 ## Walkthroughs
 
-Integrated into problem sets are "walkthroughs," videos via which the course's staff offer direction on where to begin and how to approach a challenge. Students are expected to watch walkthroughs to prepare for asking questions at the lab.
+Integrated into problem sets are "walkthroughs," videos via which the course's staff offer direction on where to begin and how to approach a challenge. You are expected to watch walkthroughs while starting with your problem sets.
 
-## Problem Sets and Workshops
+## Sections
 
-The six problem sets and workshops are the hard work of the course, on which
-you will spend most of the lab time and then some more.
+Lectures are supplemented by weekly, 60-minute sections led by the teaching fellows. Sections provide you with opportunities to explore the course's material in a more intimate environment, with only your teaching fellow and a group of classmates present, as well as to dive into hands-on activities.
 
-All weekly deadlines are at 15:00h on Fridays. Late work is not ordinarily
-accepted, except in case of medical emergency. Technical difficulties are not
-considered emergencies.
+## Office Hours
 
-In order to accommodate students with different backgrounds, some problem sets
-are released in two editions: a standard edition intended for most students and
-a "Hacker Edition" intended for some students. Both editions essentially cover
-the same material. But the Hacker Edition typically presents that material from
-a more technical angle and poses more sophisticated questions. Hacker Editions
-are graded separately from standard editions, but those students who submit the
-former do not receive any form of extra credit outright. When determining
-grades at term's end, however, we do bear in mind submissions of Hacker
-Editions.
+Office hours are opportunities for assistance with problem sets alongside the
+course's teaching assistants. Office hours ordinarily take place from 1PM to 5PM on Mondays through Fridays.
+
+## Tutoring
+
+For students who avail themselves of the course's other resources but still
+find themselves struggling, the course offers tutoring, to the extent possible,
+providing opportunities for students to work with the course's staff one-on-one
+or in particularly small groups. To arrange, contact the course's heads (shoot a question at the top of this site).
+
+## Problem Sets
+
+Five problem sets are assigned during the course. Each is due by a pre-set deadline. However, you have two "late days" that you may "spend" during the course, each of which provides you with an extension of twenty-four hours. *You may spend no more than one late day on any particular problem set.* You need not inform the staff of your use of a late day; usage of late days is tracked automatically. Lateness of electronic submissions is determined down to the minute by submissions' timestamps. Submitting more than seven minutes late is equivalent to submitting twenty-four hours late. Late work is not ordinarily accepted once you have exhausted your late days, except in cases of medical emergency.
+
+In order to accommodate students with different backgrounds, some problem sets are released in two editions: a standard edition intended for most students and a "Hacker Edition" intended for some students. Both editions essentially cover the same material. But the Hacker Edition typically presents that material from a more technical angle and poses more sophisticated questions. Hacker Editions are graded separately from standard editions, but those students who submit the former do not receive any form of extra credit outright. When determining grades at term's end, however, we do bear in mind submissions of Hacker Editions.
 
 To be clear, we encourage most students (including aspiring computer scientists) to tackle the standard editions. However, you may choose, week to week, which edition to submit. You may not submit both or some amalgam of the two.
 
-Problem sets will be evaluated along the following axes:
-
-* Correctness --- have you tried doing everything?
-
-	1. whole part is missing, or too many bugs to get it working
-    2. has to be fixed to get it running
-	3. it runs without problems, but a small part is unfinished
-	4. everything is there, but not always the correct result
-	5. even with erroneous input the program still works
-
-* Design --- how orderly is your code?
-
-	1. lots of complex code
-	2. too complicated, but you seem to know your stuff
-	3. straightforward code, could be put a bit inefficiently
-	4. makes good use of the possibilities in the language
-	5. you've read up on design and applied it to your code
-
-* Style --- how readable is your code?
-
-	1. not easily readable overall
-	2. you've read the style guide but haven't applied it consistently
-	3. your code is readable and consistent, barring some minor problems
-	4. the code is consistent, and only well-reasoned deviations from the guide
-	5. you've clearly made your own choices but maintained perfect consistency
+Although you must submit all five problem sets, your lowest score among those problem sets on which you received a perfect score for the axis of scope will be dropped when final grades are determined.
 
 ## Quiz
 
