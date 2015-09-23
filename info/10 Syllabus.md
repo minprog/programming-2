@@ -1,6 +1,6 @@
-# Programmeren 1
+# Programmeren 2
 
-*Edition: Oktober 2015 (v5.3)*
+*Edition: October 2015 (v5.0)*
 
 Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience.
 
@@ -13,34 +13,34 @@ Martijn Stegeman
 *instructor*  
 <m.stegeman@uva.nl>
 
-Jaap van Bergeijk  
+Ben Witzen  
 *head TA*
 
 Have a question? Send us a message by using the "Ask" menu, above. You can use it from home, or during office hours.
 
 ## Prerequisites
 
-This course is the first part of a two-course series aimed at students with
+This course is the second part of a two-course series aimed at students with
 *little or no prior programming experience* but a desire to understand
-computational approaches to problem solving.
+computational approaches to problem solving. To start this part, you need to have finished the first.
 
 ## Expectations
 
-You are expected to watch all lectures, attend all sections, submit five
+You are expected to watch all lectures, attend all sections, submit seven
 problem sets, and take a quiz. You are also expected to attend a minimum amount
 of lab sessions in order to get you moving quickly through the course.
 
 ## Grades
 
-All students must ordinarily submit all five problem sets and take the quiz in
+All students must ordinarily submit all seven problem sets and take the quiz in
 order to be eligible for a satisfactory grade unless granted an exception in
 writing by the course's heads.
 
-Problem sets and the final project are evaluated primarily along axes of scope,
-correctness, design, and style, with scores ordinarily determined by scope × (3
-× correctness + 2 × design + 1 × style). Scope is deemed all-important: we
-strive for you to at least try every aspect of each problem set. Mid-semester
-comparisons among students of scores are not reliable indicators of standing.
+Problem sets are evaluated primarily along axes of scope, correctness, design,
+and style, with scores ordinarily determined by scope × (3 × correctness + 2 ×
+design + 1 × style). Scope is deemed all-important: we strive for you to at
+least try every aspect of each problem set. Mid-course comparisons among
+students of scores are not reliable indicators of standing.
 
 Although you must submit all problem sets, your lowest score among those
 problem sets on which you received perfect scores for the axis of scope will be
