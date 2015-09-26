@@ -231,7 +231,7 @@ will be equivalent to running
 
 where text is the file you wish to spell-check. Suffice it to say, the former is easier to type! (Of course, `speller` will not be able to load any dictionaries until you implement load in `dictionary.c`! Until then, you'll see **Could not load.**)
 
-Within the default dictionary, mind you, are 143,091 words, all of which must be loaded into memory! In fact, take a peek at that file to get a sense of its structure and size, as with gedit. Notice that every word in that file appears in lowercase (even, for simplicity, proper nouns and acronyms). From top to bottom, the file is sorted lexicographically, with only one word per line (each of which ends with `\n`). No word is longer than 45 characters, and no word appears more than once. During development, you may find it helpful to provide `speller` with a dictionary of your own that contains far fewer words, lest you struggle to debug an otherwise enormous structure in memory. In `/home/cs50/pset6/dictionaries/small` is one such dictionary. To use it, execute
+Within the default dictionary, mind you, are 143,091 words, all of which must be loaded into memory! In fact, take a peek at that file to get a sense of its structure and size, as with gedit. Notice that every word in that file appears in lowercase (even, for simplicity, proper nouns and acronyms). From top to bottom, the file is sorted lexicographically, with only one word per line (each of which ends with `\n`). No word is longer than 45 characters, and no word appears more than once. During development, you may find it helpful to provide `speller` with a dictionary of your own that contains far fewer words, lest you struggle to debug an otherwise enormous structure in memory. In `/home/cs50/pset5/dictionaries/small` is one such dictionary. To use it, execute
 
 	./speller ~cs50/pset5/dictionaries/small text
 
@@ -274,7 +274,7 @@ Now, as you should know from having read over `speller.c` carefully, the output 
   
 will eventually resemble the below. For now, try executing the staff's solution (using the default dictionary) with the below.
 
-	~cs50/pset5/speller ~cs50/pset6/texts/austinpowers.txt
+	~cs50/pset5/speller ~cs50/pset5/texts/austinpowers.txt
   
 Below's some of the output you'll see. For amusement's sake, we've excerpted some of our favorite "misspellings." And lest we spoil the fun, we've omitted our own statistics for now.
 
@@ -412,7 +412,7 @@ You can then compare both files side by side in the same window with a program l
   
 Alternatively, to save time, you could just compare your program's output (assuming you redirected it to, e.g., `student.txt`) against one of the answer keys without running the staff's solution, as with the below.
 
-	diff -y student.txt ~cs50/pset6/keys/austinpowers.txt
+	diff -y student.txt ~cs50/pset5/keys/austinpowers.txt
   
 If your program's output matches the staff's, diff will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you'll see a `>` or `|` where they differ. For instance, if you see
 
@@ -429,7 +429,7 @@ that means your program (whose output is on the left) does not think that EVILâ€
 
 To test your code less manually (though still not exhaustively), you may also execute the below:
 
-	check50 2013.pset5.speller dictionary.c dictionary.h Makefile
+	check50 2014.pset5.speller dictionary.c dictionary.h Makefile
   
 Note that `check50` does not check for memory leaks, so be sure to run valgrind as prescribed as well.
   
