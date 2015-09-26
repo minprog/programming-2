@@ -438,9 +438,6 @@ How to assess just how fast (and correct) your code is? Well, as always, feel fr
 	~cs50/pset5/speller ~cs50/pset5/texts/austinpowers.txt
 
 
-## Big Board
-
-
 ## questions.txt
 
 Congrats! At this point, your speller-checker is presumably complete (and fast!), so it's time for a debriefing. In `questions.txt`, answer each of the following questions in a short paragraph.
@@ -461,4 +458,4 @@ When ready to submit, open up a Terminal window and navigate your way to ~/Dropb
 
     zip -r pset5.zip pset5
 
-If you type `ls` thereafter, you should see that you have a new file called pset5.zip in ~/Dropbox. (If you realize later that you need to make a change to some file and re-ZIP everything, you can delete the ZIP file you already made with rm pset5.zip, then create a new ZIP file as before.) * Once done creating your ZIP file, open up Chrome inside of the appliance (not on your own computer) and visit this very webpage and logging in.
+If you type `ls` thereafter, you should see that you have a new file called pset5.zip in ~/Dropbox. (If you realize later that you need to make a change to some file and re-ZIP everything, you can delete the ZIP file you already made with **rm pset5.zip**, then create a new ZIP file as before.) * Once done creating your ZIP file, open up Chrome inside of the appliance (not on your own computer) and visit this very webpage and logging in.
