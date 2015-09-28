@@ -429,7 +429,7 @@ that means your program (whose output is on the left) does not think that *EVIL'
 
 To test your code less manually (though still not exhaustively), you may also execute the below:
 
-	check50 2014.pset5.speller dictionary.c dictionary.h Makefile
+	check50 2014.fall.pset5.speller dictionary.c dictionary.h Makefile
   
 Note that **check50** does not check for memory leaks, so be sure to run valgrind as prescribed as well.
   
