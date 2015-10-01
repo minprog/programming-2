@@ -1,7 +1,5 @@
 # Problem Set 6: Web Server
 
-*due by noon on Fri 10/31 (or Sat 11/1 with late day)*
-
 ## Objectives
 
 * Become familiar with HTTP.
