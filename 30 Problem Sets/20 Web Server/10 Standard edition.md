@@ -31,7 +31,6 @@ If you commit some act that is not reasonable but bring it to the attention of t
 
 ### Not Reasonable
 
-* Accessing a solution in CS50 Vault to some problem prior to (re-)submitting your own.
 * Asking a classmate to see his or her solution to a problem set's problem before (re-)submitting your own.
 * Decompiling, deobfuscating, or disassembling the staff's solutions to problem sets.
 * Failing to cite (as with comments) the origins of code or techniques that you discover outside of the course's own lessons and integrate into your own work, even while respecting this policy's other constraints.
@@ -52,16 +51,19 @@ If you commit some act that is not reasonable but bring it to the attention of t
 
 Your work on this problem set will be evaluated along four axes primarily.
 
-Scope::
-  To what extent does your code implement the features required by our specification?
-Correctness::
-  To what extent is your code consistent with our specifications and free of bugs?
-Design::
-  To what extent is your code written well (i.e., clearly, efficiently, elegantly, and/or logically)?
-Style::
-  To what extent is your code readable (i.e., commented and indented with variables aptly named)?
+Scope
+: To what extent does your code implement the features required by our specification?
 
-All students, whether taking the course SAT/UNS or for a letter grade, must ordinarily submit this and all other problem sets to be eligible for a satisfactory grade unless granted an exception in writing by the course's heads.
+Correctness
+: To what extent is your code consistent with our specifications and free of bugs?
+
+Design
+: To what extent is your code written well (i.e., clearly, efficiently, elegantly, and/or logically)?
+
+Style
+: To what extent is your code readable (i.e., commented and indented with variables aptly named)?
+
+All students must ordinarily submit this and all other problem sets to be eligible for a satisfactory grade unless granted an exception in writing by the course's heads.
 
 ## Getting Ready
 
