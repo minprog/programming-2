@@ -322,9 +322,7 @@ Let's now walk through `main`.
 
 * Below that is
 
-    ~~~ c
-    signal(SIGINT, handler);
-    ~~~
+        signal(SIGINT, handler);
 
     which tells the program to listen for `SIGINT` (i.e., control-c) and call `handler` (a function defined by us elsewhere in `server.c`) if heard.
 
@@ -342,29 +340,25 @@ Let's now walk through `main`.
 
 * Below the `TODO` is a bunch of code we wrote that adds support for `.php` files. It's a bit cryptic at first glance, but in a nutshell, all we're doing, upon receiving a request for, say, `hello.php`, is executing a line like
 
-    ~~~ php
-    QUERY_STRING="name=Alice" REDIRECT_STATUS=200 SCRIPT_FILENAME=/home/jharvard/Dropbox/pset6/public/hello.php php-cgi
-    ~~~
+        QUERY_STRING="name=Alice" REDIRECT_STATUS=200 SCRIPT_FILENAME=/home/jharvard/Dropbox/pset6/public/hello.php php-cgi
 
     the effect of which is to pass the contents of `hello.php` to PHP's interpreter (i.e., `php-cgi`), with any HTTP parameters supplied via an "environment variable" called `QUERY_STRING`. Via `load` (a function we wrote), we then read the interpreter's output into memory (storing the address thereof in a global variable called `body`, which was also declared above `main`). And then we respond to the browser with (dynamically generated) output like:
 
-    ~~~ html
-    HTTP/1.1 200 OK
-    Connection: close
-    Content-Length: 127
-    X-Powered-By: PHP/5.5.9-1ubuntu4.4
-    Content-type: text/html
+        HTTP/1.1 200 OK
+        Connection: close
+        Content-Length: 127
+        X-Powered-By: PHP/5.5.9-1ubuntu4.4
+        Content-type: text/html
 
-    <!DOCTYPE html>
+        <!DOCTYPE html>
 
-    <html>
-        <head>
-            <title>hello</title>
-        </head>
-        <body>
-            hello, Alice    </body>
-    </html>
-    ~~~
+        <html>
+            <head>
+                <title>hello</title>
+            </head>
+            <body>
+                hello, Alice    </body>
+        </html>
 
     Perhaps new is our use of `popen`, `memmem`, `dprintf`, and `write`, but see each's `man` page for details! And know that `popen` opens a "pipe" to a process (`php-cgi` in our case), which provides us with a `FILE` pointer via which we can read that process's standard output (as though it were an actual file). Note, too, that functions like `dprintf` and `write` (and `open` and `read` and others) use a "file descriptor" (i.e., an `int`) instead of a `FILE` pointer (i.e., `FILE*`) to refer to files. That aside, though, they're not all that different from `fprintf` and `fwrite` (and `fopen` and `fread` and others). Do just consult `man` pages for which functions use which.
 
