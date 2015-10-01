@@ -7,10 +7,10 @@ Week 1:
     'Lecture 7 Wed [Wednesday morning]': '/lectures/week-7-wed'
     'Problem set 5 [deadline: Thursday]': '/psets/mispellings'
     'Lecture 8 Mon [Friday morning]': '/lectures/week-8-mon'
-    'Problem set 6 [deadline: next Tuesday]':
+    'Problem set 6 [deadline: next Tuesday]': '/psets/web-server'
 Week 2:
     'Lecture 8 Wed [Monday morning]': '/lectures/week-8-wed'
-    'Problem set 6 [deadline: Tuesday]': '/psets/webserver'
+    'Problem set 6 [deadline: Tuesday]': '/psets/web-server'
     'Lecture 9 Mon [Wednesday morning]': '/lectures/week-2-mon'
     'Problem set 7 [deadline: Friday]': '/psets/finance'
     'Lecture 9 Wed [Friday morning]': '/lectures/week-9-wed'
