@@ -208,11 +208,11 @@ Let's try it out. Execute the below from within your own `~/Dropbox/pset6` direc
 You should see output like
 
 ~~~ bash
-#Using /home/jharvard/solutions/2014/fall/psets/6/public for server's root#
-#Listening on port pass:[#####]#
+Using /home/jharvard/solutions/2014/fall/psets/6/public for server's root
+Listening on port #####
 ~~~
 
-where `pass:[#####]` is a random port number. Take note of your appliance's IP address, which should be a number of the form `pass:[#.#.#.#]` in the appliance's bottom-right corner. Then, open up Chrome (inside of the appliance or on your own computer) and visit `pass:[http://#.#.#.#:#####/cat.jpg]`, where, again, `pass:[#.#.#.#]` is your appliance's IP address (not `pass:[#.#.#.#]` literally) and `pass:[#####]` is the random port number. For instance, if your appliance's IP address is `1.2.3.4` and the random port number is 1337, you should visit `pass:[http://1.2.3.4:1337/cat.jpg]`.
+where `#####` is a random port number. Take note of your appliance's IP address, which should be a number of the form `#.#.#.#` in the appliance's bottom-right corner. Then, open up Chrome (inside of the appliance or on your own computer) and visit `http://#.#.#.#:#####/cat.jpg`, where, again, `#.#.#.#` is your appliance's IP address (not `#.#.#.#` literally) and `#####` is the random port number. For instance, if your appliance's IP address is `1.2.3.4` and the random port number is 1337, you should visit `http://1.2.3.4:1337/cat.jpg`.
 
 Anyhow, you should see a happy cat?? In your terminal window, meanwhile, you should see
 
@@ -256,7 +256,7 @@ Here's a quick walkthrough if a demo might help.
 
 ![embed](https://www.youtube.com/embed/mRSxes0gwfw?rel=0)
 
-Now try visiting `pass:[http://#.#.#.#:8080/cat.html]`. You should see Happy Cat again, possibly with a bit of a margin around him (simply because of Chrome's default CSS properties). If you look at the developer tools' *Network* tab (possibly after reloading, if they weren't still open), you should see that Chrome first requested `cat.html` followed by `cat.jpg`, since the latter, recall, was specified as the value of that `img` element's `src` attribute that we saw earlier in `cat.html`. To confirm as much, take a look at the developer tools' *Elements* tab, wherein you'll see a pretty-printed version of the HTML in `cat.html`. You can even change it but only Chrome's in-memory copy thereof. To change the actual file, you'd need to do so with, say, `gedit` in the usual way. Incidentally, you might find it interesting to tinker with the developer tools' *Styles* tab at right, too. Even though this page doesn't have any CSS of its own, you can see and change (temporarily) Chrome's default CSS properties via that tab.
+Now try visiting `http://#.#.#.#:8080/cat.html`. You should see Happy Cat again, possibly with a bit of a margin around him (simply because of Chrome's default CSS properties). If you look at the developer tools' *Network* tab (possibly after reloading, if they weren't still open), you should see that Chrome first requested `cat.html` followed by `cat.jpg`, since the latter, recall, was specified as the value of that `img` element's `src` attribute that we saw earlier in `cat.html`. To confirm as much, take a look at the developer tools' *Elements* tab, wherein you'll see a pretty-printed version of the HTML in `cat.html`. You can even change it but only Chrome's in-memory copy thereof. To change the actual file, you'd need to do so with, say, `gedit` in the usual way. Incidentally, you might find it interesting to tinker with the developer tools' *Styles* tab at right, too. Even though this page doesn't have any CSS of its own, you can see and change (temporarily) Chrome's default CSS properties via that tab.
 
 Okay, one last test. Try visiting `http://#.#.#.#:8080/hello.html`. Go ahead and input your name into the form and then submit it, as by clicking the button or hitting Enter. You should find yourself at a URL like `http://#.#.#.#:8080/hello.php?name=Alice` (albeit with your name, not Alice's), where a personalized hello awaits! That's what we mean by "dynamic" content. By submitting that form, you provided input (i.e., your name) to the server, which then generated output just for you. (That input was in the form of an "HTTP parameter" called `name`, the value of which was your name.) Indeed, if you look at the page's source code (as via the developer tools' *Elements* tab), you'll see your name embedded within the HTML! By contrast, files like `cat.jpg` and `cat.html` (and even `hello.html`) are "static" content, since they're not dynamically generated.
 
@@ -276,7 +276,7 @@ from within your own `~/Dropbox/pset6` directory, if the server isn't already ru
 telnet #.#.#.# 8080
 ~~~
 
-where `pass:[#.#.#.#]` is, as before, your appliance's IP address. `telnet` is a program via which you can "communicate with another host" via textual commands. (Back in my day, too, it was how we checked email!) Anyhow, note that `telnet` expects a space (not a colon) between an address and the port.
+where `#.#.#.#` is, as before, your appliance's IP address. `telnet` is a program via which you can "communicate with another host" via textual commands. (Back in my day, too, it was how we checked email!) Anyhow, note that `telnet` expects a space (not a colon) between an address and the port.
 
 You should find that `telnet` is now waiting for input. Go ahead and type
 
@@ -433,7 +433,7 @@ Per 3.1.1 of <http://tools.ietf.org/html/rfc7230>, a `request-line` is defined a
 
     method SP request-target SP HTTP-version CRLF
 
-wherein `SP` represents a single space (`pass:[ ]`) and `CRLF` represents `\r\n`. None of `method`, `request-target`, and `HTTP-version`, meanwhile, may contain `SP`.
+wherein `SP` represents a single space (` `) and `CRLF` represents `\r\n`. None of `method`, `request-target`, and `HTTP-version`, meanwhile, may contain `SP`.
 
 Per 5.3 of the same RFC, `request-target`, meanwhile, can take several forms, the only one of which your server needs to support is
 
