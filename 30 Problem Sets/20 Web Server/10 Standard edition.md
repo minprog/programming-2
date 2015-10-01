@@ -223,7 +223,7 @@ GET /cat.jpg HTTP/1.1
 which is the "request line" that your browser sent to the server (which is being outputted by `server` via `printf` for diagnostics' sake). Below that you should see
 
 ~~~ bash
-#HTTP/1.1 200 OK#
+HTTP/1.1 200 OK
 ~~~
 
 which is the server's response to the browser (which is also being outputted by `server` via `printf` for diagnostics' sake).
@@ -240,14 +240,14 @@ Not only should you see Happy Cat again. You should also see the below in your t
 
 ~~~ bash
 GET /cat.jpg HTTP/1.1
-#HTTP/1.1 200 OK#
+HTTP/1.1 200 OK
 ~~~
 
 You might also see the below.
 
 ~~~ bash
 GET /favicon.ico HTTP/1.1
-#404 Not Found#
+404 Not Found
 ~~~
 
 What's going on if so? Well, by convention, a lot of websites have in their root directory a `favicon.ico` file, which is a tiny icon that's meant to be displayed a browser's address bar or tab. If you do see those lines in your terminal window, that just means Chrome is guessing that your server, too, might have `favicon.ico` file. It doesn't (unless you put one to `public`), so not to worry.
