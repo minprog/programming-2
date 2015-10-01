@@ -69,25 +69,9 @@ First, join David (hey, that's me) for a tour of HTTP, the "protocol" via which 
 
 ![embed](https://www.youtube.com/embed/hU4XuBe50K4?rel=0)
 
-Next, consider reviewing some of these examples from Week 7, via which we introduced HTML, the language in which web pages are written.
-
-![embed](https://www.youtube.com/embed/RQ2_TIXBo00?rel=0&playlist=14jiSM4CMtY,uqsKEAAvpTA,P7oACLRGnEg,AI2nKW7_pck)
-
-And also some of these examples, via which we introduced CSS, the language with which web pages can be stylized.
-
-![embed](https://www.youtube.com/embed/1TgTA4o_AM8?rel=0&playlist=dW4giTKrgzo,GgpyVgkW_xk,whYnf7PFZ74,s1_kxTs5GfI,qyJXI2v7N8k,DQLbgo7Rzpg)
-
 Next, consider reviewing some of these examples, via which we introduced HTML forms, which we used to submit GET queries to Google.
 
 ![embed](https://www.youtube.com/embed/RQ2_TIXBo00?rel=0&playlist=14jiSM4CMtY,uqsKEAAvpTA,P7oACLRGnEg,AI2nKW7_pck)
-
-For another perspective altogether, join Daven for a tour of HTML too. Don't miss the bloopers at the end!
-
-![embed](https://www.youtube.com/embed/dM5V1epAbSs?rel=0)
-
-Finally, join Joseph (and Rob) for a closer look at CSS.
-
-![embed](https://www.youtube.com/embed/kg0ZOmUREwc?rel=0)
 
 ## Getting Started
 
