@@ -262,7 +262,7 @@ chmod 711 directory
 
 so that its contents are accessible via a browser (if that's indeed your intention).
 
-What's with all these numbers we're having you type?  Well, `600` happens to mean `rw-------`, and so all PHP files are made readable and writable only by you; `644` happens to mean `rw-r--r--`, and so all non-PHP files are to be readable and writable by you and just readable by everyone else; and `711` happens to mean `rwx--x--x`, and so all directories are to be readable, writable, and executable by you and just executable by everyone else.  Wait a minute, don't we want everyone to be able to read (i.e., interpret) your PHP files?  Nope!  For security reasons, PHP-based web pages are interpreted "as you" (i.e., under John Harvard's username) in the appliance.  For the curious, we're using http://www.suphp.org/[suPHP] with http://httpd.apache.org/[Apache].
+What's with all these numbers we're having you type?  Well, `600` happens to mean `rw-------`, and so all PHP files are made readable and writable only by you; `644` happens to mean `rw-r--r--`, and so all non-PHP files are to be readable and writable by you and just readable by everyone else; and `711` happens to mean `rwx--x--x`, and so all directories are to be readable, writable, and executable by you and just executable by everyone else.  Wait a minute, don't we want everyone to be able to read (i.e., interpret) your PHP files?  Nope!  For security reasons, PHP-based web pages are interpreted "as you" (i.e., under John Harvard's username) in the appliance.  For the curious, we're using [suPHP](http://www.suphp.org/) with [Apache](http://httpd.apache.org/).
 
 Okay, still, what's with all those numbers?  Well, think of `rw-r--r--` as representing three triples of bits, the first triple of which, to be clear, is `rw-`.  Imagine that `-` represents `0`, whereas `r`, `w`, and `x` represent `1`.  And, so, this same triple (`rw-`) is just `110` in binary, or `6` in decimal!  The other two triples, `r--` and `r--`, then, are just `100` and `100` in binary, or `4` and `4` in decimal!  How, then, to express a pattern like `rw-r--r--` with numbers?  Why, with `644`.
 
@@ -278,11 +278,11 @@ Just the other day, I heard about this great "penny stock," whose symbol (ironic
 
 Let's get in on this opportunity now.  Head on over to Yahoo! Finance at http://finance.yahoo.com/.  Type the symbol for FreeSeas Inc., *FREE*, into the text field in that page's top-left corner and click *Get Quotes*.  Odds are you'll see a table like the below.
 
-image::free.png[FreeSeas Inc.]
+![FreeSeas Inc.](free.png)
 
 Wow, only $0.16 per share!  That must be a good thing.  Anyhow, scroll down to the page's bottom, and you should see a toolbox like the below.
 
-image::toolbox.png[Toolbox]
+![Toolbox](toolbox.png)
 
 Looks like Yahoo lets you download all that data (albeit delayed).  Go ahead and click *Download Data* to download a file in CSV format (i.e., as comma-separated values).  Open the file in Excel or any text editor (e.g., `gedit`), and you should see a "row" of values, all excerpted from that table.  It turns out that the link you just clicked led to the URL below.
 
@@ -325,17 +325,15 @@ Okay, now open up `functions.php` with `gedit`.  Interesting, it looks like `fun
 
 ### header, footer
 
-In fact, navigate your way back to `~/vhosts/pset7/templates` and open up `header.php` and `footer.php` in `gedit`.  Ah, even more HTML!  Thanks to render, those files' contents will be included at the top and bottom, respectively, of each of your pages.  As a result, each of your pages will have access to http://getbootstrap.com/[Twitter's Bootstrap library], per the link and script tags therein.   And each page will have at least four `div` elements, three of which have unique IDs (`top`, `middle`, and `bottom`), if only to make styling them with CSS easier.  Even more interestingly, though, notice how `header.php` conditionally outputs `$title`, if it is set.  Remember how `index.php` contained the below line of code?
+In fact, navigate your way back to `~/vhosts/pset7/templates` and open up `header.php` and `footer.php` in `gedit`.  Ah, even more HTML!  Thanks to render, those files' contents will be included at the top and bottom, respectively, of each of your pages.  As a result, each of your pages will have access to [Twitter's Bootstrap library](http://getbootstrap.com/), per the link and script tags therein.   And each page will have at least four `div` elements, three of which have unique IDs (`top`, `middle`, and `bottom`), if only to make styling them with CSS easier.  Even more interestingly, though, notice how `header.php` conditionally outputs `$title`, if it is set.  Remember how `index.php` contained the below line of code?
 
-[source,php]
-~~~
+~~~ php
 render("portfolio.php", ["title" => "Portfolio"]);
 ~~~
 
 Well, because `render` calls `extract` on that second argument, an array, before requiring `header.php`, `header.php` ends up having access to a variable called `$title`.  Neat, eh?  You can pass even more values into a template simply by separating such key/value pairs with a comma, as in the below.
 
-[source,php]
-~~~
+~~~ php
 render("portfolio.php", ["cash" => 10000.00, "title" => "Portfolio"]);
 ~~~
 
@@ -345,24 +343,21 @@ Okay, now open up `constants.php` in `~/vhosts/pset7/includes` (which, recall, `
 
 ### login
 
-Navigate your way back to `~/vhosts/pset7/public` and open up `login.php`, another controller, with `gedit`.  This controller's a bit more involved than `index.php` as it handles the authentication of users.  Read through its lines carefully, taking note of how it how it queries the appliance's MySQL database using that `query` function from `functions.php`.  That function (which we wrote) essentially simplifies use of http://www.php.net/manual/en/class.pdo.php[PDO] (PHP Data Objects), a library with which you can query MySQL (and other) databases.   Per its definition in `functions.php`, the function accepts one or more arguments: a string of SQL followed by a comma-separated list of zero or more parameters that can be plugged into that string, not unlike `printf`.  Whereas `printf` uses `%d`, `%s`, and the like for placeholders, though, `query` simply relies on question marks, no matter the type of value.  And so the effect of
+Navigate your way back to `~/vhosts/pset7/public` and open up `login.php`, another controller, with `gedit`.  This controller's a bit more involved than `index.php` as it handles the authentication of users.  Read through its lines carefully, taking note of how it how it queries the appliance's MySQL database using that `query` function from `functions.php`.  That function (which we wrote) essentially simplifies use of [PDO](http://www.php.net/manual/en/class.pdo.php) (PHP Data Objects), a library with which you can query MySQL (and other) databases.   Per its definition in `functions.php`, the function accepts one or more arguments: a string of SQL followed by a comma-separated list of zero or more parameters that can be plugged into that string, not unlike `printf`.  Whereas `printf` uses `%d`, `%s`, and the like for placeholders, though, `query` simply relies on question marks, no matter the type of value.  And so the effect of
 
-[source,php]
-~~~
+~~~ php
 query("SELECT * FROM users WHERE username = ?", $_POST["username"]);
 ~~~
 
 in `login.php` is to replace `?` with whatever username has been submitted (via POST) via an HTML form.  (The function also ensures that any such placeholders' values are properly escaped so that your code is not vulnerable to "SQL injection attacks.")  For instance, suppose that President Skroob tries to log into C$50 Finance by inputting his username and password.  That line of code will ultimately execute the SQL statement below.
 
-[source,sql]
-~~~
+~~~ sql
 SELECT * FROM users WHERE username='skroob' 
 ~~~
 
-Beware, though.  PHP is weakly (i.e., loosely) typed, and so functions like query can actually return different types.  Indeed, even though query usually returns an array of rows (thanks to its invocation of PDO's `fetchAll`), it can also return `false` in case of errors.  But, unlike `SELECT`pass:[s], some SQL queries (e.g., `DELETE`pass:[s], `UPDATE`pass:[s], and `INSERT`pass:[s]) don't actually return rows, and so the array that `query` returns might sometimes be empty.  When checking the return value of `query` for `false`, then, take care not to use `==`, because it turns out than an empty array is `==` to `false` because of implicit casting.  But an empty array does not necessarily signify an error, only `false` does!  Use, then, PHP's `===` (or `!==`) operator when checking return values for `false`, which compares its operands' values and types (not just their values), as in the below.
+Beware, though.  PHP is weakly (i.e., loosely) typed, and so functions like query can actually return different types.  Indeed, even though query usually returns an array of rows (thanks to its invocation of PDO's `fetchAll`), it can also return `false` in case of errors.  But, unlike `SELECT`s, some SQL queries (e.g., `DELETE`s, `UPDATE`s, and `INSERT`s) don't actually return rows, and so the array that `query` returns might sometimes be empty.  When checking the return value of `query` for `false`, then, take care not to use `==`, because it turns out than an empty array is `==` to `false` because of implicit casting.  But an empty array does not necessarily signify an error, only `false` does!  Use, then, PHP's `===` (or `!==`) operator when checking return values for `false`, which compares its operands' values and types (not just their values), as in the below.
 
-[source,php]
-~~~
+~~~ php
 $result = query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"]));
 if ($result ### false)
 {
@@ -388,8 +383,7 @@ Alright, let's talk about that database you created earlier (by executing the st
 
 Now click the tab labeled *Structure*.  Ah, some familiar fields.  Recall that `login.php` generates queries like the below.
 
-[source,sql]
-~~~
+~~~ sql
 SELECT id FROM users WHERE username='skroob'
 ~~~
 
@@ -399,11 +393,11 @@ Make sense?
 
 Okay, let's give each of your users some cash.  Assuming you're still on phpMyAdmin's *Structure* tab, you should see a form with which you can add new columns.  Click the radio button immediately to the left of *After*, select *hash* from the drop-down menu, as in the below, then click *Go*.
 
-image::add.png[Add]
+![Add](add.png)
 
 Via the form that appears, define a field called cash of type `DECIMAL` with a length of `65,4`, with a default value of `0.0000`, and with an attribute of `UNSIGNED`, as in the below, then click *Save*.
 
-image::save.png[Save]
+![Save](save.png)
 
 If you pull up the documentation for MySQL at http://dev.mysql.com/doc/refman/5.5/en/numeric-types.html, you'll see that the `DECIMAL` data type is used to "store exact numeric data values."  A length of `65,4` for a `DECIMAL` means that values for `cash` can have no more than 65 digits in total, 4 of which can be to the right of the decimal point.  (Ooo, fractions of pennies.  Sounds like *Office Space*.)  
 
@@ -423,15 +417,13 @@ cp login_form.php register_form.php
 
 Then open up `register_form.php` with `gedit` and change the value of form's `action` attribute from `login.php` to `register.php`.  Next add an additional field of type `password` to the HTML form called `confirmation` so that users are prompted to input their choice of passwords twice (to discourage mistakes).  Finally, change the button's text from `Log In` to `Register` and change 
 
-[source,html]
-~~~
+~~~ html
 or <a href="register.php">register</a> for an account
 ~~~
 
 to
 
-[source,html]
-~~~
+~~~ html
 or <a href="login.php">log in</a>
 ~~~
 
@@ -439,8 +431,7 @@ so that users can navigate away from this page if they already have accounts.
    
 Then, using `gedit`, create a new file called `register.php` with the contents below, taking care to save it in `~/vhosts/pset7/public`.
 
-[source,php]
-~~~
+~~~ php
 <?php
 
     // configuration
@@ -467,33 +458,31 @@ Alright, let's take a look at your work!  Bring up http://pset7/login.php in Chr
 Of course, `register.php` doesn't actually register users yet, so it's time to tackle that `TODO`!   Allow us to offer some hints.
 
 * If `$_POST["username"]` or `$_POST["password"]` is empty or if `$_POST["password"]` does not equal `$_POST["confirmation"]`, you'll want to inform registrants of their error. 
+
 * To insert a new user into your database, you might want to call
-+
-[source,sql]
-~~~
-query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"]));
-~~~
-+
-though we leave it to you to decide how much cash your code should give to new users.
+
+        query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"]));
+
+    though we leave it to you to decide how much cash your code should give to new users.
+
 * Know that `query` will return `false` if your `INSERT` fails (as can happen if, say, `username` already exists).  Be sure to check for false with `===` and not `==`.
+
 * If, though, your `INSERT` succeeds, know that you can find out which `id` was assigned to that user with code like the below.
-+
-[source,php]
-~~~
-$rows = query("SELECT LAST_INSERT_ID() AS id");
-$id = $rows[0]["id"];
-~~~
+
+        $rows = query("SELECT LAST_INSERT_ID() AS id");
+        $id = $rows[0]["id"];
+
 * If registration succeeds, you might as well log the new user in (as by "remembering" that `id` in `$_SESSION`), thereafter redirecting to `index.php`.
 
 Here's Zamyla with some additional hints:
 
-video::-b274yKl-4w[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/-b274yKl-4w)
 
-All done with `register.php`?  Ready to test?  Head back to http://pset7/register.php using Chrome *inside of the appliance* and try to register a new username.  If you reach `index.php`, odds are you done good!  Confirm as much by returning to phpMyAdmin, clicking once more that tab labeled *Browse* for the table called `users`.  May that you see your new user.  If not, it's time to debug!
+All done with `register.php`?  Ready to test?  Head back to <http://pset7/register.php> using Chrome *inside of the appliance* and try to register a new username.  If you reach `index.php`, odds are you done good!  Confirm as much by returning to phpMyAdmin, clicking once more that tab labeled *Browse* for the table called `users`.  May that you see your new user.  If not, it's time to debug!
 
-Be sure, incidentally, that any HTML generated by `register.php` is valid, as by ctrl- or right-clicking on the page in Chrome, selecting *View Page Source*, highlighting and copying the source code, and then pasting it into the W3C's validator at http://validator.w3.org/#validate_by_input and then clicking *Check*.   Ultimately, the *Result* of checking your page for validity via the W3C's validator should be *Passed* or *Tentatively passed*, in which case you should see a friendly green banner.  Warnings are okay.  Errors (and big red banners) are not.  Note that you won't be able to "validate by URI" at http://validator.w3.org/#validate_by_uri, since your appliance isn't accessible on the public Internet!
+Be sure, incidentally, that any HTML generated by `register.php` is valid, as by ctrl- or right-clicking on the page in Chrome, selecting *View Page Source*, highlighting and copying the source code, and then pasting it into the W3C's validator at <http://validator.w3.org/#validate_by_input> and then clicking *Check*.   Ultimately, the *Result* of checking your page for validity via the W3C's validator should be *Passed* or *Tentatively passed*, in which case you should see a friendly green banner.  Warnings are okay.  Errors (and big red banners) are not.  Note that you won't be able to "validate by URI" at <http://validator.w3.org/#validate_by_uri>, since your appliance isn't accessible on the public Internet!
 
-Do bear in mind as you proceed further that you are welcome to play with and learn from the staff's implementation of C$50 Finance at https://cs50.harvard.edu/finance.
+Do bear in mind as you proceed further that you are welcome to play with and learn from the staff's implementation of C$50 Finance at <https://cs50.harvard.edu/finance>.
 
 In particular, you are welcome to register with as many (fake) usernames as you would like in order to play.  And you are welcome to view our pages' HTML and CSS (by viewing our source using your browser) so that you might learn from or improve upon our own design.  If you wish, feel free to adopt our HTML and CSS as your own.
 
@@ -510,13 +499,13 @@ How to look up a stock's latest price?  Well, recall that function called `looku
 $stock = lookup($_POST["symbol"]);
 ~~~
 
-Assuming the value of `$_POST["symbol"]` is a valid symbol for an actual stock, lookup will return an associative array with three keys for that stock, namely its `symbol`, its `name`, and its `price`.  Know that you can use PHP's `number_format` function (somehow!) to format price to at least two decimal places but no more than four decimal places.  See http://php.net/manual/en/function.number-format.php for details.
+Assuming the value of `$_POST["symbol"]` is a valid symbol for an actual stock, lookup will return an associative array with three keys for that stock, namely its `symbol`, its `name`, and its `price`.  Know that you can use PHP's `number_format` function (somehow!) to format price to at least two decimal places but no more than four decimal places.  See <http://php.net/manual/en/function.number-format.php> for details.
 
 Of course, if the user submits an invalid symbol (for which lookup returns false), be sure to inform the user somehow.  Be sure, too, that any HTML generated by your templates is valid, per the W3C's validator.
 
 Here's Zamyla again:
 
-video::l3OJRBGkU78[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/l3OJRBGkU78)
 
 ### portfolio
 
@@ -530,22 +519,19 @@ Before we let users buy and sell stocks themselves, let's give some shares to Pr
 
 Once you've bought your users some shares, let's see what you did.  Click the tab labeled *SQL* and run a query like the below, where `tbl` represents your new table's name.
 
-[source,sql]
-~~~
+~~~ sql
 SELECT * FROM tbl WHERE id = 6
 ~~~
 
 Assuming `6` is President Skroob's user ID, that query should return all rows from `tbl` that represent the president's holdings.  If the only fields in table are, say, `id`, `symbol`, and `shares`, then know that the above is actually equivalent to the below.
 
-[source,sql]
-~~~
+~~~ sql
 SELECT id, symbol, shares FROM tbl WHERE id = 6
 ~~~
 
 If, meanwhile, you'd like to retrieve only President Skroob's shares of FreeSeas, you might like to try a query like the below.
 
-[source,sql]
-~~~
+~~~ sql
 SELECT shares FROM tbl WHERE id = 6 AND symbol = "FREE"
 ~~~
 
@@ -555,8 +541,7 @@ Incidentally, via this *SQL* tab, you could have inserted those "purchases" with
 
 Alright, let's put this knowledge to use.  It's time to let users peruse their portfolios!  Overhaul `index.php` (a controller) and `portfolio.php` (a template) in such a way that they report each of the stocks in a user's portfolio, including number of shares and current price thereof, along with a user's current cash balance.  Needless to say, `index.php` will need to invoke `lookup` much like `quote.php` did, though perhaps multiple times.  And know that a PHP script can certainly invoke `query` multiple times, even though, thus far, we've seen it used in a file no more than once.  And you can certainly iterate over the array it returns in a template (assuming you pass it in via `render`).  For instance, if your goal is simply to display, say, President Skroob's holdings, one per row in some HTML table, you can generate rows with code like the below, where `$positions` is an array of associative arrays, each of which represents a position (i.e., a stock owned).  
 
-[source,php]
-~~~
+~~~ php
 <table>
     <?php
 
@@ -575,8 +560,7 @@ Alright, let's put this knowledge to use.  It's time to let users peruse their p
 
 Alternatively, you can avoid using the concatenation operator (`.`) via syntax like the below:
 
-[source,php]
-~~~
+~~~ php
 <table>
     <?php
 
@@ -595,8 +579,7 @@ Alternatively, you can avoid using the concatenation operator (`.`) via syntax l
 
 Note that, in the above version, we've surrounded the lines of HTML with double quotes instead of single quotes so that the variables within (`$position["symbol"]`, `$position["shares"]`, and `$position["price"]`) are interpolated  (i.e., substituted with their values) by PHP's interpreter; variables between single quotes are not interpolated.  And we've also surrounded those same variables with curly braces so that PHP realizes they're variables; variables with simpler syntax (e.g., `$foo`) do not require the curly braces for interpolation.  (It's fine to use double quotes inside those curly braces, even though we've also used double quotes to surround the entire argument to `print`.)  Anyhow, though commonly done, generating HTML via calls to `print` isn't terribly elegant.  An alternative approach, though still a bit inelegant, is code more like the below.
 
-[source,php]
-~~~
+~~~ php
 <?php foreach ($positions as $position): ?>
 
     <tr>
@@ -610,8 +593,7 @@ Note that, in the above version, we've surrounded the lines of HTML with double 
 
 Of course, before you can even pass `$positions` to `portfolio.php`, you'll need to define it in `index.php`.  Allow us to suggest code like the below, which combines names and prices from `lookup` with shares and symbols, as might be returned as `$rows` from `query`.
 
-[source,php]
-~~~
+~~~ php
 $positions = [];
 foreach ($rows as $row)
 {
@@ -632,8 +614,7 @@ Note that, with this code, we're deliberately create a new array of associative 
 
 Now, much like you can pass a page's title to render, so can you pass these positions, as with the below.
 
-[source,php]
-~~~
+~~~ php
 render("portfolio.php", ["positions" => $positions, "title" => "Portfolio"]);
 ~~~
 
@@ -641,7 +622,7 @@ Of course, you'll also need to pass a user's current cash balance from `index.ph
 
 To be clear, in the spirit of MVC, though, do take care *not* to call `lookup` inside of that (or any other) template; you should only call `lookup` in controllers.  Even though templates (aka views) can contain PHP code, that code should only be used to print and/or iterate over data that's been passed in (as via render) from a controller.
 
-As for what HTML to generate, look, as before, to https://cs50.harvard.edu/finance for inspiration or hints.  But do not feel obliged to mimic our design.  Make this website your own!  Although any HTML and PHP code that you yourself write should be pretty-printed (i.e., nicely indented), it's okay if lines exceed 80 characters in length.   HTML that you generate dynamically (as via calls to `print`), though, does not need to be pretty-printed.  
+As for what HTML to generate, look, as before, to <https://cs50.harvard.edu/finance> for inspiration or hints.  But do not feel obliged to mimic our design.  Make this website your own!  Although any HTML and PHP code that you yourself write should be pretty-printed (i.e., nicely indented), it's okay if lines exceed 80 characters in length.   HTML that you generate dynamically (as via calls to `print`), though, does not need to be pretty-printed.  
 
 As before, be sure to display stocks' prices and users' cash balances to at least two decimal places but no more than four.
 
@@ -651,25 +632,23 @@ As always, be sure that the HTML generated by `index.php` is valid.
 
 Here's Zamyla with some additional tips:
 
-video::ExR5lqe3ogc[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/ExR5lqe3ogc)
 
 ### sell
 
 And now it is time to implement the ability to sell with a controller called, say, `sell.php` and some number of templates.  We leave the design of this feature to you.  But know that you can delete rows from your table (on behalf of, say, President Skroob) with SQL like the below.
 
-[source,sql]
-~~~
+~~~ sql
 DELETE FROM tbl WHERE id = 6 AND symbol = "FREE"
 ~~~
 
 We leave it to you to infer exactly what that statement should do.  Of course, you could try the above out via phpMyAdmin's *SQL* tab.  Now what about the user's cash balance?  Odds are, your user is going to want the proceeds of all sales.  So selling a stock involves updating not only your table for users' portfolios but `users` as well.  We leave it to you to determine how to compute how much cash a user is owed upon sale of some stock.  But once you know that amount (say, $500), SQL like the below should take care of the deposit (for, say, President Skroob). 
 
-[source,sql]
-~~~
+~~~ sql
 UPDATE users SET cash = cash + 500 WHERE id = 6
 ~~~
 
-Of course, if the database or web server happens to die between this `DELETE` and `UPDATE`, President Skroob might lose out on all of that cash.  You need not worry about such cases!  It's also possible, because of multithreading and, thus, race conditions, that a clever president could trick your site into paying out more than once.  You need not worry about such cases either!  Though, if you're so very inclined, you can employ SQL transactions (with InnoDB tables).  See http://dev.mysql.com/doc/refman/5.5/en/sql-syntax-transactions.html for reference.
+Of course, if the database or web server happens to die between this `DELETE` and `UPDATE`, President Skroob might lose out on all of that cash.  You need not worry about such cases!  It's also possible, because of multithreading and, thus, race conditions, that a clever president could trick your site into paying out more than once.  You need not worry about such cases either!  Though, if you're so very inclined, you can employ SQL transactions (with InnoDB tables).  See <http://dev.mysql.com/doc/refman/5.5/en/sql-syntax-transactions.html> for reference.
 
 It's fine, for simplicity, to require that users sell all shares of some stock or none, rather than only a few.  Needless to say, try out your code by logging in as some user and selling some stuff.  You can always "buy" it back manually with phpMyAdmin.
 
@@ -677,14 +656,13 @@ As always, be sure that your HTML is valid!
 
 And as always, here is Zamyla!
 
-video::OfMXp22SNq8[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/OfMXp22SNq8)
 
 ### buy
 
 Now it's time to support actual buys.  Implement the ability to buy, with a controller called, say, `buy.php` and some number of templates.  (As before, you need not worry about interruptions of service or race conditions.)  The interface with which you provide a user is entirely up to you, though, as before, feel free to look to https://www.cs50.net/finance for inspiration or hints.  Of course, you'll need to ensure that a user cannot spend more cash than he or she has on hand.  And you'll want to make sure that users can only buy whole shares of stocks, not fractions thereof.  For this latter requirement, know that a call like
 
-[source,php]
-~~~
+~~~ php
 preg_match("/^\d+$/", $_POST["shares"])
 ~~~
 
@@ -694,8 +672,7 @@ When it comes time to store stocks' symbols in your database table, take care to
 
 Incidentally, if you implemented your table for users' portfolios as we did ours (with that joint primary key), know that SQL like the below (which, unfortunately, wraps onto two lines) will insert a new row into table unless the specified pair of `id` and `symbol` already exists in some row, in which case that row's number of shares will simply be increased (say, by `10`).
 
-[source,sql]
-~~~
+~~~ sql
 INSERT INTO table (id, symbol, shares) VALUES(6, "FREE", 10) ON DUPLICATE KEY UPDATE shares = shares + VALUES(shares)
 ~~~
 
@@ -703,7 +680,7 @@ As always, be sure to bang on your code.  And be sure that your HTML is valid!
 
 Here's Zamyla with some additional help:
 
-video::vWIKlxF1iog[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/vWIKlxF1iog)
 
 ### history
 
@@ -721,7 +698,7 @@ Then, by way of a controller called, say, `history.php` and some number of templ
 
 Here's Zamyla again:
 
-video::XuxJbwCdquk[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/XuxJbwCdquk)
 
 ### index
 
@@ -738,7 +715,7 @@ And now the icing on the cake.  Only one feature to go, but you get to choose.  
 
 Here's Zamyla with a few final thoughts:
 
-video::7iPqmGgA2Os[youtube,height=540,width=960]
+![embed](https://www.youtube.com/embed/7iPqmGgA2Os)
 
 ## Sanity Checks
 
@@ -771,10 +748,4 @@ zip -r pset7.zip pset7/
 ~~~
 
 If you type `ls` thereafter, you should see that you have a new file called `pset7.zip` in `~/vhosts`.  (If you realize later that you need to make a change to some file and re-ZIP everything, you can delete the ZIP file you already made with `rm pset7.zip`, then create a new ZIP file as before.)
-* Once done creating your ZIP file, open up Chrome _inside_ of the appliance (not on your own computer) and visit https://www.cs50.net/submit[cs50.net/submit], logging in if prompted.
-* Click *Submit* toward the window's top-left corner.
-* Under *Problem Set 7* on the screen that appears, click *Upload New Submission*.
-* On the screen that appears, click *Add files...*.  A window entitled *Open Files* should appear.
-* Navigate your way to `pset7.zip`, as by clicking *jharvard*, then double-clicking *Dropbox*.  Once you find `pset7.zip`, click it once to select it, then click *Open*.
-* Click *Start upload* to upload your ZIP file to CS50's servers.
-* On the screen that appears, you should see a window with *No File Selected*.  If you move your mouse toward the window's lefthand side, you should see a list of the files you uploaded.  Click each to confirm the contents of each.  (No need to click any other buttons or icons.)  If confident that you submitted the files you intended, consider your source code submitted!  If you'd like to re-submit different (or modified) files, simply return to https://www.cs50.net/submit[cs50.net/submit] and repeat these steps.  You may re-submit as many times as you'd like; we'll grade your most recent submission, so long as it's before the deadline.
+* Once done creating your ZIP file, open up Chrome _inside_ of the appliance (not on your own computer) and visit this page to submit!
