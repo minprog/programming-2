@@ -7,8 +7,8 @@
 
 ## Recommended Reading
 
-* http://diveintohtml5.info/
-* http://php.net/manual/en/langref.php
+* <http://diveintohtml5.info/>
+* <http://php.net/manual/en/langref.php>
 
 ## Academic Honesty
 
@@ -197,7 +197,7 @@ Finally, ensure that the files within those directories are world-readable by ex
 chmod a+r css/* fonts/* img/* js/*
 ~~~
 
-If unfamiliar, `\*` is a "wildcard character," so `css/*`, for instance, simply means "all files within the `css` directory."
+If unfamiliar, `*` is a "wildcard character," so `css/*`, for instance, simply means "all files within the `css` directory."
 
 For security's sake, don't make `~/vhosts/pset7/includes` or `~/vhosts/pset7/templates` world-executable (or their contents world-readable), as they shouldn't be accessible to the whole world (only to your PHP code, as you'll soon see).
 
@@ -270,13 +270,13 @@ Actually, this is a bit of a white lie.  Because you can represent only eight po
 
 ## Yahoo!
 
-If you're not quite sure what it means to buy and sell stocks (i.e., shares of a company), surf on over to http://www.investopedia.com/university/stocks/ for a tutorial.
+If you're not quite sure what it means to buy and sell stocks (i.e., shares of a company), surf on over to <http://www.investopedia.com/university/stocks/> for a tutorial.
 
 You're about to implement C$50 Finance, a Web-based tool with which you can manage portfolios of stocks.  Not only will this tool allow you to check real stocks' actual prices and portfolios' values, it will also let you buy (okay, "buy") and sell (fine, "sell") stocks!  Per Yahoo's fine print, "Quotes delayed [by a few minutes], except where indicated otherwise."
 
 Just the other day, I heard about this great "penny stock," whose symbol (ironically) is *FREE*!
 
-Let's get in on this opportunity now.  Head on over to Yahoo! Finance at http://finance.yahoo.com/.  Type the symbol for FreeSeas Inc., *FREE*, into the text field in that page's top-left corner and click *Get Quotes*.  Odds are you'll see a table like the below.
+Let's get in on this opportunity now.  Head on over to Yahoo! Finance at <http://finance.yahoo.com/>.  Type the symbol for FreeSeas Inc., *FREE*, into the text field in that page's top-left corner and click *Get Quotes*.  Odds are you'll see a table like the below.
 
 ![FreeSeas Inc.](free.png)
 
@@ -286,15 +286,11 @@ Wow, only $0.16 per share!  That must be a good thing.  Anyhow, scroll down to t
 
 Looks like Yahoo lets you download all that data (albeit delayed).  Go ahead and click *Download Data* to download a file in CSV format (i.e., as comma-separated values).  Open the file in Excel or any text editor (e.g., `gedit`), and you should see a "row" of values, all excerpted from that table.  It turns out that the link you just clicked led to the URL below.
 
-http://download.finance.yahoo.com/d/quotes.csv?s=FREE&f=sl1d1t1c1ohgv&e=.csv
+<http://download.finance.yahoo.com/d/quotes.csv?s=FREE&f=sl1d1t1c1ohgv&e=.csv>
 
 Notice how FreeSeas' symbol is embedded in this URL (as the value of the HTTP parameter called `s`); that's how Yahoo knows whose data to return.  Notice also the value of the HTTP parameter called `f`; it's a bit cryptic (and officially undocumented), but the value of that parameter tells Yahoo which fields of data to return to you. Unfortunately, Yahoo sometimes returns prices in currencies other than US dollars (without telling you which), but we'll just assume everything's in US dollars for simplicity.
 
-////
-If curious as to what they mean, head to https://web.archive.org/web/20140325063520/http://www.gummy-stuff.org/Yahoo-data.htm.
-////
-
-It's worth noting that a lot of websites that integrate data from other websites do so via "screen scraping," a process that requires writing programs that parse (or, really, search) HTML for data of interest (e.g., air fares, stock prices, etc.).  Writing a screen scraper for a site tends to be a nightmare, though, because a site's markup is often a mess, and if the site changes the format of its pages overnight, you need to re-write your scraper.  (See https://manual.cs50.net/scraping/ if curious as to how it can be done nonetheless.)
+It's worth noting that a lot of websites that integrate data from other websites do so via "screen scraping," a process that requires writing programs that parse (or, really, search) HTML for data of interest (e.g., air fares, stock prices, etc.).  Writing a screen scraper for a site tends to be a nightmare, though, because a site's markup is often a mess, and if the site changes the format of its pages overnight, you need to re-write your scraper.  (See <https://manual.cs50.net/scraping/> if curious as to how it can be done nonetheless.)
 
 Thankfully, because Yahoo provides data in CSV, C$50 Finance will avoid screen scraping altogether by downloading (effectively pretending to be a browser) and parsing CSV files instead.  Even more thankfully, we've written that code for you!
 
@@ -304,9 +300,9 @@ In fact, let's turn our attention to the code you've been given.
 
 ### index
 
-Navigate your way to `~/vhosts/pset7/public` and open up `index.php` with `gedit`.  Know that `index.php` is the file that's loaded by default when you visit a URL like http://pset7/.  Well, it turns out there's not much PHP code in this file.  And there isn't any HTML at all.  Rather, `index.php` "requires" `config.php` (which is in a directory called `includes` in ``index.php``'s parent directory).  And `index.php` then calls `render` (a function implemented in a file called `functions.php` that can also be found inside of `includes`) in order to render (i.e., output) a template called `portfolio.php` (which is in a directory called `templates` in `index.php`'s parent directory).  Phew, that was a mouthful.
+Navigate your way to `~/vhosts/pset7/public` and open up `index.php` with `gedit`.  Know that `index.php` is the file that's loaded by default when you visit a URL like <http://pset7/>.  Well, it turns out there's not much PHP code in this file.  And there isn't any HTML at all.  Rather, `index.php` "requires" `config.php` (which is in a directory called `includes` in ``index.php``'s parent directory).  And `index.php` then calls `render` (a function implemented in a file called `functions.php` that can also be found inside of `includes`) in order to render (i.e., output) a template called `portfolio.php` (which is in a directory called `templates` in `index.php`'s parent directory).  Phew, that was a mouthful.
 
-It turns out that `index.php` is considered a "controller," whereby its purpose in life is to control the behavior of your website when a user visits http://pset7/ (or, equivalently, http://pset7/index.php).  Eventually, you'll need to add some more PHP code to this file in order to pass more than just title to render.  But for now, let's take a look at `portfolio.php`, the template that this controller ultimately renders.  
+It turns out that `index.php` is considered a "controller," whereby its purpose in life is to control the behavior of your website when a user visits <http://pset7/> (or, equivalently, <http://pset7/index.php>).  Eventually, you'll need to add some more PHP code to this file in order to pass more than just title to render.  But for now, let's take a look at `portfolio.php`, the template that this controller ultimately renders.  
 
 ### portfolio
 
@@ -379,7 +375,7 @@ Phew, that was a lot.  Help yourself to a snack.
 
 ### users
 
-Alright, let's talk about that database you created earlier (by executing the statements in `pset7.sql` in phpMyAdmin's *SQL* tab).  Head back to http://pset7/phpmyadmin/ using Chrome *inside of the appliance* to access phpMyAdmin.  Log in as John Harvard if prompted (with a username of *jharvard* and a password of *crimson*).  You should then find yourself at phpMyAdmin's main page, in the top-left corner of which is a database called *pset7* that has (if you click the *pass:[+]*) a table called *users*.  Click the name of that table to see its contents.  Ah, some familiar folks.  In fact, there's President Skroob's username and a hash of his password (which is the same as the combination to his luggage)!  
+Alright, let's talk about that database you created earlier (by executing the statements in `pset7.sql` in phpMyAdmin's *SQL* tab).  Head back to <http://pset7/phpmyadmin/> using Chrome *inside of the appliance* to access phpMyAdmin.  Log in as John Harvard if prompted (with a username of *jharvard* and a password of *crimson*).  You should then find yourself at phpMyAdmin's main page, in the top-left corner of which is a database called *pset7* that has (if you click the *+*) a table called *users*.  Click the name of that table to see its contents.  Ah, some familiar folks.  In fact, there's President Skroob's username and a hash of his password (which is the same as the combination to his luggage)!  
 
 Now click the tab labeled *Structure*.  Ah, some familiar fields.  Recall that `login.php` generates queries like the below.
 
@@ -399,7 +395,7 @@ Via the form that appears, define a field called cash of type `DECIMAL` with a l
 
 ![Save](save.png)
 
-If you pull up the documentation for MySQL at http://dev.mysql.com/doc/refman/5.5/en/numeric-types.html, you'll see that the `DECIMAL` data type is used to "store exact numeric data values."  A length of `65,4` for a `DECIMAL` means that values for `cash` can have no more than 65 digits in total, 4 of which can be to the right of the decimal point.  (Ooo, fractions of pennies.  Sounds like *Office Space*.)  
+If you pull up the documentation for MySQL at <http://dev.mysql.com/doc/refman/5.5/en/numeric-types.html>, you'll see that the `DECIMAL` data type is used to "store exact numeric data values."  A length of `65,4` for a `DECIMAL` means that values for `cash` can have no more than 65 digits in total, 4 of which can be to the right of the decimal point.  (Ooo, fractions of pennies.  Sounds like *Office Space*.)  
 
 Okay, return to the tab labeled *Browse* and give everyone $10,000.00 manually.  (In theory, we could have defined `cash` as having a default value of `10000.000`, but, in general, best to put such settings in code, not your database, so that they're easier to change.)  The easiest way is to click *Check All*, then click *Change* to the right of the pencil icon.  On the page that appears, change `0.0000` to `10000.0000` for each of your users, then click *Go*.  Won't they be happy!
 
@@ -453,7 +449,7 @@ Then, using `gedit`, create a new file called `register.php` with the contents b
 ?>
 ~~~
 
-Alright, let's take a look at your work!  Bring up http://pset7/login.php in Chrome *inside of the appliance* and click that page's link to `register.php`.  You should then find yourself at http://pset7/register.php.  If anything appears awry, feel free to make tweaks to `register_form.php` or `register.php`.  Just be sure to save your changes and then reload the page in the browser.
+Alright, let's take a look at your work!  Bring up <http://pset7/login.php> in Chrome *inside of the appliance* and click that page's link to `register.php`.  You should then find yourself at <http://pset7/register.php>.  If anything appears awry, feel free to make tweaks to `register_form.php` or `register.php`.  Just be sure to save your changes and then reload the page in the browser.
 
 Of course, `register.php` doesn't actually register users yet, so it's time to tackle that `TODO`!   Allow us to offer some hints.
 
@@ -494,8 +490,7 @@ Okay, now it's time to empower users to look up quotes for individual stocks.  O
 
 How to look up a stock's latest price?  Well, recall that function called `lookup` in `functions.php`.  Odds are you'll want to call it with code like the below.
 
-[source,php]
-~~~
+~~~ php
 $stock = lookup($_POST["symbol"]);
 ~~~
 
@@ -660,13 +655,13 @@ And as always, here is Zamyla!
 
 ### buy
 
-Now it's time to support actual buys.  Implement the ability to buy, with a controller called, say, `buy.php` and some number of templates.  (As before, you need not worry about interruptions of service or race conditions.)  The interface with which you provide a user is entirely up to you, though, as before, feel free to look to https://www.cs50.net/finance for inspiration or hints.  Of course, you'll need to ensure that a user cannot spend more cash than he or she has on hand.  And you'll want to make sure that users can only buy whole shares of stocks, not fractions thereof.  For this latter requirement, know that a call like
+Now it's time to support actual buys.  Implement the ability to buy, with a controller called, say, `buy.php` and some number of templates.  (As before, you need not worry about interruptions of service or race conditions.)  The interface with which you provide a user is entirely up to you, though, as before, feel free to look to <https://www.cs50.net/finance> for inspiration or hints.  Of course, you'll need to ensure that a user cannot spend more cash than he or she has on hand.  And you'll want to make sure that users can only buy whole shares of stocks, not fractions thereof.  For this latter requirement, know that a call like
 
 ~~~ php
 preg_match("/^\d+$/", $_POST["shares"])
 ~~~
 
-will return `true` if and only if `$_POST["shares"]` contains a non-negative integer, thanks to its use of a regular expression.  See http://www.php.net/preg_match for details.  Take care to apologize to the user if you must reject their input for any reason.  In other words, be sure to perform rigorous error-checking.  (We leave to you to determine what needs to be checked!)
+will return `true` if and only if `$_POST["shares"]` contains a non-negative integer, thanks to its use of a regular expression.  See <http://www.php.net/preg_match> for details.  Take care to apologize to the user if you must reject their input for any reason.  In other words, be sure to perform rigorous error-checking.  (We leave to you to determine what needs to be checked!)
 
 When it comes time to store stocks' symbols in your database table, take care to store them in uppercase (as is convention), no matter how they were inputted by users, so that you don't accidentally treat, say, `free` and `FREE` as different stocks.  Don't force users, though, to input symbols in uppercase.
 
@@ -721,7 +716,7 @@ Here's Zamyla with a few final thoughts:
 
 Before you consider this problem set done, best to ask yourself these questions and then go back and improve your code as needed!  Do not consider the below an exhaustive list of expectations, though, just some helpful reminders.  The checkboxes that have come before these represent the exhaustive list!  To be clear, consider the questions below rhetorical.  No need to answer them in writing for us, since all of your answers should be "yes!"
 
-* Is the HTML generated by all of your PHP files valid according to link:http://validator.w3.org/[]?
+* Is the HTML generated by all of your PHP files valid according to <http://validator.w3.org/>?
 * Do your pages detect and handle invalid inputs properly?
 * Are you recording users' histories of transactions properly?
 * Did you add one (1) additional feature of your own?
