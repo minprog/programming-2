@@ -355,13 +355,13 @@ Beware, though.  PHP is weakly (i.e., loosely) typed, and so functions like quer
 
 ~~~ php
 $result = query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"]));
-if ($result ### false)
+if ($result === false)
 {
     // the INSERT failed, presumably because username already existed
 }
 ~~~
 
-See http://php.net/manual/en/language.operators.comparison.php for more details.
+See <http://php.net/manual/en/language.operators.comparison.php> for more details.
 
 Anyhow, notice too that `login.php` "remembers" that a user is logged in by storing his or her unique ID inside of `$_SESSION`.  As before, this controller does not contain any HTML.  Rather, it calls `apologize` or renders `login_form.php` as needed.  In fact, open up `login_form.php` in `~/vhosts/pset7/templates` with `gedit`.  Most of that file is HTML that's stylized via some of Bootstrap's CSS classes, but notice how the HTML form therein POSTs to `login.php`.  Just for good measure, take a peek at `apology.php` while you're in that directory as well.  And also take a peek at `logout.php` back in `~/vhosts/pset7/public` to see how it logs out a user. 
 
@@ -434,14 +434,14 @@ Then, using `gedit`, create a new file called `register.php` with the contents b
     require("../includes/config.php");
 
     // if user reached page via GET (as by clicking a link or via redirect)
-    if ($_SERVER["REQUEST_METHOD"] ## "GET")
+    if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // else render form
         render("register_form.php", ["title" => "Register"]);
     }
 
     // else if user reached page via POST (as by submitting a form via POST)
-    else if ($_SERVER["REQUEST_METHOD"] ## "POST")
+    else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // TODO
     }
@@ -593,7 +593,7 @@ $positions = [];
 foreach ($rows as $row)
 {
     $stock = lookup($row["symbol"]);
-    if ($stock !## false)
+    if ($stock !== false)
     {
         $positions[] = [
             "name" => $stock["name"],
