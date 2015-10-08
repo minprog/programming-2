@@ -502,7 +502,6 @@ Last but not least, add at least one personal touch to your mashup, altering its
 
 When ready to submit, open up a Terminal window and "export" your MySQL database (i.e., save it into a text file) by executing the commands below, inputting *crimson* when prompted for a password.  For security, you won't see the password as you type it.
 
-[source]
 ~~~
 cd ~/vhosts/pset8
 mysqldump -u jharvard -p pset8 > pset8.sql
@@ -510,7 +509,6 @@ mysqldump -u jharvard -p pset8 > pset8.sql
 
 If you type `ls` thereafter, you should see that you have a new file called `pset8.sql` in `~/vhosts/pset8`.  (If you realize later that you need to make a change to your database and re-export it, you can delete `pset8.sql` with `rm pset8.sql`, then re-export as before.)  Next create a ZIP (i.e., compressed) file containing your entire `pset8` directory by executing the below.  Incidentally, `-r` means "recursive," which in this case means to ZIP up everything inside of `pset8`, including any subdirectories (or even subsubdirectories!).
 
-[source]
 ~~~
 cd ~/vhosts
 zip -r pset8.zip pset8/
