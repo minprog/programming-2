@@ -103,11 +103,11 @@ Not to worry if you don't have a Google Account. Just head straight to that URL.
 
 Interesting, it looks like our input is now the value of an HTTP parameter, `geo`, though there's a bunch of other parameters too. (Recall that `+` is one way a browser can encode a space in a URL. Another way is with `%20`.) One at a time, delete each of those other key-value pairs plus one ampersand (e.g., first `pz=1&`, then `cf=all&`, then `&ned=us`, then `&redirect=true`, hitting Enter after each deletion so as to reload the page via a shorter and shorter URL. You should find that Google still returns news for Cambridge even when the URL is just the below?
 
-<https://news.google.com/news/section?geo=Cambridge,+Massachusetts>
+<https://news.google.com/news/section?ned=us&geo=Cambridge,+Massachusetts>
 
 Nice! +1 for trial and error. Now try changing the value of `geo` to, say, `02138` and then hit Enter again. You should find yourself at the URL below? The articles might change (since Cambridge has more than one postal code), but the news should still be about Cambridge?
 
-<https://news.google.com/news/section?geo=02138>
+<https://news.google.com/news/section?ned=us&geo=02138>
 
 Nice. Though the page you're looking at, of course, is written in HTML. And all we want, if the staff's solution is any indication, is a bulleted list of articles' titles and links. How to get those without "scraping" this page's (surely complicated) HTML? Scroll down to the page's bottom and look for *RSS*. Click that link, and you should find yourself at the URL below?
 
@@ -115,7 +115,7 @@ Nice. Though the page you're looking at, of course, is written in HTML. And all 
 
 As before, delete any parameters that don't feel core to the mission at hand, leaving only, say, `geo` and, now, `output`. You should find yourself at the (still fully functional) URL below.
 
-<https://news.google.com/news/feeds?geo=02138&output=rss>
+<https://news.google.com/news/feeds?ned=us&geo=02138&output=rss>
 
 Deleting those parameters probably isn't necessary (and, who knows, their absence might break things eventually), but whittling a URL down to its essence does feel like better design, so let's stick with simple.
 
