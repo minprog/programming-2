@@ -316,14 +316,14 @@ For each of the following fragments of code, write what the output would be. Aga
 		print num
 		num = num - 1
 
-> <textarea name="a[1-14-1]"></textarea>
+<textarea name="a[1-14-1]"></textarea>
 
 {: .language-python}
 	divisor = 2
 	for i in range(0, 10, 2):
 		print i/divisor
 
-> <textarea name="a[1-14-2]"></textarea>
+<textarea name="a[1-14-2]"></textarea>
 
 {: .language-python}
 	num = 10
@@ -333,7 +333,7 @@ For each of the following fragments of code, write what the output would be. Aga
 		print num
 		num -= 1
 
-> <textarea name="a[1-14-3]"></textarea>
+<textarea name="a[1-14-3]"></textarea>
 
 {: .language-python}
 	count = 0
@@ -341,7 +341,7 @@ For each of the following fragments of code, write what the output would be. Aga
 		print 'Letter #', count, 'is', letter
 		count += 1
 
-> <textarea name="a[1-14-4]"></textarea>
+<textarea name="a[1-14-4]"></textarea>
 
 # List and string operations
 
