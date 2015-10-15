@@ -7,7 +7,7 @@ As an introduction, please read this chapter of the "Think Python" book: [The wa
 
 ## Installing Python
 
-To install Python in the appliance simply execute the following two commands in the terminal:
+To install Python in the appliance simply execute the following commands in the terminal:
 
 	sudo apt-get install python-matplotlib
 	
