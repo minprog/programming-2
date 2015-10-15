@@ -3,28 +3,23 @@
 These exercises will take you on a trip through Python. You are supposed to try
 out the code in your Python interpreter as often as possible.
 
-## Reading 1 - Introduction and background
-[The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html)
+As an introduction, please read this chapter of the "Think Python" book: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). If needed, please try some of the examples in the book.
 
-## Exercise 1.0 – Installing Python
+## Installing Python
 
 To install Python in the appliance simply execute the following two commands in the terminal:
 
-	sudo yum install python-tools
-	sudo yum install python-matplotlib
+	sudo apt-get install python-matplotlib
 	
-The first command installs Python 2.7. The second command installs several modules necessary for the
-plotting of data. Ask an assistant for help if you run into any trouble!
+This command installs several modules necessary for the plotting of data. Ask
+an assistant for help if you run into any trouble!
 
 ## Interactive Python shell
 
-Open IDLE (Integrated DeveLopment Environment) by typing idle in the terminal. By doing so 
-a window with an interactive Python shell will pop up:
-
-![IDLE Shell](st-shell.png)
-
-You can type Python code directly into this shell, at the `>>>` prompt. Whenever
-you enter a complete code fragment, it will be executed. For instance, typing:
+Start Python by typing `python` in the terminal. This will start an interactive
+Python shell. You can type Python code directly into this shell, at the `>>>`
+prompt. Whenever you enter a complete code fragment, it will be executed. For
+instance, typing:
 
 	>>> print "hello world"
 
@@ -32,11 +27,7 @@ and pressing ENTER, will cause the following to be displayed:
 
 	hello world
 
-Try typing an underscore (`_`). Can you see it? On some operating systems, the
-bottoms of hanging letters such as 'g' or 'y', as well as underscorces, cannot
-be seen in IDLE. If this is the case for you, go to **Options -> Configure
-IDLE**, and change the size of the default font to 9 or 11. This will fix the
-problem! IDLE can also be used as a calculator:
+Quite the difference with C, where you have to compile your programs to try them! Python can also be used as a calculator:
 
 	>>> 4+4
 	8
@@ -47,9 +38,8 @@ Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), modulo
 (`%`) and power (`**`) operators are built into the Python language. This means
 you can use them right away. If you want to use a square root in your
 calculation, you can either raise something to the power of 0.5 or you can
-import the `math` module. Do not worry about what it means right now, we will
-cover this later during the course. Below are two examples of square root
-calculation:
+import the `math` module (just like `#include` in C!). Below are two examples
+of square root calculation:
 
 	>>> 16**0.5
 	4.0
@@ -64,10 +54,8 @@ The math module allows you to do a number of useful operations:
 	>>> math.cos( 0 )
 	1.0
 
-Note that you only need to execute the import command once after you start IDLE;
-however you will need to execute it again if you restart the shell, as restarting
-resets everything back to how it was when you opened IDLE. Don't worry too much
-about this right now; we'll cover it more in depth soon!
+Note that you only need to execute the import command once after you start
+Python; however you will need to execute it again if you restart the shell.
 
 ## Exercise 1.1 – Hello, world!
 
@@ -76,41 +64,21 @@ execute. Let's start with a basic command `print x` which prints the value of
 the expression `x`, followed by a *newline*.
 
 Create a new program called `hello_world.py`. You will use this file to write
-your very first 'Hello, world!' program. How to create a program file:
-
-1. Open a new window by choosing **New Window** from the **File** menu.
-
-	![File -> New](file-new.png)
-
-2. Save the file as `python_exercises1_1.py`. Do NOT skip the `.py` portion of the file
-name --- otherwise, you will lose out on syntax highlighting!
-
-	![Filename](filename.png)
-
-3. Start every program with a bank of comments, with a comment line for your
-name, the name of your file, the day of the week, and today's date. Recall that
-a comment line begins with a `#` (pound) symbol.
+your very first 'Hello, world!' program.
 
 You can now write your very own *Hello, world!* program. This is the first
 program that most programmers write in a new programming language. In Python,
 *Hello world!* is a very simple program to write. Do this now... it should be
 only be one line!
 
-When you are done, save your work and run it. Your code should look similar to
-this:
+When you are done, save your work and run it:
 
-![Hello World example](hello-world.png)
+    python hello_world.py
 
-To run your program, chose **Run Module** from the **Run** menu (or just hit F5
-on Windows/Linux, or fn-F5 on a Mac). When you run the code, your shell should
-look similar to this:
-
-![Shell Hello World](shell.png)
-
-When you run your code, it first prints the line `>>> ===== RESTART =====`, then
-runs your code underneath that line. See?
+So, like in C, you can run your programs from the command line. And you do not need to compile them first using `make`!
 
 ## Reading 2 - Variables, expressions and statements
+
 [Variables, expressions and statements](http://www.greenteapress.com/thinkpython/html/thinkpython003.html)
 
 ## Exercise 1.2 – Operators/Order of Operation
@@ -174,6 +142,7 @@ Part II: In `python_exercises1_1.py`, transcribe the following equations into Py
 	expressions until you get the hang of it.
 
 ## Reading 3 - Strings
+
 Read 8.1 - 8.2
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
@@ -240,11 +209,44 @@ concatenation operations now to get everything to look its prettiest.
 
 --------------------------------------------------------------------------------
 
-## Intermezzo: Questions
+## Exercise 1.9 – Variable Names
 
-At this point, we suggest completing questions 1.9--1.11 to cement your
-understanding of these topics. Just go to the next tab, answer the questions
-and return here to code some more.
+The Python interpreter has strict rules for variable names. Which of the
+following are legal Python names? If the name is not legal, state the reason.
+
+|expression |legal?                             |
+|-----------|-----------------------------------|
+|`and`      |<input name="a[1-9-1]" type="text">|
+|`_and`     |<input name="a[1-9-2]" type="text">|
+|`var`      |<input name="a[1-9-3]" type="text">|
+|`var1`     |<input name="a[1-9-4]" type="text">|
+|`1var`     |<input name="a[1-9-5]" type="text">|
+|`my-name`  |<input name="a[1-9-6]" type="text">|
+|`your_name`|<input name="a[1-9-7]" type="text">|
+|`COLOR`    |<input name="a[1-9-8]" type="text">|
+
+## Exercise 1.10 – Types
+
+It is important that we know the type of the values stored in a variable so that we can use the correct operators (as we have already seen!). Python automatically infers the type from the value you assign to the variable. Write down the type of the values stored in each of the variables below. Pay special attention to punctuation: values are not always the type they seem!
+
+|variable       |type                                |
+|---------------|------------------------------------|
+|`a = False`    |<input name="a[1-10-1]" type="text">|
+|`b = 3.7`      |<input name="a[1-10-2]" type="text">|
+|`c = 'Alex'`   |<input name="a[1-10-3]" type="text">|
+|`d = 7`        |<input name="a[1-10-4]" type="text">|
+|`e = 'True'`   |<input name="a[1-10-5]" type="text">|
+|`f = 17`       |<input name="a[1-10-6]" type="text">|
+|`g = '17'`     |<input name="a[1-10-7]" type="text">|
+|`h = True`     |<input name="a[1-10-8]" type="text">|
+|`i = '3.14159'`|<input name="a[1-10-9]" type="text">|
+
+To verify your answers, you can use the interactive Python shell, but first try to do the exercise without help.
+
+	>>> x = 100
+	>>> type(x)
+	<type 'int'>
+	>>>
 
 --------------------------------------------------------------------------------
 
@@ -297,10 +299,164 @@ operators in your interpreter window before moving on.
 
 --------------------------------------------------------------------------------
 
-## Intermezzo: Questions
+# Questions
 
-We strongly suggest you finish all questions now, before continuing on with the
-next exercise.
+These exercises do not ask you to create a new Python program, but instead ask
+you to read some code and predict the answer. Sometimes the questions are about
+other things related to programming.
+
+
+## Exercise 1.14 – Understanding loops
+
+For each of the following fragments of code, write what the output would be. Again, do this without running the code (although feel free to check yourself when you're done).
+
+{: .language-python}
+	num = 10
+	while num > 3:
+		print num
+		num = num - 1
+
+> <textarea name="a[1-14-1]"></textarea>
+
+{: .language-python}
+	divisor = 2
+	for i in range(0, 10, 2):
+		print i/divisor
+
+> <textarea name="a[1-14-2]"></textarea>
+
+{: .language-python}
+	num = 10
+	while True:
+		if num < 7:
+			break
+		print num
+		num -= 1
+
+> <textarea name="a[1-14-3]"></textarea>
+
+{: .language-python}
+	count = 0
+	for letter in 'Snow!':
+		print 'Letter #', count, 'is', letter
+		count += 1
+
+> <textarea name="a[1-14-4]"></textarea>
+
+# List and string operations
+
+String operators might be a little less intuitive than those on numbers. This
+exercise will give you a chance to practice those. Given the following 
+variables:
+
+	look = 'Look at me!'
+	now = ' NOW'
+
+What are the values of the following expressions? Try to guess on your own
+before using your interpreter (but feel free to use your interpreter once you 
+get stuck).
+
+|expression                           |value                               |
+|-------------------------------------|------------------------------------|
+|`look[:4]`                           |<input name="a[2-1-1]" type="text">|
+|`look[-1]`                           |<input name="a[2-1-2]" type="text">|
+|`look*2`                             |<input name="a[2-1-3]" type="text">|
+|`look[:-1] + now + look[-1]`         |<input name="a[2-1-4]" type="text">|
+|`now[1]`                             |<input name="a[2-1-5]" type="text">|
+|`now[4]`                             |<input name="a[2-1-6]" type="text">|
+|`look*2 + look[:-1] + now + look[-1]`|<input name="a[2-1-7]" type="text">|
+
+For more on strings, see [the Python docs](http://docs.python.org/release/2.7.5/library/stdtypes.html#string-methods).
+
+# List operations
+
+Say we have this list:
+
+	a_list = [3, 5, 6, 12]
+
+For the following, write the line(s) of code that will emit the given output.
+For each problem there may be more than one correct answer; just give one. 
+
+More on lists: [the Python docs](http://docs.python.org/release/2.7.5/tutorial/datastructures.html).
+
+1.	Output: `3`
+
+	<textarea name="a[2-2-1]"></textarea>
+
+2.	Output: `12`
+
+	<textarea name="a[2-2-2]"></textarea>
+
+3.	Output: `[5, 6, 12]`
+
+	<textarea name="a[2-2-3]"></textarea>
+
+4.	Output:
+
+		3
+		5
+		6
+		12
+
+	<textarea name="a[2-2-4]"></textarea>
+
+5.	Output: `[12, 6, 5, 3]`
+
+	<textarea name="a[2-2-5]"></textarea>
+
+6.	Output: `[9, 15, 18, 36]`
+
+	<textarea name="a[2-2-6]"></textarea>
+
+7.	Output: `[False, False, True, True]`
+
+	<textarea name="a[2-2-7]"></textarea>
+
+## Mutability
+
+We've learned about many Python data structures (strings, lists, tuples,
+dictionaries). For both "mutable" and "immutable", please give a short (5
+words or fewer) definition, and then list what data structure(s) have that
+characteristic.
+
+Mutable:
+
+<textarea name="a[2-3-1]"></textarea>
+
+Immutable:
+
+<textarea name="a[2-3-2]"></textarea>
+
+## Finding Bugs
+
+The following set of instructions were given to Ben Bitdiddle, and he produced
+the code below. Find at least three bugs he made, and say how to fix them.
+
+Instructions: Write a negate function that takes a number and returns the
+negation of that number. Also write a large num function that takes a number,
+and returns True if that number is bigger than 10000, and False otherwise.
+Additionally, write some code to test your functions.
+
+	def negate(num):
+		return -num
+
+	def large_num(num):
+		res = (num > 10000)
+
+	negate(b)
+	neg_b = num
+	print 'b:', b, 'neg_b:', neg_b
+
+	big = large_num(b)
+	print 'b is big:', big
+
+Bugs:
+
+1. <textarea name="a[2-4-1]"></textarea>
+
+2. <textarea name="a[2-4-2]"></textarea>
+
+3. <textarea name="a[2-4-3]"></textarea>
 
 --------------------------------------------------------------------------------
 
