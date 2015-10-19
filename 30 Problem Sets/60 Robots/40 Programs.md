@@ -1,12 +1,9 @@
 # Simulating Robots
 
-## Introduction
-
-In this problem set you will practice designing a simulation and implementing a program that
-uses classes.
-
-Please don’t be discouraged by the apparent length of this problem set. There is quite a bit to
-read and understand, but most of the problems do not involve writing much code.
+In this problem set you will practice designing a simulation and implementing a
+program that uses classes. Please don't be discouraged by the apparent length
+of this problem set. There is quite a bit to read and understand, but most of
+the problems do not involve writing much code.
 
 ## Getting Started
 
@@ -54,19 +51,21 @@ If you are working on your own machine, you will have to install the packages. Y
 
 ## Simulation Overview
 
-iRobot is a company (started by MIT alumni and faculty) that sells the [Roomba vacuuming robot]
-(watch one of the product videos to see these robots in action). Roomba robots move about a
-floor, cleaning the area they pass over. You will design a simulation to estimate how much time
-a group of Roomba-like robots will take to clean the floor of a room.
+iRobot is a company (started by MIT alumni and faculty) that sells the [Roomba
+vacuuming robot] (watch one of the product videos to see these robots in
+action). Roomba robots move about a floor, cleaning the area they pass over.
+You will design a simulation to estimate how much time a group of Roomba-like
+robots will take to clean the floor of a room.
 
 [Roomba vacuuming robot]: http://store.irobot.com/category/index.jsp?categoryId=3334619&cp=2804605&ab=CMS_IRBT_Storefront_011510_vacuumcleaning
 
-The following simplified model of a single robot moving in a square 5×5 room should give you
-some intuition about the system we are simulating.
+The following simplified model of a single robot moving in a square 5×5 room
+should give you some intuition about the system we are simulating.
 
-The robot starts out at some random position in the room, and with a random direction of motion.
-The illustrations below show the robot’s position (indicated by a black dot) as well as its
-direction (indicated by the direction of the red arrowhead).
+The robot starts out at some random position in the room, and with a random
+direction of motion. The illustrations below show the robot’s position
+(indicated by a black dot) as well as its direction (indicated by the direction
+of the red arrowhead).
 
 ![sim1](sim1.png)
 
@@ -454,4 +453,3 @@ two types of robots. Add your code to *showPlot3()*. As always, your plot should
 appropriate title, axis labels, and (if applicable) legend.
 
 Within comments in *showPlot3*, comment briefly on how the two types of robots compare.
-
