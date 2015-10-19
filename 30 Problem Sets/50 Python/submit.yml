@@ -1,5 +1,4 @@
-name: py1
-form: true
+name: python
 required:
     - python_exercises1_1.py
     - python_exercises1_2.py
