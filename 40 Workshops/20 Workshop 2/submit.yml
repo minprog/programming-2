@@ -1,6 +1,0 @@
-name: py2
-required:
-    - queue.py
-    - stack.py
-    - workshop2.py
-form: true
