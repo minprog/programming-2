@@ -21,6 +21,7 @@ Week 3:
     'Lecture 10 Wed [Friday morning]': '/lectures/week-10-wed'
     'Quiz preparations [weekend]': '/resources/quiz'
 Week 4:
-    'Problem set 10 [deadline: Friday]':
+    'Problem set 9: Python [deadline: Monday]': '/psets/python'
+    'Quiz preparations [weekend]': '/resources/quiz'
+    'Problem set 10 [deadline: Friday]': '/psets/robots'
     'Lecture 12 Mon [Thursday morning]': '/lectures/week-12-mon'
-    "That's it for now!!!":
