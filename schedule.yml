@@ -1,23 +1,25 @@
 Week 1:
-    'Lecture 0 Wed': '/lectures/week-0-wed'
-    'Lecture 0 Fri': '/lectures/week-0-fri'
-    'Section [Tuesday]':
-    'Problem set 0: Scratch [deadline: Thursday]': '/psets/scratch'
-    'Lecture 1 Mon [preparation]': '/lectures/week-1-mon'
-    'Lecture 1 Wed [preparation]': '/lectures/week-1-wed'
+    'Lecture 6 Fri': '/lectures/week-6-fri'
+    'Problem set 5: Mispellings [deadline: Thursday 12 Nov]': '/psets/mispellings'
 Week 2:
-    'Problem set 1: C [deadline: Thursday]': '/psets/c'
-    'Section [Tuesday]':
-    'Style guide [reference]': '/resources/style-guide'
-    'Lecture 2 Mon [preparation]': '/lectures/week-2-mon'
-    'Lecture 2 Wed [preparation]': '/lectures/week-2-wed'
+    'Lecture 7 Mon': '/lectures/week-7-mon'
+    'Lecture 7 Wed': '/lectures/week-7-wed'
+    'Problem set 5: Mispellings [deadline: Thursday 12 Nov]': '/psets/mispellings'
 Week 3:
-    'Problem set 2: Crypto [deadline: Thursday]': '/psets/crypto'
-    'Lecture 3 Mon': '/lectures/week-3-mon'
-    'Section [Tuesday]':
-    'Lecture 3 Wed': '/lectures/week-3-wed'
+    'Lecture 8 Mon': '/lectures/week-8-mon'
+    'Lecture 8 Wed': '/lectures/week-8-wed'
+    'Problem set 6: Web server': '/psets/web-server'
 Week 4:
-    'Problem set 3: Breakout [deadline: in two weeks!]': '/psets/breakout'
-    'Lecture 4 Mon': '/lectures/week-4-mon'
-    'Section [Tuesday]':
-    'Lecture 4 Wed': '/lectures/week-4-wed'
+    'Lecture 9 Mon': '/lectures/week-9-mon'
+    'Lecture 9 Wed': '/lectures/week-9-wed'
+    'Problem set 7': '/psets/finance'
+Week 5:
+    'Lecture 10 Mon': '/lectures/week-10-mon'
+    'Lecture 10 Wed': '/lectures/week-10-wed'
+    'Problem set 8: Mashup': '/psets/mashup'
+Week 6:
+    'Quiz preparations': '/resources/quiz'
+    'Problem set 9: Python': '/psets/python'
+Week 7:
+    'Lecture 12 Mon': '/lectures/week-12-mon'
+    'Problem set 10: Robots': '/psets/robots'

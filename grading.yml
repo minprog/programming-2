@@ -1,3 +1,11 @@
+formulas:
+    mispell: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+    webserver: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+    finance: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+    mashup: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+    python: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+    robots: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
+
 calculation:
     resit:
         resit: 0
@@ -7,15 +15,15 @@ calculation:
         psets: 100
 
 psets:
-    type: integer
-    drop: correctness
+    type: float
+    drop: scope
     grades:
-        breakout: 1
-        recover: 1
         mispell: 1
-        py1: 1
-        py2: 1
-        py3: 1
+        webserver: 1
+        finance: 1
+        mashup: 1
+        python: 1
+        robots: 1
 
 quiz:
     type: pass
