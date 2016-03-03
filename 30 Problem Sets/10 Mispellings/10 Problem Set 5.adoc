@@ -15,8 +15,6 @@ From this problem set on, there are no more hacker editions!
 * Chapter 26 of _Absolute Beginner's Guide to C_.
 * Chapter 17 of _Programming in C_.
 
-include::../../../lectures/0/w/syllabus/honesty.adoc[]
-
 == Assessment
 
 Your work on this problem set will be evaluated along four axes primarily.

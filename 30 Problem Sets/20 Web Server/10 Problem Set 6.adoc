@@ -8,8 +8,6 @@
 * Apply familiar techniques in unfamiliar contexts.
 * Transition from C to web programming.
 
-include::../../../lectures/0/w/syllabus/honesty.adoc[]
-
 == Assessment
 
 Your work on this problem set will be evaluated along four axes primarily.
