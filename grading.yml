@@ -4,7 +4,6 @@ formulas:
     finance: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
     mashup: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
     python: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
-    robots: (scope * (3 * correctness + 2 * design + 1 * style) / 150.0 * 9 + 1).round(1)
 
 calculation:
     resit:
@@ -23,7 +22,6 @@ psets:
         finance: 1
         mashup: 1
         python: 1
-        robots: 1
 
 quiz:
     type: pass
