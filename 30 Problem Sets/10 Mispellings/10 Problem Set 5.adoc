@@ -1,6 +1,6 @@
 = Problem Set 5: Mispellings 
 
-**Due: Thursday, February 4, at noon.**
+**Due: Thursday, March 10, at noon.**
 
 From this problem set on, there are no more hacker editions!
 

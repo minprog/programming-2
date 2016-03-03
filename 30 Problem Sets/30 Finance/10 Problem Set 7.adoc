@@ -1,5 +1,7 @@
 = Problem Set 7: C$50 Finance
 
+**Due: Thursday, March 24, at noon.**
+
 == Objectives
 
 * Introduce you to HTML, CSS, PHP, and SQL.

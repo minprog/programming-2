@@ -1,5 +1,7 @@
 = Problem Set 6: Web Server
 
+**Due: Thursday, March 17, at noon.**
+
 == Objectives
 
 * Become familiar with HTTP.

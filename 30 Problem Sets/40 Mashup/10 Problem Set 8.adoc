@@ -1,5 +1,7 @@
 = Problem Set 8: Mashup
 
+**Due: Thursday, March 31, at noon.**
+
 == Objectives
 
 * Introduction to JavaScript, Ajax, JSON.
