@@ -1,7 +1,20 @@
 # Problem Set 9: Python
 
-The structure of this workshop differs somewhat from the C problem sets. First and foremost, there are no lectures. There is, however, a substantial amount of reading to be done. You will find that this problem pet covers concepts most of which you already know from C.
+![inline](python.png)
 
-Hacker editions have been replaced by hacker additions. If you have time to spare after finishing, cleaning, and perfecting your code, you can continue with the hacker additions.
+In this problem set, you'll learn about:
 
-Now off you go into the [wondrous world of Python](http://xkcd.com/353/).
+* Classes.
+* Objects.
+* Methods.
+* Inheritance.
+
+Please prepare using the readings below. They will not always immediately make
+sense without practice, but that's no problem. You may want to re-read them
+after this practice session!
+
+* 15 [Classes and Objects](http://www.greenteapress.com/thinkpython/html/thinkpython016.html)
+* 16 [Classes and Functions](http://www.greenteapress.com/thinkpython/html/thinkpython017.html)
+* 17 [Classes and Methods](http://www.greenteapress.com/thinkpython/html/thinkpython018.html)
+* 18 [Inheritance](http://www.greenteapress.com/thinkpython/html/thinkpython019.html)
+
