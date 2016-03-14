@@ -1,4 +1,6 @@
-## Your first class: Queue
+## Your first class: Queue ##
+
+
 
 This exercise, plus the remaining questions will be the start of our journey
 into object-oriented programming; we suggest you do these questions before
