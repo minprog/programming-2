@@ -17,7 +17,7 @@ Lectures are supplemented by weekly, 60-minute sections led by the teaching fell
 ## Office Hours
 
 Office hours are opportunities for assistance with problem sets alongside the
-course's teaching assistants. Office hours ordinarily take place from 1PM to 5PM on Mondays through Fridays.
+course's teaching assistants. Office hours ordinarily take place from 1PM to 5PM on Mondays through Thursdays.
 
 ## Tutoring
 
@@ -28,13 +28,13 @@ or in particularly small groups. To arrange, contact the course's heads (shoot a
 
 ## Problem Sets
 
-Seven problem sets are assigned during the course. Each is due by a pre-set deadline. However, you have two "late days" that you may "spend" during the course, each of which provides you with an extension of twenty-four hours. *You may spend no more than one late day on any particular problem set.* You need not inform the staff of your use of a late day; usage of late days is tracked automatically. Lateness of electronic submissions is determined down to the minute by submissions' timestamps. Submitting more than seven minutes late is equivalent to submitting twenty-four hours late. Late work is not ordinarily accepted once you have exhausted your late days, except in cases of medical emergency.
+Five problem sets are assigned during the course. Each is due by a pre-set deadline: Thursday, at 23:59. However, you have two "late days" that you may "spend" during the semester, each of which provides you with an extension of twelve hours. *You may spend no more than one late day on any particular problem set.* You need not inform the staff of your use of a late day; usage of late days is tracked automatically. Lateness of electronic submissions is determined down to the minute by submissions' timestamps. Submitting more than seven minutes late is equivalent to submitting twenty-four hours late. Late work is not ordinarily accepted, except in cases of medical emergency.
 
 In order to accommodate students with different backgrounds, some problem sets are released in two editions: a standard edition intended for most students and a "Hacker Edition" intended for some students. Both editions essentially cover the same material. But the Hacker Edition typically presents that material from a more technical angle and poses more sophisticated questions. Hacker Editions are graded separately from standard editions, but those students who submit the former do not receive any form of extra credit outright. When determining grades at term's end, however, we do bear in mind submissions of Hacker Editions.
 
 To be clear, we encourage most students (including aspiring computer scientists) to tackle the standard editions. However, you may choose, week to week, which edition to submit. You may not submit both or some amalgam of the two.
 
-Although you must submit all seven problem sets, your lowest score among those problem sets on which you received a perfect score for the axis of scope will be dropped when final grades are determined.
+Although you must submit all five problem sets, your lowest score among those problem sets on which you received a perfect score for the axis of scope will be dropped when final grades are determined.
 
 ## Quiz
 
