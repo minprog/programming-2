@@ -4,7 +4,7 @@ The course has one 75-minute quiz. It is "closed-book," but you may utilize duri
 
 Unless arranged with the course's heads in advance, quizzes cannot ordinarily be taken at alternative times even if missed by accident, except in cases of medical emergency.
 
-Anything in lectures from weeks 6 through 10 can be on the quiz. So best to review all lecture notes! But a lot more tips on studying are in this review session:
+Anything in lectures from weeks 6 through 9 can be on the quiz. So best to review all lecture notes! But a lot more tips on studying are in this review session:
 
 ![embed](https://www.youtube.com/embed/wCS7il7_mWA?rel=0)
 
