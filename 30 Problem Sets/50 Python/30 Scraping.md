@@ -21,7 +21,7 @@ Here are some starter files to download:
 * The test script for this exercise [test-tvscraper.py]
 
 [tvscraper.py]: distro/scraper/tvscraper.py
-[test-tvscraper.py]: distro/scraper/testtvscraper.py
+[test-tvscraper.py]: distro/scraper/test-tvscraper.py
 
 ## Installing Pattern
 
@@ -63,8 +63,7 @@ from IMDB.
 6. It could be that there are missing data (for instance the runtime), insert
    an appropriate value when something is missing.
 
-[output.csv]: output.csv
-[test-tvscraper.py]: test-tvscraper.py
+[output.csv]: distro/scraper/output.csv
 
 ## Building `scraper.py`
 
