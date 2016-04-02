@@ -1,19 +1,15 @@
 # Scraping
 
-In this assignment you will learn to use the Document Object Model (DOM) using Python via the
-Pattern library. For the programming excercises in this homework, we provide both some scaffolding
-and automated tests that are also used when grading the homework.
+Now we'll start to use Python for things that it's really good at! Text processing is one such application. *Scraping* is one particular form of text processing, where we use a computer to automatically extract information from web pages. We have already seen some of this processing in Problem Set 8, where we used the Google News API to extract information from a website.
 
-* The IMDB highest ranking TV-series exercise: [tvscraper.py]
-* The test script for this exercise [test-tvscraper.py]
+However, not all websites expose their data in JSON or some other machine-readable form. In particular, the website IMDB is very protective of its data, because it doesn't want other websites to simply copy their content and create a new website about movies, using that content.
 
-[tvscraper.py]: tvscraper.py
-[test-tvscraper.py]: test-tvscraper.py
+Your task now, is to extract a list of information about today's most popular TV series, as listed at the <http://www.imdb.com/chart/tvmeter> web page. This seems not too hard, as web pages are in HTML and thus also written to be machine-readable. However, there is one problem: web pages are created by humans, and as a result, they are often less structured than you would think.
 
-## DOM scraping and traversal
+## Introducing Pattern
 
-To scrape data, we will be using Pattern, a Python web mining module. Its
-description is as follows:
+*Pattern* is a Python module that will come to our rescue for tackling this problem. Its
+online description is as follows:
 
 > Pattern is a web mining module for the Python programming language. It bundles
 > tools for data mining (Google + Twitter + Wikipedia API, web spider, HTML DOM
@@ -23,7 +19,26 @@ description is as follows:
 > and visualization). It is well documented and bundled with 30+ examples and
 > 350+ unit tests.
 
-Instructions:
+An important part of this problem is to practice using such a library for reaching our goals. Your task is to gather information about the library and how to use it, and then implement a solution.
+
+Here are some starter files to download:
+
+* The IMDB highest ranking TV-series exercise: [distro/scraper/tvscraper.py]
+* The test script for this exercise [distro/scraper/test-tvscraper.py]
+
+[tvscraper.py]: tvscraper.py
+[test-tvscraper.py]: test-tvscraper.py
+
+## Installing Pattern
+
+As before, Python is already installed in the CS50 IDE, but Pattern is not. To do that, we will use the Python *package manager*, which is called `pip`:
+
+	umask 0022
+	sudo pip install pattern
+
+From then on, you can `import` parts of the `pattern` library in your Python programs!
+
+## Steps
 
 2. We will be looking at IMDB TV Series and getting data off this website. To
 get started, you should look at the `examples` folder within `patterns­2.5`
@@ -59,12 +74,11 @@ from IMDB.
 
 ## Building `scraper.py`
 
-This is the introductory exercise to Pattern. We will try to guide you along as
-much as possible, but you should read up on documentation and get used to doing
+You should read up on documentation and get used to doing
 that. It's a really useful skill and a big part of programming is 
 self-­learning!
 
-This is also just a skeleton so you actually don't have to use this at all. As
+This is also just a skeleton, so you actually don't have to use this at all. As
 long as your code runs at the end of the day and produces the write results in
 a CSV file, we're happy.
 
