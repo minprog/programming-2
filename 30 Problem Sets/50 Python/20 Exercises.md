@@ -13,7 +13,7 @@ In order to install Python in your own computer, follow instructions at <https:/
 
 ## Reading
 
-As an introduction, please read the introductory chapter of the book *Think Python*: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). Feel free to try some of the examples in the book.
+Read the introductory chapter of the book *Think Python*: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). Feel free to try some of the examples in the book.
 
 ## Interactive Python shell
 
