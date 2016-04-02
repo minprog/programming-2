@@ -17,11 +17,11 @@ An important part of this problem is to practice using such a library for reachi
 
 Here are some starter files to download:
 
-* The IMDB highest ranking TV-series exercise: [distro/scraper/tvscraper.py]
-* The test script for this exercise [distro/scraper/test-tvscraper.py]
+* The IMDB highest ranking TV-series exercise: [tvscraper.py]
+* The test script for this exercise [test-tvscraper.py]
 
-[tvscraper.py]: tvscraper.py
-[test-tvscraper.py]: test-tvscraper.py
+[tvscraper.py]: distro/scraper/tvscraper.py
+[test-tvscraper.py]: distro/scraper/test-tvscraper.py
 
 ## Installing Pattern
 
