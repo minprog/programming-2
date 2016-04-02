@@ -11,13 +11,7 @@ Your task now, is to extract a list of information about today's most popular TV
 *Pattern* is a Python module that will come to our rescue for tackling this problem. Its
 [online description](http://www.clips.ua.ac.be/pages/pattern) is as follows:
 
-> Pattern is a web mining module for the Python programming language. It bundles
-> tools for data mining (Google + Twitter + Wikipedia API, web spider, HTML DOM
-> parser), natural language processing (tagger/chunker, n­gram search, sentiment
-> analysis, WordNet), machine learning (vector space model, k­means clustering,
-> Naive Bayes + k­NN + SVM classifiers) and network analysis (graph centrality
-> and visualization). It is well documented and bundled with 30+ examples and
-> 350+ unit tests.
+> Pattern is a web mining module for the Python programming language. It has tools for data mining (Google, Twitter and Wikipedia API, a web crawler, a HTML DOM parser), natural language processing (part-of-speech taggers, n-gram search, sentiment analysis, WordNet), machine learning (vector space model, clustering, SVM), network analysis and <canvas> visualization.
 
 An important part of this problem is to practice using such a library for reaching our goals. Your task is to gather information about the library and how to use it, and then implement a solution.
 
