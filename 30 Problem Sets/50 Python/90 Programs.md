@@ -1,4 +1,4 @@
-# Simulating Robots
+# Simulating robots
 
 *Think Python*,
 
@@ -18,6 +18,14 @@ the problems do not involve writing much code.
 ## Getting Started
 
 Download the zip file [here](workshop3.zip).
+
+To install Python in the appliance simply execute the following commands in the terminal:
+
+	sudo apt-get install python-matplotlib
+	
+This command installs several modules necessary for the plotting of data. Ask
+an assistant for help if you run into any trouble!
+
 
 ## Graphs & Math
 

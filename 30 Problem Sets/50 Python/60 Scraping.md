@@ -1,18 +1,8 @@
-To install Python in the appliance simply execute the following commands in the terminal:
-
-	sudo apt-get install python-matplotlib
-	
-This command installs several modules necessary for the plotting of data. Ask
-an assistant for help if you run into any trouble!
-
-
 # Scraping
 
-In this assignment you will learn to use the Document Object Model (DOM) using
-Python via the Pattern library, in a few weeks you will also access the DOM
-from Javascript. For the programming excercises in this homework, we provide
-both some scaffolding and automated tests that are also used when grading the
-homework.
+In this assignment you will learn to use the Document Object Model (DOM) using Python via the
+Pattern library. For the programming excercises in this homework, we provide both some scaffolding
+and automated tests that are also used when grading the homework.
 
 * The IMDB highest ranking TV-series exercise: [tvscraper.py]
 * The test script for this exercise [test-tvscraper.py]
@@ -34,9 +24,6 @@ description is as follows:
 > 350+ unit tests.
 
 Instructions:
-
-1. We assume Python and pattern are installed (see [preparations] if this is not
-the case).
 
 2. We will be looking at IMDB TV Series and getting data off this website. To
 get started, you should look at the `examples` folder within `patterns­2.5`
@@ -69,9 +56,8 @@ from IMDB.
 
 [output.csv]: output.csv
 [test-tvscraper.py]: test-tvscraper.py
-[preparations]: http://data.mprog.nl/homework/preparations
 
-### Building `scraper.py`
+## Building `scraper.py`
 
 This is the introductory exercise to Pattern. We will try to guide you along as
 much as possible, but you should read up on documentation and get used to doing

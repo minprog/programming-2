@@ -18,7 +18,7 @@ Read the introductory chapter of the book *Think Python*: [The way of the progra
 ## Interactive Python shell
 
 Start Python by typing `python` in the terminal. This will start an interactive
-Python shell. You can type Python code directly into this shell, at the `>>>`
+Python *shell*. You can type Python code directly into this shell, at the `>>>`
 prompt. Whenever you enter a complete code fragment, it will be executed. For
 instance, typing:
 
@@ -65,11 +65,7 @@ execute. Let's start with a basic command `print x` which prints the value of
 the expression `x`, followed by a *newline*.
 
 Create a new program called `hello_world.py`. You will use this file to write
-your very first 'Hello, world!' program.
-
-You can now write your very own *Hello, world!* program. This is the first
-program that most programmers write in a new programming language. In Python,
-*Hello world!* is a very simple program to write. Do this now... it should be
+your very first 'Hello, world!' program. Do this now... it should be
 only be one line!
 
 When you are done, save your work and run it:
@@ -103,7 +99,7 @@ Output:
 
 Note that we can use variables in the definition of other variables!
 Mathematical operators only work on numbers: `int`s or `float`s. Statements such
-as `'Hi' + 5` or `'5 + 7` will not work.
+as `'Hi' + 5` or `'5' + 7` will not work.
 
 Part I: Input the following sets of equations, and note the difference
   between `int` arithmetic and `float` arithmetic. You can do this just in your
@@ -142,12 +138,12 @@ Part II: In `python_exercises1_1.py`, transcribe the following equations into Py
 	the remainder when $$x$$ is divided by $$y$$. Try a couple of modular
 	expressions until you get the hang of it.
 
-## Reading 3 - Strings
+## Reading
 
 Read 8.1 - 8.2
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
-## Exercise 1.3 – User input
+## User input
 
 Do this exercise in `python_exercises1_1.py`. In this exercise, we will ask the user for
 his/her first and last name, and date of birth, and print them out
@@ -210,7 +206,7 @@ concatenation operations now to get everything to look its prettiest.
 
 --------------------------------------------------------------------------------
 
-## Exercise 1.9 – Variable Names
+## Variable Names
 
 The Python interpreter has strict rules for variable names. Which of the
 following are legal Python names? If the name is not legal, state the reason.
@@ -226,7 +222,7 @@ following are legal Python names? If the name is not legal, state the reason.
 |`your_name`|<input name="a[1-9-7]" type="text">|
 |`COLOR`    |<input name="a[1-9-8]" type="text">|
 
-## Exercise 1.10 – Types
+## Types
 
 It is important that we know the type of the values stored in a variable so that we can use the correct operators (as we have already seen!). Python automatically infers the type from the value you assign to the variable. Write down the type of the values stored in each of the variables below. Pay special attention to punctuation: values are not always the type they seem!
 
@@ -251,12 +247,12 @@ To verify your answers, you can use the interactive Python shell, but first try 
 
 --------------------------------------------------------------------------------
 
-## Reading 4 - Conditionals
+## Reading
 
 Read 5.1 - 5.7
 [Conditionals](http://www.greenteapress.com/thinkpython/html/thinkpython006.html)
 
-## Exercise 1.4 – New Operators
+## New operators
 
 Open up IDLE and play around with the operators from the book (look them up in
 the index). Make sure that you understand how to use them and what they are
@@ -298,18 +294,11 @@ operators in your interpreter window before moving on.
 	>>> print y
 	11
 
---------------------------------------------------------------------------------
-
-# Questions
-
-These exercises do not ask you to create a new Python program, but instead ask
-you to read some code and predict the answer. Sometimes the questions are about
-other things related to programming.
-
-
-## Exercise 1.14 – Understanding loops
+## Understanding loops
 
 For each of the following fragments of code, write what the output would be. Again, do this without running the code (although feel free to check yourself when you're done).
+
+> Note: your answers will not be saved or submitted. Use the text fields to mark your progress while you are practicing with different parts of the Python language.
 
 {: .language-python}
 	num = 10
@@ -461,14 +450,15 @@ Bugs:
 
 --------------------------------------------------------------------------------
 
-## Reading 5 - Loops
+## Reading
+
 Read 7.1 - 7.4
 [Iteration (while loop)](http://www.greenteapress.com/thinkpython/html/thinkpython008.html)
 
 Read 8.3
 [Strings (and for loop)](http://www.greenteapress.com/thinkpython/html/thinkpython009.html)
 
-## Exercise 1.5 – For & While Loops
+## `for` and `while` loops
 
 Continue in `python_exercises1_1.py` and use it for all parts of this
 exercise. Remember the difference between input and raw input? If not, look at
@@ -498,7 +488,8 @@ until they enter an even number! Print a congratulatory message when they
 
 --------------------------------------------------------------------------------
 
-## Reading 6 - Functions
+## Reading
+
 [Functions](http://www.greenteapress.com/thinkpython/html/thinkpython004.html)
 
 Read 6.1 - 6.5
@@ -507,7 +498,7 @@ Read 6.1 - 6.5
 Extra: Read 5.8 - 5.12
 [Recursion](http://www.greenteapress.com/thinkpython/html/thinkpython006.html#toc59)
 
-## 2.1 Print vs Return
+## Print versus return
 
 Important: most of the other exercises should be put in a file called
 `python_exercises1_2.py`. You should make sure this file runs without any user input
@@ -569,7 +560,7 @@ are separated by commas. Try this:
 	>>> print 'x:', x, 'x squared:', x*x, 'sqrt(x):', x**0.5
 	x: 100 x squared: 10000 sqrt(x): 10.0
 
-## 2.2 Writing simple methods
+## Writing simple methods
 
 In this problem you'll be asked to write two simple methods (*method* is an
 interchangeable term for *function*). Be sure to test your functions well,
@@ -595,7 +586,7 @@ including at least 3 test cases for each method. Write these methods in `python_
    function! Test if your code works by thinking of examples and making sure
    the output is the same for your new method as `!=` gives you.
 
-## 2.3 The `random` module
+## The `random` module
 
 First, have a short look at the example program below.
 
@@ -627,12 +618,13 @@ Write this exercise in `python_exercises1_2.py`.
 		6
 		That's all!
 
-## Reading 7 - Lists and tuples
+## Reading
+
 [Lists](http://www.greenteapress.com/thinkpython/html/thinkpython011.html)
 
 [Tuples](http://www.greenteapress.com/thinkpython/html/thinkpython013.html)
 
-## 2.4 Working with lists
+## Working with lists
 
 Check out this function that sums all numbers in a list:
 
@@ -657,7 +649,7 @@ For example, the cumulative sum of `[4, 3, 6]` is `[4, 7, 13]`.
 
 Such a useful function!
 
-## 2.5 Pig Latin
+## Pig Latin
 
 Write a function `pig_latin` in `python_exercises1_2.py` that takes in a single word, then converts the
 word to Pig Latin. To review, Pig Latin takes the first letter of a word, 
@@ -678,10 +670,11 @@ letter, you can use `word[1:]`.
 Test your function with some interesting tests of which you already know
 the answer!
 
-## Reading 8 - Dictionairies
+## Reading
+
 [Dictionaries](http://www.greenteapress.com/thinkpython/html/thinkpython012.html)
 
-## 2.6 More About Dictionaries
+## More about dictionaries
 
 This exercise should be going into a file called `python_exercises1_2.py`.
 
@@ -713,16 +706,66 @@ All lines should print `True`. The last line is an "edge condition" that we're
 testing; your `people` function should be able to handle this condition (hint:
 what is this condition?) by simply returning an empty list...
 
-# Double check
+## Zeller's Algorithm
 
-For every problem, check the following:
+Zeller's algorithm computes the day of the week on which a given date will fall
+(or fell). In this exercise, you will write a program to run Zeller's algorithm
+on a specific date. You will need to create a new file for this program,
+`zellers.py`. The program should use the algorithm outlined below to compute the
+day of the week on which the user's birthday fell in the year you were born and
+print the result to the screen.
 
-* Have you put the problem in a function? (if required)
-* Have you added the problem to the right Python file?
-* Have you put your name on top of that file?
-* Have you made sure the program is NOT interactive (e.g. we don't have to type
-  anything) except were explicitly asked?
-* Have you written at least three tests to show the program is correct, or even
-  more tests if the problem prescribes this?
-* Do the tests give the expected output?
-* Is your output understandable without looking at the code?
+Write a function (zellers) that takes parameters (month, day, year), and uses dictionaries to facilitate "pretty printing" (where the answer is given to the user in a nice looking
+fashion).
+
+Calling `zellers("March", 10, 1940)` should give the output: `Sunday`.
+
+Zeller's algorithm is defined as follows:
+
+Let A, B, C, D denote integer variables that have the following values:
+
+* `A` = the month of the year, with March having the value 1, April the value 2,
+  ..., December the value 10, and January and February being counted as months
+  11 and 12 of the preceding year (in which case,subtract 1 from C)
+* `B` = the day of the month (1, 2, 3, . . . , 30, 31)
+* `C` = the year of the century (e.g. C = 89 for the year 1989)
+* `D` = the century (e.g. D = 19 for the year 1989)
+
+Note: if the month is January or February, then the preceding year is used for
+computation. This is because there was a period in history when March 1st, not
+January 1st, was the beginning of the year.
+
+Let W, X, Y, Z, R also denote integer variables. Compute their values in the
+following order using integer arithmetic:
+
+* `W = (13 * A - 1) / 5`
+* `X = C / 4`
+* `Y = D / 4`
+* `Z = W + X + Y + B + C - 2 * D`
+* `R = the remainder when Z is divided by 7`
+	
+The value of R is the day of the week, where 0 represents Sunday, 1 is Monday,
+..., 6 is Saturday. If the computed value of R is a negative number, add 7 to
+get a non negative number between 0 and 6. You can check to be sure your code is working by looking at [timeanddate.com](http://www.timeanddate.com/calendar/).
+
+Provide atleast three test cases at the bottom of the file: try today's date, your birth date, and whatever else interests you!
+
+Hints:
+
+1. Use a dictionary to map between the month and its numerical value.
+
+2. You can use either a list or dictionary to convert the final output of the
+   algorithm to the day of the week.
+
+3. Make sure you handle the following three points correctly.
+
+   * Note: If the month is January or February, then the preceding year is
+     used for computation. This is because there was a period in history when
+     March 1st, not January 1st, was the beginning of the year.
+
+   * If the computed value of R is a negative number, add 7 to get a
+     nonnegative number between 0 and 6.
+
+   * You might need to use one of the following (but, maybe not): To convert
+     the string '90' to the number 90, use `int('90')`; to convert the int 90 to
+     the string '90', use `str(90)`.
