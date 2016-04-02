@@ -21,7 +21,7 @@ Here are some starter files to download:
 * The test script for this exercise [test-tvscraper.py]
 
 [tvscraper.py]: distro/scraper/tvscraper.py
-[test-tvscraper.py]: distro/scraper/test-tvscraper.py
+[test-tvscraper.py]: distro/scraper/testtvscraper.py
 
 ## Installing Pattern
 
