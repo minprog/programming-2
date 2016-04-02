@@ -5,6 +5,7 @@
 ## Objectives
 
 * Introduction to Python.
+* Learn a new language through various online resources.
 * Practice with objects and methods.
 
 ## Recommended reading

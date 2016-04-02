@@ -1,20 +1,19 @@
-# Exercises #
+# Exercises
 
 These exercises will take you on a trip through Python. You are supposed to try
 out the code in your Python interpreter as often as possible. Feel free to skip parts, but we might refer you back to the exercises later this week!
 
 ![inline](python.png){:.inline}
 
-As an introduction, please read this chapter of the "Think Python" book: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). If needed, please try some of the examples in the book.
-
 ## Installing Python
 
-To install Python in the appliance simply execute the following commands in the terminal:
+You can use Python directly in the CS50 IDE! However, so of the exercises below will entail interactive graphical user interface (GUI) programs, which can't run from the IDE.
 
-	sudo apt-get install python-matplotlib
-	
-This command installs several modules necessary for the plotting of data. Ask
-an assistant for help if you run into any trouble!
+In order to install Python in your own computer, follow instructions at <https://www.continuum.io/downloads> to download a free version.
+
+## Reading
+
+As an introduction, please read the introductory chapter of the book *Think Python*: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). Feel free to try some of the examples in the book.
 
 ## Interactive Python shell
 
@@ -59,7 +58,7 @@ The math module allows you to do a number of useful operations:
 Note that you only need to execute the import command once after you start
 Python; however you will need to execute it again if you restart the shell.
 
-## Exercise 1.1 – Hello, world!
+## Hello, world!
 
 Recall that a program is just a set of instructions for the computer to
 execute. Let's start with a basic command `print x` which prints the value of
@@ -79,11 +78,11 @@ When you are done, save your work and run it:
 
 So, like in C, you can run your programs from the command line. And you do not need to compile them first using `make`!
 
-## Reading 2 - Variables, expressions and statements
+## Reading
 
 [Variables, expressions and statements](http://www.greenteapress.com/thinkpython/html/thinkpython003.html)
 
-## Exercise 1.2 – Operators/Order of Operation
+## Operators and the order of operation
 
 Python has the ability to be used as a cheap, 5-dollar calculator. In
 particular, it supports basic mathematical operators `+`, `-`, `*`, `/` as well

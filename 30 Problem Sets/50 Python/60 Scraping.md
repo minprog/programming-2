@@ -1,3 +1,11 @@
+To install Python in the appliance simply execute the following commands in the terminal:
+
+	sudo apt-get install python-matplotlib
+	
+This command installs several modules necessary for the plotting of data. Ask
+an assistant for help if you run into any trouble!
+
+
 # Scraping
 
 In this assignment you will learn to use the Document Object Model (DOM) using
