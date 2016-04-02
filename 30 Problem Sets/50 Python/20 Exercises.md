@@ -7,13 +7,13 @@ out the code in your Python interpreter as often as possible. Feel free to skip 
 
 ## Installing Python
 
-You can use Python directly in the CS50 IDE! However, so of the exercises below will entail interactive graphical user interface (GUI) programs, which can't run from the IDE.
+You can use Python directly in the CS50 IDE! However, some of the exercises below will entail interactive graphical user interface (GUI) programs, which can't run from the IDE.
 
-In order to install Python in your own computer, follow instructions at <https://www.continuum.io/downloads> to download a free version.
+In order to install Python on your own computer, follow instructions at <https://www.continuum.io/downloads>.
 
 ## Reading
 
-Read the introductory chapter of the book *Think Python*: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). Feel free to try some of the examples in the book.
+Read the introductory chapter of the book *Think Python*: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). Feel free to try some of the examples in the book; this can really help you understand the important details!
 
 ## Interactive Python shell
 
