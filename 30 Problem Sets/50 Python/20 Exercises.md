@@ -204,12 +204,12 @@ you'd have to convert the `int` to a `string`. We'll cover this more in-depth
 later on, when we get to strings, but you may want to play with string
 concatenation operations now to get everything to look its prettiest.
 
---------------------------------------------------------------------------------
-
 ## Variable Names
 
 The Python interpreter has strict rules for variable names. Which of the
 following are legal Python names? If the name is not legal, state the reason.
+
+> Note: your answers will not be saved or submitted. Use the text fields to mark your progress while you are practicing with different parts of the Python language.
 
 |expression |legal?                             |
 |-----------|-----------------------------------|
@@ -297,8 +297,6 @@ operators in your interpreter window before moving on.
 ## Understanding loops
 
 For each of the following fragments of code, write what the output would be. Again, do this without running the code (although feel free to check yourself when you're done).
-
-> Note: your answers will not be saved or submitted. Use the text fields to mark your progress while you are practicing with different parts of the Python language.
 
 {: .language-python}
 	num = 10
