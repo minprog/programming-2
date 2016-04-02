@@ -9,7 +9,7 @@ Your task now, is to extract a list of information about today's most popular TV
 ## Introducing Pattern
 
 *Pattern* is a Python module that will come to our rescue for tackling this problem. Its
-online description is as follows:
+[online description](http://www.clips.ua.ac.be/pages/pattern) is as follows:
 
 > Pattern is a web mining module for the Python programming language. It bundles
 > tools for data mining (Google + Twitter + Wikipedia API, web spider, HTML DOM
