@@ -1,7 +1,8 @@
 # Exercises #
 
+![inline](python.png)
 
-![embed](https://www.youtube.com/embed/Q98L3yaNEao)
+
 
 These exercises will take you on a trip through Python. You are supposed to try
 out the code in your Python interpreter as often as possible.
