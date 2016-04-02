@@ -1,11 +1,9 @@
 # Exercises #
 
-![inline](python.png)
-
-
-
 These exercises will take you on a trip through Python. You are supposed to try
-out the code in your Python interpreter as often as possible.
+out the code in your Python interpreter as often as possible. Feel free to skip parts, but we might refer you back to the exercises later this week!
+
+![inline](python.png){:.inline}
 
 As an introduction, please read this chapter of the "Think Python" book: [The way of the program](http://www.greenteapress.com/thinkpython/html/thinkpython002.html). If needed, please try some of the examples in the book.
 
