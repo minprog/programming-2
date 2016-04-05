@@ -7,7 +7,7 @@ Now, on to the paradigm of object-oriented programming! To get started, read up 
 * Chapter 17: [Classes and Methods](http://www.greenteapress.com/thinkpython/html/thinkpython018.html)
 * Chapter 18: [Inheritance](http://www.greenteapress.com/thinkpython/html/thinkpython019.html)
 
-# Questions about object-oriented programming
+## Questions about object-oriented programming
 
 To make sure you understand some of the core ideas of object-oriented programming, here are some questions to answer. Discuss with your fellow students and staff if unsure how to answer.
 
