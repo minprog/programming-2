@@ -591,7 +591,7 @@ First, have a short look at the example program below.
 	import module
 	print random.randint(0, 5)
 	print random.random() * 100
-	print random.choice(3, "Hello", 432, "Bye")
+	print random.choice([3, "Hello", 432, "Bye"])
 
 Write this exercise in `python_exercises1_2.py`.
 
