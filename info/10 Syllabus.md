@@ -36,8 +36,8 @@ writing by the course's heads.
 The final grade for this course is primarily determined by averaging the scores for the problem sets. The final exam has to be passed, but has no weight in the final grade.
 
 Problem sets are evaluated primarily along axes of scope,
-correctness, design, and style, with scores ordinarily determined by scope × (3
-× correctness + 2 × design + 1 × style). Scope is deemed all-important: we
+correctness, design, and style, with scores ordinarily determined by scope x (3
+x correctness + 2 x design + 1 x style). Scope is deemed all-important: we
 strive for you to at least try every aspect of each problem set. Mid-semester
 comparisons among students of scores are not reliable indicators of standing.
 

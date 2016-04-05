@@ -46,7 +46,7 @@ the same directory.
 output CSV file is correct and that the script actually works given the HTML
 from IMDB.
 
-5. It could be that there are missing data (for instance the runtime), insert
+5. It could be that there are missing data for some rows (for instance the runtime), insert
    an appropriate value when something is missing.
 
 [tvscraper.py]: distro/scraper/tvscraper.py

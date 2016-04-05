@@ -1,30 +1,30 @@
-# Problem Set 6: Simulating robots
-# Name:
-# Collaborators:
-# Time:
+# Robots
+# Name
 
 import math
 import random
 
-import workshop3_visualize
+import robots_animation
 import pylab
-
-# === Provided classes
 
 class Position(object):
     """
     A Position represents a location in a two-dimensional room.
     """
+
     def __init__(self, x, y):
         """
         Initializes a position with coordinates (x, y).
         """
         self.x = x
         self.y = y
+
     def getX(self):
         return self.x
+
     def getY(self):
         return self.y
+
     def getNewPosition(self, angle, speed):
         """
         Computes and returns the new Position after a single clock-tick has
@@ -47,7 +47,9 @@ class Position(object):
         new_y = old_y + delta_y
         return Position(new_x, new_y)
 
-# === Problems 1
+#
+# Problem 1
+#
 
 class RectangularRoom(object):
     """
@@ -57,6 +59,7 @@ class RectangularRoom(object):
     A room has a width and a height and contains (width * height) tiles. At any
     particular time, each of these tiles is either clean or dirty.
     """
+
     def __init__(self, width, height):
         """
         Initializes a rectangular room with the specified width and height.
@@ -134,6 +137,7 @@ class Robot(object):
     Subclasses of Robot should provide movement strategies by implementing
     updatePositionAndClean(), which simulates a single time-step.
     """
+
     def __init__(self, room, speed):
         """
         Initializes a Robot with the given speed in the specified room. The
@@ -187,8 +191,10 @@ class Robot(object):
         """
         raise NotImplementedError
 
+#
+# Problem 2
+#
 
-# === Problem 2
 class StandardRobot(Robot):
     """
     A StandardRobot is a Robot with the standard movement strategy.
@@ -196,6 +202,7 @@ class StandardRobot(Robot):
     At each time-step, a StandardRobot attempts to move in its current direction; when
     it hits a wall, it chooses a new direction randomly.
     """
+
     def updatePositionAndClean(self):
         """
         Simulate the passage of a single time-step.
@@ -205,7 +212,9 @@ class StandardRobot(Robot):
         """
         raise NotImplementedError
 
-# === Problem 3
+#
+# Problem 3
+#
 
 def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
                   robot_type):
@@ -227,43 +236,13 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
     """
     raise NotImplementedError
 
-# === Problem 4
+#
+# Problem 4
+#
 
-class RandomWalkRobot(Robot):
+class RandomRobot(Robot):
     """
-    A RandomWalkRobot is a robot with the "random walk" movement strategy: it
+    A RandomRobot is a robot with the "random walk" movement strategy: it
     chooses a new direction at random after each time-step.
-    """
-    raise NotImplementedError
-
-# Hacker Addition
-
-# === Problem 5
-#
-# 1) How long does it take to clean 80% of a 20×20 room with each of 1-10 robots?
-#
-# 2) How long does it take two robots to clean 80% of rooms with dimensions 
-#	 20×20, 25×16, 40×10, 50×8, 80×5, and 100×4?
-
-def showPlot1():
-    """
-    Produces a plot showing dependence of cleaning time on number of robots.
-    """ 
-    raise NotImplementedError
-
-def showPlot2():
-    """
-    Produces a plot showing dependence of cleaning time on room shape.
-    """
-    raise NotImplementedError
-
-# === Problem 6
-
-# For the parameters tested below (cleaning 80% of a 20x20 square room),
-# RandomWalkRobots take approximately twice as long to clean the same room as
-# StandardRobots do.
-def showPlot3():
-    """
-    Produces a plot comparing the two robot strategies.
     """
     raise NotImplementedError

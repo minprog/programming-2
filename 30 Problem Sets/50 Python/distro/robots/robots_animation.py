@@ -1,7 +1,5 @@
-# Problem Set 6:
+# Robots
 # Visualization code for simulated robots.
-#
-# See the problem set for instructions on how to use this code.
 
 import math
 import time

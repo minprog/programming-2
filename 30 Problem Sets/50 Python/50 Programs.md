@@ -1,19 +1,15 @@
 # Simulating robots
 
-In this problem you will practice with designing a simulation and implementing a program that uses
-classes. Please don't be discouraged by the apparent length of this problem set. There is quite a
-bit to read and understand, but most of the problems do not involve writing much code.
+In this problem you will practice with designing a simulation and implementing a program that uses classes. Please don't be discouraged by the apparent length of this problem. There is quite a bit to read and understand, but most of the problems do not involve writing much code.
 
 ## Getting Started
 
-For this problem, you will need Python installed on your own computer, and access to the `matplotlib` library! Ask for help when needed.
-
-Download the zip file [here](workshop3.zip).
+Download the zip file [here](distro/robots/robots.zip).
 
 ## Graphs & Math
 
-To create plots for Problems #4 and #6 of this problem set, you will need these Python library
-packages: 
+To create plots for part 4 of this problem, you will need these Python library
+packages:
 
 ### Matplotlib
 
@@ -36,7 +32,7 @@ An introduction with some [sample code] and the [numpy documentation].
 ### Check the packages are installed
 
 All you have to do is verify that these packages are available in your IDLE version (there are multiple versions
-on the UvA machines). You can test this by running *workshop3_pkgtest.py* or by simply typing
+on the UvA machines). You can test this by running `robots_pkgtest.py` or by simply typing
 
     import matplotlib, numpy
 
@@ -52,59 +48,38 @@ If you are working on your own machine, you will have to install the packages. Y
 
 ## Simulation Overview
 
-iRobot is a company (started by MIT alumni and faculty) that sells the [Roomba
-vacuuming robot] (watch one of the product videos to see these robots in
-action). Roomba robots move about a floor, cleaning the area they pass over.
-You will design a simulation to estimate how much time a group of Roomba-like
-robots will take to clean the floor of a room.
+iRobot is a company, started by MIT alumni and faculty, that sells the [Roomba vacuuming robot](watch one of the product videos to see these robots in action). Roomba robots move about a floor, cleaning the area they pass over.
+You will design a simulation to estimate how much time a group of Roomba-like robots will take to clean the floor of a room.
 
 [Roomba vacuuming robot]: http://store.irobot.com/category/index.jsp?categoryId=3334619&cp=2804605&ab=CMS_IRBT_Storefront_011510_vacuumcleaning
 
-The following simplified model of a single robot moving in a square 5×5 room
-should give you some intuition about the system we are simulating.
+![](laser.jpg)
 
-The robot starts out at some random position in the room, and with a random
-direction of motion. The illustrations below show the robot’s position
-(indicated by a black dot) as well as its direction (indicated by the direction
-of the red arrowhead).
+The following simplified model of a single robot moving in a square 5x5 room should give you some intuition about the system we are simulating.
+
+The robot starts out at some random position in the room, and with a random direction of motion. The illustrations below show the robot’s position (indicated by a black dot) as well as its direction (indicated by the direction of the red arrowhead).
 
 ![sim1](sim1.png)
 
-Time t = 0: The robot starts at
-the position (2.1, 2.2) with an
-angle of 205 degrees (measured
-clockwise from “north”). The
-tile that it is on is now clean.
+Time t = 0: The robot starts at the position (2.1, 2.2) with an angle of 205 degrees (measured clockwise from "north"). The tile that it is on is now clean.
 
 ![sim2](sim2.png)
 
-t = 1: The robot has moved 1
-unit in the direction it was
-facing, to the position (1.7,
-1.3), cleaning another tile.
+t = 1: The robot has moved 1 unit in the direction it was facing, to the position (1.7, 1.3), cleaning another tile.
 
 ![sim3](sim3.png)
 
-t = 2: The robot has moved 1
-unit in the same direction (205
-degrees from north), to the
-position (1.2, 0.4), cleaning
-another tile.
+t = 2: The robot has moved 1 unit in the same direction (205 degrees from north), to the position (1.2, 0.4),
+cleaning another tile.
 
 ![sim4](sim4.png)
 
-t = 3: The robot could not have 
-moved another unit in the same 
-direction without hitting the
-wall, so instead it turns to face
-in a new, random direction, 287
-degrees.
+t = 3: The robot could not have moved another unit in the same direction without hitting the wall, so instead it
+turns to face in a new, random direction, 287 degrees.
 
 ![sim5](sim5.png)
 
-t = 4: The robot moves along
-its new heading to the position
-(0.3, 0.7), cleaning another tile.
+t = 4: The robot moves along its new heading to the position (0.3, 0.7), cleaning another tile.
 
 ### Simulation Details
 
@@ -129,7 +104,7 @@ A robot may not move to a point outside the room.
   a new direction at random. The robot continues in that direction until it reaches
   another wall.
 * *Tiles*: You will need to keep track of which parts of the floor have been cleaned by the
-robot(s). We will divide the area of the room into 1×1 tiles (there will be w * hsuch tiles).
+robot(s). We will divide the area of the room into 1x1 tiles (there will be w * hsuch tiles).
 When a robot’s location is anywhere in a tile, we will consider the entire tile to be
 cleaned (as in the pictures above). By convention, we will refer to the tiles using ordered
 pairs of integers: (0, 0), (0, 1), ..., (0, h-1), (1, 0), (1, 1), ..., (w-1, h-1).
@@ -145,7 +120,7 @@ behave, and document that decision in your code.
 You will need to design two classes to keep track of which parts of the room have been cleaned
 as well as the position and direction of each robot.
 
-In workshop3.py, we’ve provided skeletons for the following two classes, which you will fill in in
+In robots.py, we’ve provided skeletons for the following two classes, which you will fill in in
 Problem #1:
 
 * *RectangularRoom*: Represents the space to be cleaned and keeps track of which tiles have been cleaned.
@@ -155,7 +130,7 @@ We’ve also provided a complete implementation of the following class:
 
 * *Position*: Stores the x- and y-coordinates of a robot in a room.
 
-Read workshop3.py carefully before starting, so that you understand the provided code and its capabilities.
+Read robots.py carefully before starting, so that you understand the provided code and its capabilities.
 
 ## Problem #1
 
@@ -182,14 +157,14 @@ to be performed:
 * Setting the robot’s direction
 
 Complete the RectangularRoom and Robot classes by implementing their methods
-in workshop3.py.
+in `robots.py`.
 
 (Although this problem has many parts, it should not take long once you have chosen how you
 wish to represent your data. For reasonable representations, *a majority of the methods will
 require only one line of code.*)
 
 For your reference, here are abbreviated specifications for the methods of RectangularRoom
-and Robot. See workshop3.py for complete details.
+and Robot. See `robots.py` for complete details.
 
     class RectangularRoom(object):
         """
@@ -332,10 +307,10 @@ We have provided the getNewPosition method of Position, which you may find helpf
 For your reference, here are some approximate room cleaning times. These times are with a
 robot speed of 1.0.
 
-* One robot takes around 150 clock ticks to completely clean a 5×5 room.
-* One robot takes around 190 clock ticks to clean 75% of a 10×10 room.
-* One robot takes around 310 clock ticks to clean 90% of a 10×10 room.
-* One robot takes around 3250 clock ticks to completely clean a 20×20 room.
+* One robot takes around 150 clock ticks to completely clean a 5x5 room.
+* One robot takes around 190 clock ticks to clean 75% of a 10x10 room.
+* One robot takes around 310 clock ticks to clean 90% of a 10x10 room.
+* One robot takes around 3250 clock ticks to completely clean a 20x20 room.
 
 (These are only intended as guidelines. Depending on the exact details of your implementation,
 you may get times different from ours.)
@@ -351,16 +326,22 @@ determine when things are going wrong.
 
 Here’s how to run the visualization:
 
-1. In your simulation, at the beginning of a trial, do the following to start an animation:  
-*anim = workshop3_visualize.RobotVisualization(num_robots, width, height)*  
-(Pass in parameters appropriate to the trial, of course.) This will open a new window to
-display the animation and draw a picture of the room.
-2. Then, on each time-step, do the following to draw a new frame of the animation:  
-*anim.update(room, robots)*  
-Pass in a RectangularRoom object and a list of Robot objects representing the current
-state of the room and the robots in the room.
-3. When the trial is over, call the following method:  
-*anim.done()*
+1. In your simulation, at the beginning of a trial, do the following to start an animation:
+
+		anim = robots_animation.RobotVisualization(num_robots, width, height)
+
+	(Pass in parameters appropriate to the trial, of course.) This will open a new window to display the animation and draw a picture of
+the room.
+
+2. Then, on each time-step, do the following to draw a new frame of the animation:
+
+		anim.update(room, robots)
+		
+	Pass in a RectangularRoom object and a list of Robot objects representing the current state of the room and the robots in the room.
+
+3. When the trial is over, call the following method:
+
+		anim.done()
 
 The resulting animation will look like this:
 
@@ -374,7 +355,7 @@ the full simulation).
 For purposes of debugging your simulation, you can slow down the animation even further. You
 can do this by changing the call to RobotVisualization, as follows:
 
-*anim = workshop3_visualize.RobotVisualization(num_robots, width, height, delay)*
+	anim = robots_animation.RobotVisualization(num_robots, width, height, delay)
 
 The parameter delay specifies how many seconds the program should pause between frames.
 The default is 0.2 (that is, 5 frames per second). You can raise this value to make the animation
@@ -392,11 +373,10 @@ direction randomly after every time step, rather than just when they run into wa
 been asked to design a simulation to determine what effect, if any, this change has on room
 cleaning times.
 
-Write a new class RandomWalkRobot that inherits from Robot (like StandardRobot) but
-implements the new movement strategy. RandomWalkRobot should have the same interface
-as StandardRobot.
+Write a new class `RandomRobot` that inherits from `Robot` (like `StandardRobot`!) but
+implements the new movement strategy. `RandomRobot` should have the same interface
+as `StandardRobot`.
 
-Test out your new class. Perform a single trial with the new RandomWalkRobot implementation
+Test out your new class. Perform a single trial with the new `RandomRobot` implementation
 and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
-can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
-
+can call `runSimulation` again, passing `RandomRobot` instead of `StandardRobot`.
