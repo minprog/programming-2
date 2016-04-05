@@ -1,31 +1,14 @@
 # Simulating robots
 
-*Think Python*,
-
-* Chapter 15: [Classes and Objects](http://www.greenteapress.com/thinkpython/html/thinkpython016.html)
-* Chapter 16: [Classes and Functions](http://www.greenteapress.com/thinkpython/html/thinkpython017.html)
-* Chapter 17: [Classes and Methods](http://www.greenteapress.com/thinkpython/html/thinkpython018.html)
-* Chapter 18: [Inheritance](http://www.greenteapress.com/thinkpython/html/thinkpython019.html)
-
-Before you read those, however, watch the video below, introducing you to Python by way of re-implementing earlier Problem Sets!
-
-
-In this problem set you will practice designing a simulation and implementing a
-program that uses classes. Please don't be discouraged by the apparent length
-of this problem set. There is quite a bit to read and understand, but most of
-the problems do not involve writing much code.
+In this problem you will practice with designing a simulation and implementing a program that uses
+classes. Please don't be discouraged by the apparent length of this problem set. There is quite a
+bit to read and understand, but most of the problems do not involve writing much code.
 
 ## Getting Started
 
+For this problem, you will need Python installed on your own computer, and access to the `matplotlib` library! Ask for help when needed.
+
 Download the zip file [here](workshop3.zip).
-
-To install Python in the appliance simply execute the following commands in the terminal:
-
-	sudo apt-get install python-matplotlib
-	
-This command installs several modules necessary for the plotting of data. Ask
-an assistant for help if you run into any trouble!
-
 
 ## Graphs & Math
 
