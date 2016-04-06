@@ -2,40 +2,7 @@
 
 In this problem you will practice with designing a simulation and implementing a program that uses classes. Please don't be discouraged by the apparent length of this problem. There is quite a bit to read and understand, but most of the problems do not involve writing much code.
 
-## Graphs & Math
-
-To create plots for part 4 of this problem, you will need these Python library
-packages:
-
-- `matplotlib`: This is a package for plotting graphs, barcharts and other visual representations of numerical data. Find some [sample images] online (click on the images for the code) and don't forget the [matplotlib documentation].
-
-- `numpy`: This is a package for scientific computing, implemented mostly with more efficient or advanced math operations. On the website you can find an introduction with some [sample code] and the [numpy documentation].
-
-[sample images]: http://matplotlib.org/gallery.html
-[matplotlib documentation]: http://matplotlib.org/contents.html
-
-[sample code]: http://scipy.org/Getting_Started
-[numpy documentation]: http://docs.scipy.org/doc/
-
-All you have to do is verify that these packages are available in your IDLE version (there are multiple versions
-on the UvA machines). You can test this by running `robots_pkgtest.py` or by simply typing
-
-    import matplotlib, numpy
-
-in the Shell, which should not result in any errors.
-
-If you are working on your own machine, you will have to install the packages. You will need
-
-* [matplotlib] Version 1.0.0 or higher
-* [numpy] Version 1.5.0 or higher
-
-[matplotlib]: http://matplotlib.org/downloads.html
-[numpy]: http://sourceforge.net/projects/numpy/files/NumPy/
-
-## Simulation Overview
-
-iRobot is a company, started by MIT alumni and faculty, that sells the [Roomba vacuuming robot](watch one of the product videos to see these robots in action). Roomba robots move about a floor, cleaning the area they pass over.
-You will design a simulation to estimate how much time a group of Roomba-like robots will take to clean the floor of a room.
+iRobot is a company, started by MIT alumni and faculty, that sells the [Roomba vacuuming robot](watch one of the product videos to see these robots in action). Roomba robots move about a floor, cleaning the area they pass over. You will design a simulation to estimate how much time a group of Roomba-like robots will take to clean the floor of a room.
 
 [Roomba vacuuming robot]: http://store.irobot.com/category/index.jsp?categoryId=3334619&cp=2804605&ab=CMS_IRBT_Storefront_011510_vacuumcleaning
 
