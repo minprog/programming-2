@@ -4,8 +4,8 @@
 import math
 import random
 
-import robots_animation
-import pylab
+# import robots_animation
+# import pylab
 
 class Position(object):
     """
@@ -245,4 +245,4 @@ class RandomRobot(Robot):
     A RandomRobot is a robot with the "random walk" movement strategy: it
     chooses a new direction at random after each time-step.
     """
-    raise NotImplementedError
+    # Not implemented.
