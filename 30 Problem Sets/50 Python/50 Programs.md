@@ -155,7 +155,7 @@ In this problem you will write code that runs a complete robot simulation. Recal
 
 The first six parameters should be self-explanatory. For the time being, you should pass in `StandardRobot` for the `robot_type` parameter, like so:
 
-*avg = runSimulation(10, 1.0, 15, 20, 0.8, 30, StandardRobot)*
+	avg = runSimulation(10, 1.0, 15, 20, 0.8, 30, StandardRobot)
 
 > Note: what you actually do there, is pass along the *name* of a class to that function. The function itself will then create a new *instance* of the class with that name. We can then pass any kind of class to the function (although in practice, the function only works with classes that look like a Robot). Make sure you understand how that works by asking questions!
 
