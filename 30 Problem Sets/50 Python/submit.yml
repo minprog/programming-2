@@ -4,3 +4,4 @@ required:
     - tvscraper.py
     - tvseries.html
     - tvseries.csv
+    - robots.py

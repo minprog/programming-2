@@ -11,20 +11,12 @@ Download the zip file [here](distro/robots/robots.zip).
 To create plots for part 4 of this problem, you will need these Python library
 packages:
 
-### Matplotlib
+- `matplotlib`: This is a package for plotting graphs, barcharts and other visual representations of numerical data. Find some [sample images] online (click on the images for the code) and don't forget the [matplotlib documentation].
 
-This is a package for plotting graphs, barcharts and other visual representations of numerical data.
-
-Some [sample images], you can click on the images for the code and the [matplotlib documentation].
+- `numpy`: This is a package for scientific computing, implemented mostly with more efficient or advanced math operations. On the website you can find an introduction with some [sample code] and the [numpy documentation].
 
 [sample images]: http://matplotlib.org/gallery.html
 [matplotlib documentation]: http://matplotlib.org/contents.html
-
-### Numpy
-
-This is a package for scientific computing, implemented mostly with more efficient/advanced math operations.
-
-An introduction with some [sample code] and the [numpy documentation].
 
 [sample code]: http://scipy.org/Getting_Started
 [numpy documentation]: http://docs.scipy.org/doc/
@@ -57,7 +49,7 @@ You will design a simulation to estimate how much time a group of Roomba-like ro
 
 The following simplified model of a single robot moving in a square 5x5 room should give you some intuition about the system we are simulating.
 
-The robot starts out at some random position in the room, and with a random direction of motion. The illustrations below show the robot’s position (indicated by a black dot) as well as its direction (indicated by the direction of the red arrowhead).
+The robot starts out at some random position in the room, and with a random direction of motion. The illustrations below show the robot's position (indicated by a black dot) as well as its direction (indicated by the direction of the red arrowhead).
 
 ![sim1](sim1.png)
 
@@ -92,20 +84,20 @@ same point without interfering.
 given. Initially the entire floor is dirty. A robot cannot pass through the walls of the room.
 A robot may not move to a point outside the room.
 * *Robot motion rules*:
-  * Each robot has a position inside the room. We’ll represent the position using
+  * Each robot has a position inside the room. We'll represent the position using
   coordinates (x, y) which are floats satisfying 0 ≤ x < w and 0 ≤ y < h. In our
-  program we’ll use instances of the Position class to store these coordinates.
-  * A robot has a direction of motion. We’ll represent the direction using an integer d
+  program we'll use instances of the Position class to store these coordinates.
+  * A robot has a direction of motion. We'll represent the direction using an integer d
   satisfying 0 ≤ d < 360, which gives an angle in degrees.
   * All robots move at the same speed s, which is given and is constant throughout
   the simulation. Every time-step, a robot moves in its direction of motion by s
   units.
-  * If a robot would’ve ended up hitting the wall within the time-step, it instead picks
+  * If a robot would've ended up hitting the wall within the time-step, it instead picks
   a new direction at random. The robot continues in that direction until it reaches
   another wall.
 * *Tiles*: You will need to keep track of which parts of the floor have been cleaned by the
 robot(s). We will divide the area of the room into 1x1 tiles (there will be w * hsuch tiles).
-When a robot’s location is anywhere in a tile, we will consider the entire tile to be
+When a robot's location is anywhere in a tile, we will consider the entire tile to be
 cleaned (as in the pictures above). By convention, we will refer to the tiles using ordered
 pairs of integers: (0, 0), (0, 1), ..., (0, h-1), (1, 0), (1, 1), ..., (w-1, h-1).
 * *Termination*: The simulation ends when a specified fraction of the tiles in the room have
@@ -115,18 +107,18 @@ If you find any places above where the specification of the simulation dynamics 
 ambiguous, it is up to you to make a reasonable decision about how your program/model will
 behave, and document that decision in your code.
 
-# Part I: The Rectangular Room and Robot classes
+## Part I: The Rectangular Room and Robot classes
 
 You will need to design two classes to keep track of which parts of the room have been cleaned
 as well as the position and direction of each robot.
 
-In robots.py, we’ve provided skeletons for the following two classes, which you will fill in in
+In `robots.py`, we've provided skeletons for the following two classes, which you will fill in in
 Problem #1:
 
 * *RectangularRoom*: Represents the space to be cleaned and keeps track of which tiles have been cleaned.
 * *Robot*: Stores the position and heading of a robot.
 
-We’ve also provided a complete implementation of the following class:
+We've also provided a complete implementation of the following class:
 
 * *Position*: Stores the x- and y-coordinates of a robot in a room.
 
@@ -151,10 +143,10 @@ For the Robot class, decide what fields you will use and decide how the followin
 to be performed:
 
 * Initializing the object
-* Accessing the robot’s position
-* Accessing the robot’s direction
-* Setting the robot’s position
-* Setting the robot’s direction
+* Accessing the robot's position
+* Accessing the robot's direction
+* Setting the robot's position
+* Setting the robot's direction
 
 Complete the RectangularRoom and Robot classes by implementing their methods
 in `robots.py`.
@@ -235,11 +227,11 @@ and Robot. See `robots.py` for complete details.
 Each robot must also have some code that tells it how to move about a room, which will go in a
 method called *updatePositionAndClean*.
 
-Ordinarily we would consider putting all the robot’s methods in a single class. However, later in
-this problem set we’ll consider robots with alternate movement strategies, to be implemented as
+Ordinarily we would consider putting all the robot's methods in a single class. However, later in
+this problem set we'll consider robots with alternate movement strategies, to be implemented as
 different classes with the same interface. These classes will have a different implementation
 of *updatePositionAndClean* but are for the most part the same as the original robots.
-Therefore, we’d like to use inheritance to reduce the amount of duplicated code.
+Therefore, we'd like to use inheritance to reduce the amount of duplicated code.
 
 We have already refactored the robot code for you into two classes: the Robot class you
 completed above (which contains general robot code), and a StandardRobot class inheriting from
@@ -248,36 +240,11 @@ it (which contains its own movement strategy).
 Complete the *updatePositionAndClean* method of StandardRobot to simulate the motion
 of the robot after a single time-step (as described above in the simulation dynamics).
 
-    class StandardRobot(Robot):
-        """
-        A StandardRobot is a Robot with the standard movement strategy.
-        At each time-step, a StandardRobot attempts to move in its current
-        direction; when
-        it hits a wall, it chooses a new direction randomly.
-        """
-        
-        def updatePositionAndClean(self):
-            """
-            Simulate the passage of a single time-step.
-            Move the robot to a new position and mark the tile it is on as having
-            been cleaned.
-            """
-
 ## Problem #3
 
 In this problem you will write code that runs a complete robot simulation.
 Recall that in each trial, the objective is to determine how many time-steps are on average
-needed before a specified fraction of the room has been cleaned. Implement the following
-function:
-
-    def runSimulation(num_robots, speed, width, height, min_coverage, num_trials, robot_type):
-        """
-        Runs NUM_TRIALS trials of the simulation and returns the mean number of
-        time-steps needed to clean the fraction MIN_COVERAGE of the room.
-        The simulation is run with NUM_ROBOTS robots of type ROBOT_TYPE, each
-        with
-        speed SPEED, in a room of dimensions WIDTH x HEIGHT.
-        """
+needed before a specified fraction of the room has been cleaned. Implement the function `runSimulation`.
 
 The first six parameters should be self-explanatory. For the time being, you should pass
 in StandardRobot for the robot_type parameter, like so:
@@ -286,45 +253,28 @@ in StandardRobot for the robot_type parameter, like so:
 
 Then, in runSimulation you should use *robot_type(...)* instead of *StandardRobot(...)*
 whenever you wish to instantiate a robot. (This will allow us to easily adapt the simulation to run
-with different robot implementations, which you’ll encounter in Problem #5.)
+with different robot implementations, which you'll encounter in Problem #5.)
 
 Feel free to write whatever helper functions you wish.
 
-We have provided the getNewPosition method of Position, which you may find helpful:
+We have provided the getNewPosition method of Position, which you may find helpful.
 
-    class Position(object):
-        def getNewPosition(self, angle, speed):
-            """
-            Computes and returns the new Position after a single clock-tick has
-            passed, with this object as the current position, and with the
-            specified angle and speed.
-            Does NOT test whether the returned position fits inside the room.
-            angle: float representing angle in degrees, 0 <= angle < 360
-            speed: positive float representing speed
-            Returns: a Position object representing the new position.
-            """
-
-For your reference, here are some approximate room cleaning times. These times are with a
-robot speed of 1.0.
+For your reference, here are some approximate room cleaning times. These times are with a robot speed of 1.0. However, these are only intended as guidelines. Depending on the exact details of your implementation, you may get times different from ours. That is probably fine, too.
 
 * One robot takes around 150 clock ticks to completely clean a 5x5 room.
 * One robot takes around 190 clock ticks to clean 75% of a 10x10 room.
 * One robot takes around 310 clock ticks to clean 90% of a 10x10 room.
 * One robot takes around 3250 clock ticks to completely clean a 20x20 room.
 
-(These are only intended as guidelines. Depending on the exact details of your implementation,
-you may get times different from ours.)
-
-You should also check your simulation’s output for speeds other than 1.0. One way to do this is
-to take the above test cases, change the speeds, and make sure the results are sensible.
+You should also check your simulation's output for speeds other than 1.0. One way to do this is to take the above test cases, change the speeds, and make sure the results are sensible.
 
 #### Visualizing robots (Optional, but cool and should be easy to do)
 
-We’ve provided some code to generate animations of your robots as they go about cleaning a
+We've provided some code to generate animations of your robots as they go about cleaning a
 room. These animations can also help you debug your simulation by helping you to visually
 determine when things are going wrong.
 
-Here’s how to run the visualization:
+Here's how to run the visualization:
 
 1. In your simulation, at the beginning of a trial, do the following to start an animation:
 
@@ -347,7 +297,7 @@ The resulting animation will look like this:
 
 ![visualization](visualization.png)
 
-The visualization code slows down your simulation so that the animation doesn’t zip by too fast
+The visualization code slows down your simulation so that the animation doesn't zip by too fast
 (by default, it shows 5 time-steps every second). Naturally, you will want to avoid running the
 animation code if you are trying to run many trials at once (for example, when you are running
 the full simulation).
@@ -362,7 +312,7 @@ The default is 0.2 (that is, 5 frames per second). You can raise this value to m
 slower.
 
 For problems 4 and 6, you will want to make calls to *runSimulation()* to get simulation data
-and plot it. However, you don’t want the visualization getting in the way. If you choose to do this
+and plot it. However, you don't want the visualization getting in the way. If you choose to do this
 visualization exercise, before you get started on problems 4 and 6 and before you turn your
 problem set in, make sure to comment the visualization code out of *runSimulation()*.
 

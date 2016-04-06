@@ -30,12 +30,12 @@ To make sure you understand some of the core ideas of object-oriented programmin
             def __init__(self, time):
                 self.time = time
             def print_time(self):
-                time = ’6:30’
+                time = '6:30'
                 print self.time
-        clock = Clock(’5:30’)
+        clock = Clock('5:30')
         clock.print_time()
 
-    1. What does the code print out? If you aren’t sure, create a Python file and run it.
+    1. What does the code print out? If you aren't sure, create a Python file and run it.
     2. Is that what you expected? Why?
 
 3. Consider the following code:
@@ -45,10 +45,10 @@ To make sure you understand some of the core ideas of object-oriented programmin
                 self.time = time
             def print_time(self, time):
                 print time
-        clock = Clock(’5:30’)
-        clock.print_time(’10:30’)
+        clock = Clock('5:30')
+        clock.print_time('10:30')
 
-	1. What does the code print out? If you aren’t sure, create a Python file and run it.
+	1. What does the code print out? If you aren't sure, create a Python file and run it.
 	2. What does this tell you about giving parameters the same name as object attributes?
 
 4. Consider the following code:
@@ -58,12 +58,12 @@ To make sure you understand some of the core ideas of object-oriented programmin
                 self.time = time
             def print_time(self):
                 print self.time
-        boston_clock = Clock(’5:30’)
+        boston_clock = Clock('5:30')
         paris_clock = boston_clock
-        paris_clock.time = ’10:30’
+        paris_clock.time = '10:30'
         boston_clock.print_time()
 
-	1. What does the code print out? If you aren’t sure, create a Python file and run it.
+	1. What does the code print out? If you aren't sure, create a Python file and run it.
     2. Why does it print what it does? (Are boston clock and paris clock different objects? Why or why not?)
 
 ## Implementing a data structure as a class
@@ -73,7 +73,7 @@ of a queue, you get the item that has been in there the longest.
 
 Create a new file called `queue.py` to make your `Queue` class. In your `Queue` class, you will need three methods:
 
-* `__init__`: to initialize your `Queue` (think: how will you store the queue’s elements? You'll
+* `__init__`: to initialize your `Queue` (think: how will you store the queue's elements? You'll
   need to initialize an appropriate object attribute in this method)
 
 * `insert`: inserts one element in your `Queue`
