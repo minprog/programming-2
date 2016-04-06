@@ -2,10 +2,6 @@
 
 In this problem you will practice with designing a simulation and implementing a program that uses classes. Please don't be discouraged by the apparent length of this problem. There is quite a bit to read and understand, but most of the problems do not involve writing much code.
 
-## Getting Started
-
-Download the zip file [here](distro/robots/robots.zip).
-
 ## Graphs & Math
 
 To create plots for part 4 of this problem, you will need these Python library
@@ -20,8 +16,6 @@ packages:
 
 [sample code]: http://scipy.org/Getting_Started
 [numpy documentation]: http://docs.scipy.org/doc/
-
-### Check the packages are installed
 
 All you have to do is verify that these packages are available in your IDLE version (there are multiple versions
 on the UvA machines). You can test this by running `robots_pkgtest.py` or by simply typing
@@ -103,33 +97,28 @@ pairs of integers: (0, 0), (0, 1), ..., (0, h-1), (1, 0), (1, 1), ..., (w-1, h-1
 * *Termination*: The simulation ends when a specified fraction of the tiles in the room have
 been cleaned.
 
-If you find any places above where the specification of the simulation dynamics seems
-ambiguous, it is up to you to make a reasonable decision about how your program/model will
-behave, and document that decision in your code.
+If you find any places above where the specification of the simulation dynamics seems ambiguous, it is up to you to make a reasonable decision about how your simulation will behave, and document that decision in your code.
 
-## Part I: The Rectangular Room and Robot classes
+## Getting Started
 
-You will need to design two classes to keep track of which parts of the room have been cleaned
-as well as the position and direction of each robot.
+You will need to design two classes to keep track of which parts of the room have been cleaned as well as the position and direction of each robot. First, download the necessary [starter files](distro/robots/robots.zip).
 
-In `robots.py`, we've provided skeletons for the following two classes, which you will fill in in
-Problem #1:
+In `robots.py`, you'll fiind skeletons for the following two classes:
 
-* *RectangularRoom*: Represents the space to be cleaned and keeps track of which tiles have been cleaned.
-* *Robot*: Stores the position and heading of a robot.
+* `RectangularRoom` represents the space to be cleaned and keeps track of which tiles have been cleaned.
+* `Robot` stores the position and heading of a robot.
 
-We've also provided a complete implementation of the following class:
+And there is a complete implementation of the following class:
 
-* *Position*: Stores the x- and y-coordinates of a robot in a room.
+* `Position` stores the x- and y-coordinates of a robot in a room.
 
-Read robots.py carefully before starting, so that you understand the provided code and its capabilities.
+Read `robots.py` carefully before starting, so that you understand the provided code and its capabilities.
 
-## Problem #1
+## Modeling rooms and robots
 
-In this problem you will implement two classes.
+Now it's time to implement the two empty classes! Although this problem has many parts, it should not take long once you have chosen how you wish to represent your data. For reasonable representations, *a majority of the methods will require only one line of code.*
 
-For the RectangularRoom class, decide what fields you will use and decide how the following
-operations are to be performed:
+For the `RectangularRoom` class, decide what *fields* (instance variables) you will use and decide how the following operations are to be performed:
 
 * Initializing the object
 * Marking an appropriate tile as cleaned when a robot moves to a given position
@@ -139,8 +128,7 @@ operations are to be performed:
 * Getting a random position in the room
 * Determining if a given position is in the room
 
-For the Robot class, decide what fields you will use and decide how the following operations are
-to be performed:
+For the `Robot` class, decide what fields (instance variables) you will use and decide how the following operations are to be performed:
 
 * Initializing the object
 * Accessing the robot's position
@@ -148,116 +136,35 @@ to be performed:
 * Setting the robot's position
 * Setting the robot's direction
 
-Complete the RectangularRoom and Robot classes by implementing their methods
-in `robots.py`.
+Complete the `RectangularRoom` and `Robot` classes by implementing their methods in `robots.py`.
 
-(Although this problem has many parts, it should not take long once you have chosen how you
-wish to represent your data. For reasonable representations, *a majority of the methods will
-require only one line of code.*)
+## Defining the simulation step
 
-For your reference, here are abbreviated specifications for the methods of RectangularRoom
-and Robot. See `robots.py` for complete details.
+Each robot must also have some code that tells it how to move about a room, which will go into a
+method called `updatePositionAndClean`.
 
-    class RectangularRoom(object):
-        """
-        A RectangularRoom represents a rectangular region containing clean or dirty
-        tiles. A room has a width and a height and contains (width * height) tiles. At
-        any particular time, each of these tiles is either clean or dirty.
-        """
-        
-        def __init__(self, width, height):
-            """
-            Initializes a rectangular room with the specified width and height.
-            Initially, no tiles in the room have been cleaned.
-            """
-        
-        def cleanTileAtPosition(self, pos):
-            """Mark the tile under the position POS as cleaned."""
-        
-        def isTileCleaned(self, m, n):
-            """Return True if the tile (m, n) has been cleaned."""
-        
-        def getNumTiles(self):
-            """Return the total number of tiles in the room."""
-        
-        def getNumCleanedTiles(self):
-            """Return the total number of clean tiles in the room."""
-        
-        def getRandomPosition(self):
-            """Return a random position inside the room."""
-        
-        def isPositionInRoom(self, pos):
-            """Return True if POS is inside the room."""
-    
-    class Robot(object):
-        """
-        Represents a robot cleaning a particular room.
-        At all times the robot has a particular position and direction in the room.
-        The robot also has a fixed speed.
-        Subclasses of Robot should provide movement strategies by implementing
-        updatePositionAndClean(), which simulates a single time-step.
-        """
-        
-        def __init__(self, room, speed):
-            """
-            Initializes a Robot with the given speed in the specified room. The
-            robot initially has a random direction and a random position in the
-            room. The robot cleans the tile it is on.
-            """
-            
-            def getRobotPosition(self):
-                """Return the position of the robot."""
-            
-            def getRobotDirection(self):
-                """Return the direction of the robot."""
-            
-            def setRobotPosition(self, position):
-                """Set the position of the robot."""
-            
-            def setRobotDirection(self, direction):
-                """Set the direction of the robot."""
-            
-            def updatePositionAndClean(self):
-                """Simulate the passage of a single time-step."""
+Ordinarily we would consider putting all the robot's methods in a single class. However, we will also be considering robots with alternate movement strategies, to be implemented as different classes with the same design (the same *interface*). These classes will have a different implementation of `updatePositionAndClean` but are for the most part the same as the original robots. Therefore, we'd like to use *inheritance* to reduce the amount of duplicated code.
 
-# Part II: Creating and using the simulator
+We have already refactored the robot code for you into two classes: the `Robot` class you completed above (which contains general robot code), and a `StandardRobot` class inheriting from it (which contains its own movement strategy).
 
-## Problem #2
+Complete the `updatePositionAndClean` method of `StandardRobot` to simulate the motion of the robot after a single time-step (as described above in the simulation dynamics).
 
-Each robot must also have some code that tells it how to move about a room, which will go in a
-method called *updatePositionAndClean*.
+## Running the simulation
 
-Ordinarily we would consider putting all the robot's methods in a single class. However, later in
-this problem set we'll consider robots with alternate movement strategies, to be implemented as
-different classes with the same interface. These classes will have a different implementation
-of *updatePositionAndClean* but are for the most part the same as the original robots.
-Therefore, we'd like to use inheritance to reduce the amount of duplicated code.
+In this problem you will write code that runs a complete robot simulation. Recall that in each trial, the objective is to determine how many time-steps are on average needed before a specified fraction of the room has been cleaned. Implement the function `runSimulation`.
 
-We have already refactored the robot code for you into two classes: the Robot class you
-completed above (which contains general robot code), and a StandardRobot class inheriting from
-it (which contains its own movement strategy).
-
-Complete the *updatePositionAndClean* method of StandardRobot to simulate the motion
-of the robot after a single time-step (as described above in the simulation dynamics).
-
-## Problem #3
-
-In this problem you will write code that runs a complete robot simulation.
-Recall that in each trial, the objective is to determine how many time-steps are on average
-needed before a specified fraction of the room has been cleaned. Implement the function `runSimulation`.
-
-The first six parameters should be self-explanatory. For the time being, you should pass
-in StandardRobot for the robot_type parameter, like so:
+The first six parameters should be self-explanatory. For the time being, you should pass in `StandardRobot` for the `robot_type` parameter, like so:
 
 *avg = runSimulation(10, 1.0, 15, 20, 0.8, 30, StandardRobot)*
 
-Then, in runSimulation you should use *robot_type(...)* instead of *StandardRobot(...)*
-whenever you wish to instantiate a robot. (This will allow us to easily adapt the simulation to run
-with different robot implementations, which you'll encounter in Problem #5.)
+> Note: what you actually do there, is pass along the *name* of a class to that function. The function itself will then create a new *instance* of the class with that name. We can then pass any kind of class to the function (although in practice, the function only works with classes that look like a Robot). Make sure you understand how that works by asking questions!
 
-Feel free to write whatever helper functions you wish.
+Then, in `runSimulation` you should use `robot_type(...)` instead of `StandardRobot(...)` whenever you wish to instantiate a robot.
 
-We have provided the getNewPosition method of Position, which you may find helpful.
+Hints:
+
+- Feel free to write whatever helper functions you wish.
+- We have provided the `getNewPosition` method of `Position`, which you may find helpful.
 
 For your reference, here are some approximate room cleaning times. These times are with a robot speed of 1.0. However, these are only intended as guidelines. Depending on the exact details of your implementation, you may get times different from ours. That is probably fine, too.
 
@@ -268,7 +175,7 @@ For your reference, here are some approximate room cleaning times. These times a
 
 You should also check your simulation's output for speeds other than 1.0. One way to do this is to take the above test cases, change the speeds, and make sure the results are sensible.
 
-#### Visualizing robots (Optional, but cool and should be easy to do)
+## Visualizing the robots (fully optional)
 
 We've provided some code to generate animations of your robots as they go about cleaning a
 room. These animations can also help you debug your simulation by helping you to visually
@@ -311,12 +218,7 @@ The parameter delay specifies how many seconds the program should pause between 
 The default is 0.2 (that is, 5 frames per second). You can raise this value to make the animation
 slower.
 
-For problems 4 and 6, you will want to make calls to *runSimulation()* to get simulation data
-and plot it. However, you don't want the visualization getting in the way. If you choose to do this
-visualization exercise, before you get started on problems 4 and 6 and before you turn your
-problem set in, make sure to comment the visualization code out of *runSimulation()*.
-
-## Problem #4
+## Introducing Random Robot
 
 iRobot is testing out a new robot design. The proposed new robots differ in that they change
 direction randomly after every time step, rather than just when they run into walls. You have
@@ -329,4 +231,4 @@ as `StandardRobot`.
 
 Test out your new class. Perform a single trial with the new `RandomRobot` implementation
 and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
-can call `runSimulation` again, passing `RandomRobot` instead of `StandardRobot`.
+can call `runSimulation` again, passing the name of the class `RandomRobot` instead of `StandardRobot`.
