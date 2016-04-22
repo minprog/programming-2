@@ -578,8 +578,6 @@ Last but not least, add at least one personal touch to your mashup, altering its
 
 == How to Submit
 
-=== Step 1 of 2
-
 . When ready to submit, "export" your MySQL database (i.e., save it into a text file) by executing the commands below, where `username` is your own username, pasting your MySQL password when prompted for a password.  (Recall that you can see your MySQL password by clicking the ⓘ icon toward CS50 IDE's top-right corner.) For security, you won't see the password as you paste it.
 +
 [source]
@@ -590,16 +588,5 @@ mysqldump -u username -p pset8 > pset8.sql
 +
 If you type `ls` thereafter, you should see that you have a new file called `pset8.sql` in `~/workspace/pset8`.  (If you realize later that you need to make a change to your database and re-export it, you can delete `pset8.sql` with `rm pset8.sql`, then re-export as before.)
 . Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset8` folder and then select *Download*. You should find that your browser has downloaded `pset8.tar.gz`, a "gzipped tarball" that's similar in spirit to a ZIP file.
-. In a separate tab or window, log into https://cs50.net/submit[CS50 Submit], logging in if prompted.
-. Click *Submit* toward the window's top-left corner.
-. Under *Problem Set 8* on the screen that appears, click *Upload New Submission*.
-. On the screen that appears, click *Add files...*.  A window entitled *Open Files* should appear.
-. Navigate your way to `pset8.tar.gz`. Odds are it's in your *Downloads* folder or wherever your browser downloads files by default.  Once you find `pset8.tar.gz`, click it once to select it, then click *Open* (or the like).
-. Click *Start upload* to upload all of your files at once to CS50's servers.
-. On the screen that appears, you should see a window with *No File Selected*.  If you move your mouse toward the window's lefthand side, you should see a list of the files you uploaded.  Click each to confirm the contents of each.  (No need to click any other buttons or icons.)  If confident that you submitted the files you intended, consider your source code submitted!  If you'd like to re-submit different (or modified) files, simply return to https://cs50.net/submit[CS50 Submit] and repeat these steps.  You may re-submit as many times as you'd like; we'll grade your most recent submission, so long as it's before the deadline.
-
-=== Step 2 of 2
-
-Head to https://forms.cs50.net/2015/fall/psets/8 where a short form awaits.  (It's a bit longer than usual, so it's okay if you start it before but submit it shortly after the problem set's deadline.) Once you have submitted that form (as well as your source code), you are done! 
 
 This was Problem Set 8, your last!
