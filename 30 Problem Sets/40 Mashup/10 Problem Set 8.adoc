@@ -1,6 +1,6 @@
 = Problem Set 8: Mashup
 
-**Due: Wednesday, May 4, at 11:59.**
+**Due: Wednesday, May 4, at 23:59.**
 
 == Objectives
 
