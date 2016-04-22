@@ -589,4 +589,4 @@ mysqldump -u username -p pset8 > pset8.sql
 If you type `ls` thereafter, you should see that you have a new file called `pset8.sql` in `~/workspace/pset8`.  (If you realize later that you need to make a change to your database and re-export it, you can delete `pset8.sql` with `rm pset8.sql`, then re-export as before.)
 . Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset8` folder and then select *Download*. You should find that your browser has downloaded `pset8.tar.gz`, a "gzipped tarball" that's similar in spirit to a ZIP file.
 
-This was Problem Set 8, your last!
+This was Problem Set 8!
