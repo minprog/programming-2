@@ -7,12 +7,12 @@ the problems do not involve writing much code.
 
 ## Getting Started
 
-Download the zip file [here](workshop3.zip).
+Download the zip file [here](/distro/workshop3.zip).
 
 ## Graphs & Math
 
 To create plots for Problems #4 and #6 of this problem set, you will need these Python library
-packages: 
+packages:
 
 ### Matplotlib
 
@@ -92,8 +92,8 @@ another tile.
 
 ![sim4](sim4.png)
 
-t = 3: The robot could not have 
-moved another unit in the same 
+t = 3: The robot could not have
+moved another unit in the same
 direction without hitting the
 wall, so instead it turns to face
 in a new, random direction, 287
@@ -196,31 +196,31 @@ and Robot. See workshop3.py for complete details.
         tiles. A room has a width and a height and contains (width * height) tiles. At
         any particular time, each of these tiles is either clean or dirty.
         """
-        
+
         def __init__(self, width, height):
             """
             Initializes a rectangular room with the specified width and height.
             Initially, no tiles in the room have been cleaned.
             """
-        
+
         def cleanTileAtPosition(self, pos):
             """Mark the tile under the position POS as cleaned."""
-        
+
         def isTileCleaned(self, m, n):
             """Return True if the tile (m, n) has been cleaned."""
-        
+
         def getNumTiles(self):
             """Return the total number of tiles in the room."""
-        
+
         def getNumCleanedTiles(self):
             """Return the total number of clean tiles in the room."""
-        
+
         def getRandomPosition(self):
             """Return a random position inside the room."""
-        
+
         def isPositionInRoom(self, pos):
             """Return True if POS is inside the room."""
-    
+
     class Robot(object):
         """
         Represents a robot cleaning a particular room.
@@ -229,26 +229,26 @@ and Robot. See workshop3.py for complete details.
         Subclasses of Robot should provide movement strategies by implementing
         updatePositionAndClean(), which simulates a single time-step.
         """
-        
+
         def __init__(self, room, speed):
             """
             Initializes a Robot with the given speed in the specified room. The
             robot initially has a random direction and a random position in the
             room. The robot cleans the tile it is on.
             """
-            
+
             def getRobotPosition(self):
                 """Return the position of the robot."""
-            
+
             def getRobotDirection(self):
                 """Return the direction of the robot."""
-            
+
             def setRobotPosition(self, position):
                 """Set the position of the robot."""
-            
+
             def setRobotDirection(self, direction):
                 """Set the direction of the robot."""
-            
+
             def updatePositionAndClean(self):
                 """Simulate the passage of a single time-step."""
 
@@ -279,7 +279,7 @@ of the robot after a single time-step (as described above in the simulation dyna
         direction; when
         it hits a wall, it chooses a new direction randomly.
         """
-        
+
         def updatePositionAndClean(self):
             """
             Simulate the passage of a single time-step.
@@ -398,4 +398,3 @@ as StandardRobot.
 Test out your new class. Perform a single trial with the new RandomWalkRobot implementation
 and watch the visualization to make sure it is doing the right thing. Once you are satisfied, you
 can call runSimulation again, passing RandomWalkRobot instead of StandardRobot.
-

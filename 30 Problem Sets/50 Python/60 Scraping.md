@@ -9,8 +9,8 @@ homework.
 * The IMDB highest ranking TV-series exercise: [tvscraper.py]
 * The test script for this exercise [test-tvscraper.py]
 
-[tvscraper.py]: tvscraper.py
-[test-tvscraper.py]: test-tvscraper.py
+[tvscraper.py]: /distro/scraper/tvscraper.py
+[test-tvscraper.py]: /distro/scraper/test-tvscraper.py
 
 ## DOM scraping and traversal
 
@@ -37,7 +37,7 @@ the example is in directory `01-web` in the file `12-dom.py`.
 
 The documentation on the website is also useful.
 
-3. To get you started we have provided you with a script [tvscraper.py] that 
+3. To get you started we have provided you with a script [tvscraper.py] that
 loads the correct IMDB address, makes a local backup of it (`tvseries.html`)
 and outputs a CSV file (`tvseries.csv`) that will contain only a header until
 you complete the implementation of the functions `extract_tvseries(dom)` and
@@ -45,13 +45,13 @@ you complete the implementation of the functions `extract_tvseries(dom)` and
 
 4. To help you validate your script we provide both an example output CSV
 file [output.csv] and a test script [test-tvscraper.py]. To use the latter you
-must first run the `tvscraper.py` script (with the command 
+must first run the `tvscraper.py` script (with the command
 `python tvscraper.py`). This will copy the IMDB webpage to the local directory
-and save a CSV file. After you get these files run `test-tvscraper.py` from 
+and save a CSV file. After you get these files run `test-tvscraper.py` from
 the same directory. If your implementation of the missing functions is
 correct, you will see no ERROR of FAIL messages.
 
-5. When you hand this exercise in be sure to submit: your `tvscraper.py`, 
+5. When you hand this exercise in be sure to submit: your `tvscraper.py`,
 `tvseries.html` and `tvseries.csv`. This will allow us to verify that your
 output CSV file is correct and that the script actually works given the HTML
 from IMDB.
@@ -59,15 +59,15 @@ from IMDB.
 6. It could be that there are missing data (for instance the runtime), insert
    an appropriate value when something is missing.
 
-[output.csv]: output.csv
-[test-tvscraper.py]: test-tvscraper.py
+[output.csv]: /distro/scraper/output.csv
+[test-tvscraper.py]: /distro/scraper/test-tvscraper.py
 [preparations]: http://data.mprog.nl/homework/preparations
 
 ### Building `scraper.py`
 
 This is the introductory exercise to Pattern. We will try to guide you along as
 much as possible, but you should read up on documentation and get used to doing
-that. It's a really useful skill and a big part of programming is 
+that. It's a really useful skill and a big part of programming is
 self-­learning!
 
 This is also just a skeleton so you actually don't have to use this at all. As
@@ -81,26 +81,26 @@ This is taken from the documentation, which you should learn to read!
 
 	The DOM object is a tree of Element and Text objects. All objects inherit
 	from Node, DOM also inherits from Element.
-	
+
 	Node.type => NODE, TEXT, COMMENT, ELEMENT, DOM
 	Node.parent => Parent Node object
 	Node.children => List of child Node objects
 	Node.next => Next Node in Node.parent.children
 	Node.previous => Previous Node in Node.parent.children
-	
+
 	DOM.head => Element with tag name "head"
 	DOM.body => Element with tag name "body"
-	
+
 	Element.tag => Element tag name, e.g. "body"
 	Element.attributes => Dictionary of tag attribute, e.g. {"class": "header"}
 	Element.content => Element HTML content as a string.
 	Element.source => Element tag + content
-	
+
 	Element.get_element_by_id(value)
 	Element.get_elements_by_tagname(value)
 	Element.get_elements_by_classname(value)
 	Element.get_elements_by_attribute(name=value)
-	
+
 	You can also use short aliases: by_id(), by_tag(), by_class(), by_attribute()
 	The tag name passed to Element.by_tag()
 	can include a class ("div.message") or an id ("div#header").
