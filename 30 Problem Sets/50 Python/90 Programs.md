@@ -7,7 +7,7 @@ the problems do not involve writing much code.
 
 ## Getting Started
 
-Download the zip file [here](/distro/workshop3.zip).
+Download the zip file [here](distro/workshop3.zip).
 
 ## Graphs & Math
 

@@ -9,8 +9,8 @@ homework.
 * The IMDB highest ranking TV-series exercise: [tvscraper.py]
 * The test script for this exercise [test-tvscraper.py]
 
-[tvscraper.py]: /distro/scraper/tvscraper.py
-[test-tvscraper.py]: /distro/scraper/test-tvscraper.py
+[tvscraper.py]: distro/scraper/tvscraper.py
+[test-tvscraper.py]: distro/scraper/test-tvscraper.py
 
 ## DOM scraping and traversal
 
