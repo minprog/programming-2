@@ -1,0 +1,3 @@
+name: django
+required:
+    - pset10.tar.gz
