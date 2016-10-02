@@ -513,15 +513,6 @@ How to assess just how fast (and correct) your code is?  Well, as always, feel f
 ~cs50/pset5/speller texts/austinpowers.txt
 ----
 
-=== Big Board
-
-But also feel free (just for fun) to put your code to the test against classmates'!  Execute the command below to challenge the Big Board.
-
-[source,bash]
-----
-~cs50/pset5/challenge ~/workspace/pset5
-----
-
 === questions.txt
 
 Congrats!  At this point, your speller-checker is presumably complete (and fast!), so it's time for a debriefing.  In `questions.txt`, answer each of the following questions in a short paragraph.
