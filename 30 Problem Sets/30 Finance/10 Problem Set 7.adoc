@@ -253,17 +253,15 @@ If you're not quite sure what it means to buy and sell stocks (i.e., shares of a
 
 You're about to implement C$50 Finance, a Web-based tool with which you can manage portfolios of stocks.  Not only will this tool allow you to check real stocks' actual prices and portfolios' values, it will also let you buy (okay, "buy") and sell (fine, "sell") stocks!  Per Yahoo's fine print, "Quotes delayed [by a few minutes], except where indicated otherwise."
 
-Just the other day, I heard about this great "penny stock," whose symbol (ironically) is *FREE*!
+Just the other day, I heard about this great "penny stock," whose symbol (ironically) is *FREEF*!
 
-Let's get in on this opportunity now.  Head on over to Yahoo! Finance at http://finance.yahoo.com/.  Type the symbol for FreeSeas Inc., *FREE*, into the text field in that page's top-left corner and click *Get Quotes*.  Odds are you'll see a table like the below.
+Let's get in on this opportunity now.  Head on over to Yahoo! Finance at http://finance.yahoo.com/.  Type the symbol for FreeSeas Inc., *FREEF*, into the text field in that page's top-left corner and click *Get Quotes*.  Odds are you'll see a table like the below.
 
 image::free.png[FreeSeas Inc.]
 
-Wow, only $0.0661 per share!  That must be a good thing.  Anyhow, scroll down to the page's bottom, and you should see a toolbox like the below.
+Wow, only $0.0661 per share!  That must be a good thing.
 
-image::toolbox.png[Toolbox]
-
-Looks like Yahoo lets you download all that data (albeit delayed).  Go ahead and click *Download Data* to download a file in CSV format (i.e., as comma-separated values).  Open the file in Excel or any text editor, and you should see a "row" of values, all excerpted from that table.  It turns out that the link you just clicked led to the URL below.
+Anyhow, looks like Yahoo lets you download all that data (albeit delayed).  Go ahead and click the following link to download a file in CSV format (i.e., as comma-separated values).  Open the file in Excel or any text editor, and you should see a "row" of values.
 
 http://download.finance.yahoo.com/d/quotes.csv?s=FREE&f=sl1d1t1c1ohgv&e=.csv
 
