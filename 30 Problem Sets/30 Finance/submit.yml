@@ -1,3 +1,4 @@
 name: finance
-required:
-    - pset7.tar.gz
+files:
+    required:
+        - pset7.zip

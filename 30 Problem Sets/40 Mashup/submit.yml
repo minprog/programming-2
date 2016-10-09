@@ -1,3 +1,4 @@
 name: mashup
-required:
-    - pset8.tar.gz
+files:
+    required:
+        - pset8.zip
