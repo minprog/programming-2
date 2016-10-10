@@ -170,6 +170,7 @@ Next, ensure that `~/workspace/pset7/public` is "world-executable" by executing
 
 [source]
 ----
+chmod a+x ~/workspace/pset7
 chmod a+x ~/workspace/pset7/public
 ----
 
@@ -202,6 +203,24 @@ chmod a+r css/* fonts/* img/* js/*
 ----
 
 If unfamiliar, `\*` is a "wildcard character," so `css/*`, for instance, simply means "all files within the `css` directory."
+
+Now, ensure that the CS50 PHP library is world-readable.
+
+[source]
+----
+chmod a+x vendor/
+chmod a+x vendor/library50-php-5/
+chmod a+x vendor/library50-php-5/CS50/
+----
+
+Finally, set all `.php` files and `config.json` to be semi-world-readable by executing the below.
+
+[source]
+----
+chmod a+r includes/*.php public/*.php views/*.php
+chmod a+r vendor/library50-php-5/CS50/CS50.php
+chmod a+r config.json
+----
 
 For security's sake, don't make `~/workspace/pset7/includes` or `~/workspace/pset7/views` world-executable (or their contents world-readable), as they shouldn't be (potentially) accessible to the whole world (only to your PHP code, as you'll soon see).
 
@@ -254,7 +273,7 @@ Henceforth, for any PHP file, file, that you create, execute
 
 [source]
 ----
-chmod 600 file
+chmod 640 file
 ----
 
 so that it's accessible only by you (and the workspace's webserver).  After all, we don't want visitors to see the contents of PHP files; rather, we want them to see the output of PHP files once executed (or, rather, interpreted) by the workspace's web server.
