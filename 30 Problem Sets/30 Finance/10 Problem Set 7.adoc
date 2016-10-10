@@ -211,7 +211,7 @@ Now, move back into `~/workspace/pset7` again.
 cd ..
 ----
 
-From there, ensure that the CS50 PHP library is world-readable.
+From there, ensure that the CS50 PHP library is world-accessible.
 
 [source]
 ----
@@ -220,7 +220,7 @@ chmod a+x vendor/library50-php-5
 chmod a+x vendor/library50-php-5/CS50
 ----
 
-And allow world access to the other directories that contain PHP files.
+As well as other directories that contain PHP files.
 
 [source]
 ----
