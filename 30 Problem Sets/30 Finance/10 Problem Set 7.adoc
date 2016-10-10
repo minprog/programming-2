@@ -232,9 +232,9 @@ Finally, set all `.php` files and `config.json` to be semi-world-readable by exe
 
 [source]
 ----
-chmod a+r includes/*.php public/*.php views/*.php
-chmod a+r vendor/library50-php-5/CS50/CS50.php
-chmod a+r config.json
+chmod g+r includes/*.php public/*.php views/*.php
+chmod g+r vendor/library50-php-5/CS50/CS50.php
+chmod g+r config.json
 ----
 
 For security's sake, don't make `~/workspace/pset7/includes` or `~/workspace/pset7/views` world-executable (or their contents world-readable), as they shouldn't be (potentially) accessible to the whole world (only to your PHP code, as you'll soon see).
