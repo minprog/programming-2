@@ -1,6 +1,6 @@
 = Problem Set 8: Mashup
 
-**Due: Wednesday, May 4, at 23:59.**
+**Due: Friday, October 21, at 23:59.**
 
 == Objectives
 
@@ -51,24 +51,9 @@ Below are rules of thumb that (inexhaustively) characterize acts that the course
 * Using resources during a quiz beyond those explicitly allowed in the quiz's instructions.
 * Viewing another's solution to a problem and basing your own solution on it.
 
-== Assessment
-
-Your work on this problem set will be evaluated along four axes primarily.
-
-Scope::
-  To what extent does your code implement the features required by our specification?
-Correctness::
-  To what extent is your code consistent with our specifications and free of bugs?
-Design::
-  To what extent is your code written well (i.e., clearly, efficiently, elegantly, and/or logically)?
-Style::
-  To what extent is your code readable (i.e., commented and indented with variables aptly named)?
-
-All students, whether or not taking the course for a letter grade, must ordinarily submit this and all other problem sets to be eligible for a satisfactory grade unless granted an exception in writing by the course's heads.
-
 == Getting Ready
 
-Your (final!) mission for this problem set is to implement "mashup" that integrates Google Maps with Google News with a MySQL database containing thousands of postal codes, GPS coordinates, and more. Quite like this here version by the staff!
+Your mission for this problem set is to implement "mashup" that integrates Google Maps with Google News with a MySQL database containing thousands of postal codes, GPS coordinates, and more. Quite like this version here by the staff!
 
 https://mashup.cs50.net/
 
@@ -237,11 +222,11 @@ Next, ensure MySQL is running by executing the below.
 mysql50 start
 ----
 
-Alright, time for a test! In another tab, visit `pass:[https://ide50-username.cs50.io/]`, where `username` is your own username.
+Alright, time for a test! In another tab, visit `pass:[https://ide50-username.cs50.io/]`, where `username` is your own username (or click *CS50 IDE > Web Server* on the top left).
 
 You should find yourself at a map (without much of anything going on)! (If you instead see Forbidden, odds are you missed a step earlier; best to try all those chmod steps again.) Feel free to click on the map and drag it around. Or try searching for your home town via the text box up top. It won't find it yet! Indeed, the mashup itself doesn't do much just yet!
 
-Next, head to `pass:[https://ide50-username.cs50.io/phpmyadmin]`, where `username` is again your own username, to access phpMyAdmin. Log in if prompted. (Recall that you can the ⓘ icon toward CS50 IDE's top-right corner to see your *MySQL Username* and your *MySQL Password*.) You should then find yourself at phpMyAdmin's main page.  
+Next, head to `pass:[https://ide50-username.cs50.io/phpmyadmin]`, where `username` is again your own username, to access phpMyAdmin (or click *CS50 IDE > phpMyAdmin*). Log in if prompted. (Recall that you can see your *MySQL Username* by executing `username50` and your *MySQL Password* by executing `password50` in a terminal tab.) You should then find yourself at phpMyAdmin's main page.  
 
 Within CS50 IDE, now, open up `pset8.sql`, which you downloaded earlier. You should see a whole bunch of SQL statements.  Highlight them all, select *Edit > Copy* (or hit control-c), then return to phpMyAdmin.  Click phpMyAdmin's *SQL* tab, and paste everything you copied into that page's big text box (which is below *Run SQL query/queries on server "127.0.0.1"*).  Skim what you just pasted to get a sense of the commands you're about to execute, then click *Go*.  You should then see a greenish banner indicating success (i.e., *1 row affected*).  In phpMyAdmin's top-left corner, you should now see link to a database called *pset8*, beneath which is a link to a table called *places*. (If you don't, try reloading the page.) If you click *places*, you'll find (gasp!) that this table is empty. But we have defined its "schema" (i.e., structure) for you. Click phpMyAdmin's *Structure* tab to see. 
 
@@ -249,7 +234,7 @@ Let's now download the data that we'll ultimately import into this table. In a s
 
 Next, unzip `US.zip`, which should yield `US.txt`. (Remember how?) And then delete `US.zip`.
 
-Per http://download.geonames.org/export/zip/readme.txt, `US.txt` is quite like a CSV file except that fields are delimited with `\t` (a tab character) instead of a comma. To see the file's contents, you're welcome to open it within CS50 IDE, but take care not to change it.
+Per http://download.geonames.org/export/zip/readme.txt, `US.txt` is quite like a CSV file except that fields are delimited with `\t` (a tab character) instead of a comma. To see the file's contents, you're welcome to open it within CS50 IDE, but take care not to change it. In fact, to be safe, you might want to execute `chmod a-w US.txt` to ensure that even you can't write to (i.e., change) it.
 
 == Walkthrough
 
@@ -578,7 +563,7 @@ Last but not least, add at least one personal touch to your mashup, altering its
 
 == How to Submit
 
-. When ready to submit, "export" your MySQL database (i.e., save it into a text file) by executing the commands below, where `username` is your own username, pasting your MySQL password when prompted for a password.  (Recall that you can see your MySQL password by clicking the ⓘ icon toward CS50 IDE's top-right corner.) For security, you won't see the password as you paste it.
+. When ready to submit, "export" your MySQL database (i.e., save it into a text file) by executing the commands below, where `username` is your own username, pasting your MySQL password when prompted for a password.  (Recall that you can see your MySQL password by executing `password50` in a terminal tab.) For security, you won't see the password as you paste it.
 +
 [source]
 ----
@@ -587,6 +572,5 @@ mysqldump -u username -p pset8 > pset8.sql
 ----
 +
 If you type `ls` thereafter, you should see that you have a new file called `pset8.sql` in `~/workspace/pset8`.  (If you realize later that you need to make a change to your database and re-export it, you can delete `pset8.sql` with `rm pset8.sql`, then re-export as before.)
-. Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset8` folder and then select *Download*. You should find that your browser has downloaded `pset8.tar.gz`, a "gzipped tarball" that's similar in spirit to a ZIP file.
 
 This was Problem Set 8!
