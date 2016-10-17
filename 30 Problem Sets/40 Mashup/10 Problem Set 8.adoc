@@ -193,7 +193,7 @@ Next, execute `ls` within `~/workspace/pset8`, and you should see three subdirec
 * `640`
 ** `includes/*.php`
 ** `public/*.php`
-** `config.php`
+** `config.json`
 * `644`
 ** `public/css/*`
 ** `public/fonts/*`
