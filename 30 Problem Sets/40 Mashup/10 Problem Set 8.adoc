@@ -184,14 +184,16 @@ Next, execute `ls` within `~/workspace/pset8`, and you should see three subdirec
 ** `includes`
 ** `vendor`
 * `711`
+** `pset8`
 ** `public`
 ** `public/css`
 ** `public/fonts`
 ** `public/img`
 ** `public/js`
-* `600`
+* `640`
 ** `includes/*.php`
 ** `public/*.php`
+** `config.php`
 * `644`
 ** `public/css/*`
 ** `public/fonts/*`
