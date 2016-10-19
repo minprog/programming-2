@@ -547,7 +547,7 @@ might do the trick, perhaps coupled with some CSS.
 
 ==== addMarker
 
-Implement `addMarker` in `scripts.js` in such a way that it adds a marker for `place` on the map, where `place` is a JavaScript object that represents a row from `places`, your MySQL table. See https://developers.google.com/maps/documentation/javascript/markers for tips. But also see http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/ for an alternative to Google's own markers, which add support for labels beneath markers. (Recall that we're already loading `markerwithlabel_packed.js` for you in `index.html`.)
+Implement `addMarker` in `scripts.js` in such a way that it adds a marker for `place` on the map, where `place` is a JavaScript object that represents a row from `places`, your MySQL table. See https://developers.google.com/maps/documentation/javascript/markers for tips. But also see https://github.com/rdeguzman/markerwithlabel for an alternative to Google's own markers, which add support for labels beneath markers. (Recall that we're already loading `markerwithlabel_packed.js` for you in `index.html`.)
 
 When a marker is clicked, it should trigger the mashup's info window to open, anchored at that same marker, the contents of which should be an unordered list of links to article for that article's location (unless `articles.php` outputs an empty array)!
 
