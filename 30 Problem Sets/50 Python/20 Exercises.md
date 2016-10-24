@@ -10,12 +10,9 @@ As an introduction, please read this chapter of the "Think Python" book: [The wa
 
 ## Installing Python
 
-To install Python in the appliance simply execute the following commands in the terminal:
+For this exercise we do not use the IDE. Please install Python 2.7 [through this link](https://www.python.org/downloads/) on your own computer. (click on the big yellow 2.7.xx button)
 
-	sudo apt-get install python-matplotlib
-	
-This command installs several modules necessary for the plotting of data. Ask
-an assistant for help if you run into any trouble!
+You might also want to install an editor. [Atom](https://atom.io/) is recommended. 
 
 ## Interactive Python shell
 
