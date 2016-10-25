@@ -114,7 +114,7 @@ Part I: Input the following sets of equations, and note the difference
 	Note that as long as one argument is a float, all of your math 
 	will be floating point!
 
-2.	$$7 xx (1 / 2)$$ and $$7 xx (1 / 2.0)$$
+2.	$$7 ** (1 / 2)$$ and $$7 ** (1 / 2.0)$$
 
 3.	$$5^2$$, $$5.0^2$$, $$5^2.0$$
 
@@ -128,9 +128,9 @@ Part II: In `python_exercises1_1.py`, transcribe the following equations into Py
   (without simplifying!), preserving order of operation with parenthesis as
   needed. Save each as the value of a variable, and then print the variable.
 
-1.	$$(3 xx 5) / (2 + 3)$$
+1.	$$(3 ** 5) / (2 + 3)$$
 
-2.	$$sqrt(7 + 9) xx 2$$
+2.	$$sqrt(7 + 9) ** 2$$
 
 3.	$$(4 - 7) ^ 3$$
 
@@ -601,7 +601,7 @@ First, have a short look at the example program below.
 	import module
 	print random.randint(0, 5)
 	print random.random() * 100
-	print random.choice(3, "Hello", 432, "Bye")
+	print random.choice([3, "Hello", 432, "Bye"])
 
 Write this exercise in `python_exercises1_2.py`.
 
