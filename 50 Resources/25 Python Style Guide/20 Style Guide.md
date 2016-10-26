@@ -1,3 +1,5 @@
+# Python Style Guide
+
 As readers of your assignments we'll notice all too soon if it is
 well-readable. It influences how quickly we are able to understand the meaning
 of the program.
