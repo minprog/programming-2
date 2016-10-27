@@ -161,14 +161,14 @@ Here's three very small blocks of code, each responsible for a particular
 function of the program:
 
 {: .language-python}
-	# user input
+	# User input
 	number = input("Please enter a number: ")
 	
-	# calculations - uses a complex loop to handle special cases
+	# Calculations - uses a complex loop to handle special cases.
 	while(number > 0):
 		number -= 1
 	
-	# output - might not print zero (e.g., if user put in a float)
+	# Output - might not print zero (e.g., if user put in a float).
 	print user_input
 
 ### Spaces around operators
