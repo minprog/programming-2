@@ -1,6 +1,6 @@
 = Problem Set 7: C$50 Finance
 
-**Due: Friday, December 10, at 23:59.**
+**Due: Friday, December 9, at 23:59.**
 
 == Objectives
 
