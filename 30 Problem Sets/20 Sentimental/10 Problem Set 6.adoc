@@ -1,7 +1,5 @@
 = Problem Set 6: Sentimental
 
-**Due: Friday, November 25, at 23:59.**
-
 == Objectives
 
 * Port some programs from C to Python.
