@@ -1,8 +1,10 @@
 = Problem Set 7: C$50 Finance
 
+**Due: Wednesday, December 7, at 23:59.**
+
 == Objectives
 
-* Introduce you to HTML, CSS, PHP, and SQL.
+* Introduce you to HTML, CSS, Python, and SQL.
 * Teach you how to teach yourself new languages.
 
 == Recommended Reading
@@ -82,15 +84,6 @@ Implement http://docs.cs50.net/problems/finance/finance.html[C$50 Finance] in `p
 
 == How to Submit
 
-. When ready to submit, "export" your MySQL database (i.e., save it into a text file) by executing the commands below, where `username` is your own username, pasting your MySQL password when prompted for a password.  (Recall that you can see your MySQL username and password by executing `username50` and `password50` respectively in a terminal tab) For security, you won't see the password as you paste it.
-+
-[source]
-----
-cd ~/workspace/pset7
-mysqldump -u username -p pset7 > pset7.sql
-----
-+
-If you type `ls` thereafter, you should see that you have a new file called `pset7.sql` in `~/workspace/pset7`.  (If you realize later that you need to make a change to your database and re-export it, you can delete `pset7.sql` with `rm pset7.sql`, then re-export as before.)
-. Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset7` folder and then select *Download*. You should find that your browser has downloaded `pset7.zip`.
+Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset7` folder and then select *Download*. You should find that your browser has downloaded `pset7.zip`. Make sure to check whether the zip file contains your database `finance.db`.
 
 This was Problem Set 7.
