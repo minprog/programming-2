@@ -1,4 +1,6 @@
 name: mispell
 files:
     required:
-        - pset5.zip
+        - dictionary.c
+        - dictinoary.h
+        - Makefile
