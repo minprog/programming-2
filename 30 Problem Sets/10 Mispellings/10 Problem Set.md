@@ -1,4 +1,4 @@
-# Problem Set 6: Mispellings
+# Problem Set 5: Mispellings
 
 ##  Objectives
 
