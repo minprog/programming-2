@@ -2,5 +2,5 @@ name: mispell
 files:
     required:
         - dictionary.c
-        - dictinoary.h
+        - dictionary.h
         - Makefile
