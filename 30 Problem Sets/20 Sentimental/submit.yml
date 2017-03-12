@@ -1,4 +1,4 @@
 name: sentimental
 files:
-    required:
+    choose:
         - pset6.zip
