@@ -1,0 +1,37 @@
+= Problem Set 7: C$50 Finance
+
+== tl;dr
+ 
+. Watch /lectures/week-9[Week 9's lecture].
+. Implement a stock-trading website.
+
+== Getting Started
+
+[source]
+----
+update50
+mkdir ~/workspace/pset7/
+cd ~/workspace/pset7/
+----
+
+== Academic Honesty
+
+Be sure to read the rules of this course regarding academic honesty and understand what's reasonable and what's not reasonable when doing this problem set. See the /[course syllabus] for more information.
+
+== Problems
+
+Implement link:/problems/finance[C$50 Finance] in `pset7/finance/`.
+
+== Hints
+
+* Be sure to use Python 3, not Python 2.
+* All code that you write should be consistent with https://www.python.org/dev/peps/pep-0008/[Style Guide for Python Code], otherwise known as PEP 8.
+* Insofar as a goal of this problem set is to teach you how to teach yourself a new language, keep in mind that these acts are not only *reasonable*, per the syllabus, but encouraged toward that end:
+** Incorporating a few lines of code that you find online or elsewhere into your own code, provided that those lines are not themselves solutions to assigned problems and that you cite the lines' origins.
+** Turning to the web or elsewhere for instruction beyond the course's own, for references, and for solutions to technical difficulties, but not for outright solutions to problem set's problems or your own final project.
+
+== How to Submit
+
+Toward CS50 IDE's top-left corner, within its "file browser" (not within a terminal window), control-click or right-click your `pset7` folder and then select *Download*. You should find that your browser has downloaded `pset7.zip`. Make sure to check whether the zip file contains your database `finance.db`.
+
+This was Problem Set 7.
