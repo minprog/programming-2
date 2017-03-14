@@ -16,7 +16,7 @@ cd ~/workspace/pset8/
 
 == Academic Honesty
 
-Be sure to read the rules of this course regarding academic honesty and understand what's reasonable and what's not reasonable when doing this problem set. See the /[course syllabus] for more information.
+Be sure to read the rules of this course regarding academic honesty and understand what's reasonable and what's not reasonable when doing this problem set. See the link:/[course syllabus] for more information.
 
 == Problems
 
