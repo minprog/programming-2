@@ -2,7 +2,7 @@
 
 == tl;dr
  
-. Watch /lectures/week-9[Week 9's lecture].
+. Watch link:/lectures/week-9[Week 9's lecture].
 . Implement a stock-trading website.
 
 == Getting Started

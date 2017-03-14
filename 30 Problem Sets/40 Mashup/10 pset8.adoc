@@ -2,7 +2,7 @@
 
 == tl;dr
  
-. Watch https://video.cs50.net/2016/fall/lectures/10[Week 10's lecture].
+. Watch link:/lectures/week-10[Week 10's lecture].
 . Implement a news map.
 
 == Getting Started
