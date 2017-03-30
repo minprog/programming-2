@@ -1,4 +1,10 @@
 name: sentimental
 files:
-    choose:
-        - pset6.zip
+    required:
+        - mario.py
+        - greedy.py or credit.py
+        - caesar.py or vigenere.py or crack.py
+        - analyzer.py
+        - tweets
+        - application.py
+        - smile.py
