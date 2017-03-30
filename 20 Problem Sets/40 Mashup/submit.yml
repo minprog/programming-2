@@ -1,4 +1,5 @@
 name: mashup
 files:
     required:
-        - pset8.zip
+        - application.py
+        - scripts.js
