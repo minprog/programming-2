@@ -1,4 +1,6 @@
 name: finance
 files:
     required:
-        - pset7.zip
+        - html.zip
+        - finance.db
+        - application.py
